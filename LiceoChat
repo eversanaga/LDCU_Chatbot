@@ -38,7 +38,7 @@ possibleResponses = {
 	"who": {
 		"owner": "The owners of Liceo De Cagayan University are Rodolfo Pelaez and his wife Elsa Pelaez.",
 		"ever": "Ever is just a chill guy.",
-		"you": "I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether it’s related to academic inquiries, campus information, or any other services we offer. I’m here to provide you with accurate and helpful responses, and I’m excited to help make your experience smoother and more efficient. Feel free to ask me anything, and I'll do my best to assist you!"
+		"you": "I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether it's related to academic inquiries, campus information, or any other services we offer. I'm here to provide you with accurate and helpful responses, and I'm excited to help make your experience smoother and more efficient. Feel free to ask me anything, and I'll do my best to assist you!"
 	},
 	"what": {
 		"test":"test"
@@ -54,8 +54,8 @@ possibleResponses = {
 overloadQuestionErrorResponses = (
 	"Sorry, could we please focus on one question at a time?",
 	"I apologize, but can you please ask one question at a time?",
-	"I’m sorry, but it’s a bit difficult to answer multiple questions at once. Can we take them one by one?",
-	"Sorry about that, but I’d appreciate it if we could go through one question at a time.",
+	"I'm sorry, but it's a bit difficult to answer multiple questions at once. Can we take them one by one?",
+	"Sorry about that, but I'd appreciate it if we could go through one question at a time.",
 	"Apologies, but I can only answer one question at a time. Could we start with the first?"
 	)
 
@@ -63,17 +63,17 @@ inputErrorResponses = (
 	"Sorry, I may have not heard what you said. Could you repeat it again?",
 	"Apologies, I don't understand what you said. Can you repeat it?",
 	"Sorry, I didn't catch that. Could you say it again?",
-	"I’m sorry, I didn’t quite understand. Could you repeat that?",
+	"I'm sorry, I didn't quite understand. Could you repeat that?",
 	"Sorry, I didn't follow that. Could you say it one more time?",
-	"Sorry, I didn’t quite hear that. Could you say it again?",
-	"Apologies, I didn’t catch that. Can you repeat what you said?",
-	"Sorry, I didn’t understand you clearly. Could you say that again?",
-	"I’m sorry, I missed that. Can you repeat it for me?",
-	"Sorry, I didn’t quite get that. Could you repeat what you just said?",
-	"Apologies, I didn’t follow that. Could you say it one more time?",
-	"Sorry, I didn’t quite grasp what you said. Could you say it again?",
-	"I’m sorry, I didn’t hear you properly. Can you repeat that?",
-	"Sorry, I didn’t understand. Could you say that again for me?",
+	"Sorry, I didn't quite hear that. Could you say it again?",
+	"Apologies, I didn't catch that. Can you repeat what you said?",
+	"Sorry, I didn't understand you clearly. Could you say that again?",
+	"I'm sorry, I missed that. Can you repeat it for me?",
+	"Sorry, I didn't quite get that. Could you repeat what you just said?",
+	"Apologies, I didn't follow that. Could you say it one more time?",
+	"Sorry, I didn't quite grasp what you said. Could you say it again?",
+	"I'm sorry, I didn't hear you properly. Can you repeat that?",
+	"Sorry, I didn't understand. Could you say that again for me?",
 	"Apologies, I missed that part. Could you repeat it once more?"
 )
 
@@ -88,13 +88,13 @@ questionErrorResponses = {
 		"I'm sorry, I didn't understand what you said."),
 	
 		"when": ("I'm sorry, I don't know when that is.",
-		"I apologize, I’m not sure when that happened."),
+		"I apologize, I'm not sure when that happened."),
 
-		"why": ("I honestly don’t know why.",
-		"I’m afraid I don’t know why."),
+		"why": ("I honestly don't know why.",
+		"I'm afraid I don't know why."),
 
-		"how": ("I apologize, but I honestly don’t know how.",
-		"I’m sorry, but I wish I knew how.")
+		"how": ("I apologize, but I honestly don't know how.",
+		"I'm sorry, but I wish I knew how.")
 	}
 
 greets = (
@@ -113,7 +113,9 @@ def printBanner() -> None:
 	return
 
 def chatbotSpeak(text: str) -> None:
-	execute(f"echo \"{text}\" |festival --tts &")
+	toSay = text.replace("'", "")
+	debug(f"@ chatbotSpeak(): {toSay=}")
+	execute(f"echo \"{toSay}\" |festival --tts &")
 	return
 
 def getDirectObject(text: str) -> str:
@@ -150,6 +152,16 @@ def getPredicateNominative(text: str) -> str:
 
 	return ""
 
+def getGrammaticalNumber(text: str) -> str:
+	doc = nlp(text)
+	for token in doc:
+		if token.dep_ == "nsubj":
+			if token.tag_ in ["NN", "PRP", "NNP"]:
+				return "singular"
+			elif token.tag_ in ["NNS", "NNPS", "PRP$"]:
+				return "plural"
+	return ""
+
 def debug(text: str) -> None:
 	if debugging:
 		logText = f"{c.RED}[DEBUG] {c.BLUE}[{timenow.now().time().strftime('%H:%M:%S')}] {c.GREEN}{text}{c.R}"
@@ -162,6 +174,7 @@ def debug(text: str) -> None:
 	return
 
 def talkBot(text: str) -> None:
+	debug("@ talkBot(): executing chatbotSpeak()")
 	chatbotSpeak(text)
 	if chatbotReplyDelay:
 		print(f"{c.CYAN}[LDCU_BOT]: {c.WHITE}", end="")
@@ -191,7 +204,8 @@ def getInput() -> dict:
 			"isQuestion": False,
 			"questionType": "",
 			"interrogativeWordsCount": 0,
-			"subjectWord": ""
+			"subjectWord": "",
+			"grammaticalNumber": ""
 			}
 
 		userInput = input(f"{c.YELLOW}[LICEAN]: {c.WHITE}")
@@ -200,8 +214,8 @@ def getInput() -> dict:
 			return
 
 		listUserInput = userInput.split(" ")
-		debug(f"@ getInput: {userInput=}")
-		debug(f"@ getInput: checking user input for interrogative words")
+		debug(f"@ getInput(): {userInput=}")
+		debug(f"@ getInput(): checking user input for interrogative words")
 
 		for word in interrogativeWords:
 			if word in userInput.lower():
@@ -209,43 +223,46 @@ def getInput() -> dict:
 				inputType["questionType"] = word
 				inputType["interrogativeWordsCount"] += 1
 
-		debug(f"@ getInput: found {inputType["interrogativeWordsCount"]} interrogative words")
-		debug(f"@ getInput: {inputType['isQuestion']=}")
-		debug(f"@ getInput: {inputType['questionType']=}")
+		debug(f"@ getInput(): found {inputType["interrogativeWordsCount"]} interrogative words")
+		debug(f"@ getInput(): {inputType['isQuestion']=}")
+		debug(f"@ getInput(): {inputType['questionType']=}")
 
 		inputType["subjectWord"] = getSubject(userInput)
 
 		for word in interrogativeWords:
 			if word == inputType["subjectWord"]:
-				debug("@ getInput: getting predicate nominative")
+				debug("@ getInput(): getting predicate nominative")
 				inputType["subjectWord"] = getPredicateNominative(userInput)
 		
 		for word in personalPronouns:
 			if word == inputType["subjectWord"]:
-				debug("@ getInput: getting direct object")
+				debug("@ getInput(): getting direct object")
 				inputType["subjectWord"] = getDirectObject(userInput)
 
-		debug(f"@ getInput: {inputType["subjectWord"]=}")
+		debug(f"@ getInput(): {inputType["subjectWord"]=}")
+
+		inputType["grammaticalNumber"] = getGrammaticalNumber(userInput)
+		debug(f"@ getInput(): {inputType["grammaticalNumber"]=}")
 
 		return inputType, listUserInput
 
 	except KeyboardInterrupt:
-		debug("@ getInput: executing exit()")
-		debug("@ getInput: exiting program")
+		debug("@ getInput(): executing exit()")
+		debug("@ getInput(): exiting program")
 		exit()
 
 def processInput(typeInput: dict, inputUser: list) -> None:
-	debug(f"@ processInput: checking the number of interrogative words")
+	debug(f"@ processInput(): checking the number of interrogative words")
 	if typeInput["interrogativeWordsCount"] > 1:
 		talkBot(selectRandom(overloadQuestionErrorResponses))
 
 	else:
 		try:
 			if typeInput["questionType"]:
-				debug("@ processInput: declaring response")
-				debug(f"@ processInput: response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}]")
+				debug("@ processInput(): declaring response")
+				debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}]")
 				response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]]
-				debug("@ processInput: chatbot replying")
+				debug("@ processInput(): chatbot replying")
 				talkBot(response)
 
 			else:
@@ -261,9 +278,9 @@ def processInput(typeInput: dict, inputUser: list) -> None:
 def initiateConversation() -> None:
 	while True:
 		try:
-			debug(f"@ initiateConversation: executing getInput()")
+			debug(f"@ initiateConversation(): executing getInput()")
 			typeInput, listUserInput = getInput()
-			debug(f"@ initiateConversation: executing processInput()")
+			debug(f"@ initiateConversation(): executing processInput()")
 			processInput(typeInput, listUserInput)
 		
 		except TypeError:
@@ -276,11 +293,11 @@ def initiateConversation() -> None:
 
 
 def main() -> None:
-	debug("@ main: executing printBanner()")
+	debug("@ main(): executing printBanner()")
 	printBanner()
-	debug("@ main: executing introGreet()")
+	debug("@ main(): executing introGreet()")
 	introGreet()
-	debug("@ main: executing initiateConversation()")
+	debug("@ main(): executing initiateConversation()")
 	initiateConversation()
 
 """ END: FUNCTIONS """
@@ -296,4 +313,5 @@ if __name__ == '__main__':
 		debugging = True
 		
 	debug("@ entry_point: starting program")
+	debug("@ entry_point: executing main()")
 	main()
