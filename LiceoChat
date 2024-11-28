@@ -1,0 +1,294 @@
+#!/bin/python
+
+""" START: LIBRARIES """
+
+from datetime import datetime as timenow
+from random import choice as selectRandom
+from time import sleep
+import spacy
+import readline
+import argparse
+from os import system as execute
+
+""" END: LIBRARIES """
+
+""" START: CLASSES """
+
+class Colors:
+	R = "\033[0m"
+	BLACK = "\033[90m"
+	RED = "\033[91m"
+	GREEN = "\033[92m"
+	YELLOW = "\033[93m"
+	BLUE = "\033[94m"
+	MAGENTA = "\033[95m"
+	CYAN = "\033[96m"
+	WHITE = "\033[97m"
+
+""" END: CLASSES """
+
+""" START: GLOBAL VARIABLES """
+
+c = Colors()
+debugging = False
+chatbotReplyDelay = True
+nlp = spacy.load("en_core_web_sm")
+
+possibleResponses = {
+	"who": {
+		"owner": "The owners of Liceo De Cagayan University are Rodolfo Pelaez and his wife Elsa Pelaez.",
+		"ever": "Ever is just a chill guy.",
+		"you": "I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether it’s related to academic inquiries, campus information, or any other services we offer. I’m here to provide you with accurate and helpful responses, and I’m excited to help make your experience smoother and more efficient. Feel free to ask me anything, and I'll do my best to assist you!"
+	},
+	"what": {
+		"test":"test"
+	},
+	"where": {
+		"liceo": "Oh! I know where you can find Liceo De Cagayan University. It is located at Kauswagan, Rodolfo N. Pelaez Boulevard, Cagayan De Oro City"
+	},
+	"when": {
+		"liceo": "Liceo was founded in the year 1955."
+	}
+}
+
+overloadQuestionErrorResponses = (
+	"Sorry, could we please focus on one question at a time?",
+	"I apologize, but can you please ask one question at a time?",
+	"I’m sorry, but it’s a bit difficult to answer multiple questions at once. Can we take them one by one?",
+	"Sorry about that, but I’d appreciate it if we could go through one question at a time.",
+	"Apologies, but I can only answer one question at a time. Could we start with the first?"
+	)
+
+inputErrorResponses = (
+	"Sorry, I may have not heard what you said. Could you repeat it again?",
+	"Apologies, I don't understand what you said. Can you repeat it?",
+	"Sorry, I didn't catch that. Could you say it again?",
+	"I’m sorry, I didn’t quite understand. Could you repeat that?",
+	"Sorry, I didn't follow that. Could you say it one more time?",
+	"Sorry, I didn’t quite hear that. Could you say it again?",
+	"Apologies, I didn’t catch that. Can you repeat what you said?",
+	"Sorry, I didn’t understand you clearly. Could you say that again?",
+	"I’m sorry, I missed that. Can you repeat it for me?",
+	"Sorry, I didn’t quite get that. Could you repeat what you just said?",
+	"Apologies, I didn’t follow that. Could you say it one more time?",
+	"Sorry, I didn’t quite grasp what you said. Could you say it again?",
+	"I’m sorry, I didn’t hear you properly. Can you repeat that?",
+	"Sorry, I didn’t understand. Could you say that again for me?",
+	"Apologies, I missed that part. Could you repeat it once more?"
+)
+
+questionErrorResponses = {
+		"who": ("Sorry, I don't know who that person is.",
+		"I apologize, It seems that I don't have any information connected to that person."),
+
+		"where": ("I apologize, I have no information regarding to where that location is.",
+		"I'm sorry, I don't know where that place is located."),
+
+		"what": ("I'm sorry, I don't know what you meant.",
+		"I'm sorry, I didn't understand what you said."),
+	
+		"when": ("I'm sorry, I don't know when that is.",
+		"I apologize, I’m not sure when that happened."),
+
+		"why": ("I honestly don’t know why.",
+		"I’m afraid I don’t know why."),
+
+		"how": ("I apologize, but I honestly don’t know how.",
+		"I’m sorry, but I wish I knew how.")
+	}
+
+greets = (
+	"Hi! I am a chatbot. I can provide informations about Liceo De Cagayan University.",
+	"Hello! How can I help you today? I am from Liceo De Cagayan University.",
+	"Oh! Hi there! I am a chatbot made in Liceo De Cagayan University, how can I help you?",
+	"Hello person! Ask me anything about Liceo De Cagayan University!",
+	)
+
+""" END: GLOBAL VARIABLES """
+
+""" START: FUNCTIONS """
+
+def chatbotSpeak(text: str) -> None:
+	execute(f"echo \"{text}\" |festival --tts &")
+	return
+
+def getDirectObject(text: str) -> str:
+	doc = nlp(text)
+	for token in doc:
+		if token.dep_ == "ROOT" or token.dep_ == "aux":
+			for child in token.subtree:
+				if child.dep_ == "dobj":
+					return child.text
+	return ""
+
+def getSubject(text: str) -> str:
+	doc = nlp(text)
+	for token in doc:
+		if "subj" in token.dep_:
+			return token.text.lower()
+	return ""
+
+def getPredicateNominative(text: str) -> str:
+	doc = nlp(text)
+	for token in doc:
+		if token.dep_ == "ROOT" and token.lemma_ == "be":
+			for child in token.children:
+				if child.text.lower() == "ever" and child.pos_ == "ADV":
+						return child.text.lower()
+				elif child.dep_ == "attr" or child.dep_ == "nsubj":	
+					if child.text.lower() not in ["who", "what"]:
+						return child.text
+			for child in token.subtree:
+				if child.dep_ == "nsubj" and child.text.lower() in ["who", "what"]:
+					continue
+				elif child.pos_ in ["NOUN", "PROPN"]:
+					return child.text
+
+	return ""
+
+def debug(text: str) -> None:
+	if debugging:
+		logText = f"{c.RED}[DEBUG] {c.GREEN}[{timenow.now().time().strftime('%H:%M:%S')}] {c.WHITE}{text}{c.R}"
+		with open("log.txt", "a") as logFile:
+			print(logText)
+			logFile.write(logText+"\n")
+		
+		sleep(0.05)
+		return
+	return
+
+def talkBot(text: str) -> None:
+	chatbotSpeak(text)
+	if chatbotReplyDelay:
+		print(f"{c.CYAN}[LDCU_BOT]: {c.WHITE}", end="")
+		for letter in text:
+			print(letter, end='', flush=True)
+			sleep(0.07)
+		print()
+	else:
+		print(f"{c.CYAN}[LDCU_BOT]: {c.WHITE}{text}{c.R}")
+	return
+
+def introGreet() -> None:
+	execute("./liceo")
+	talkBot(selectRandom(greets))
+	return
+
+def getInput() -> dict:
+	try:
+		interrogativeWords = (
+			"who", "where", "what", "when", "why", "how"
+		)
+
+		personalPronouns = (
+			"i", "we", "they",
+			)
+
+		inputType = {
+			"isQuestion": False,
+			"questionType": "",
+			"interrogativeWordsCount": 0,
+			"subjectWord": ""
+			}
+
+		userInput = input(f"{c.YELLOW}[LICEAN]: {c.WHITE}")
+
+		if not userInput:
+			return
+
+		listUserInput = userInput.split(" ")
+		debug(f"@ getInput: {userInput=}")
+		debug(f"@ getInput: checking user input for interrogative words")
+
+		for word in interrogativeWords:
+			if word in userInput.lower():
+				inputType["isQuestion"] = True
+				inputType["questionType"] = word
+				inputType["interrogativeWordsCount"] += 1
+
+		debug(f"@ getInput: found {inputType["interrogativeWordsCount"]} interrogative words")
+		debug(f"@ getInput: {inputType['isQuestion']=}")
+		debug(f"@ getInput: {inputType['questionType']=}")
+
+		inputType["subjectWord"] = getSubject(userInput)
+
+		for word in interrogativeWords:
+			if word == inputType["subjectWord"]:
+				debug("@ getInput: getting predicate nominative")
+				inputType["subjectWord"] = getPredicateNominative(userInput)
+		
+		for word in personalPronouns:
+			if word == inputType["subjectWord"]:
+				debug("@ getInput: getting direct object")
+				inputType["subjectWord"] = getDirectObject(userInput)
+
+		debug(f"@ getInput: {inputType["subjectWord"]=}")
+
+		return inputType, listUserInput
+
+	except KeyboardInterrupt:
+		debug("@ getInput: executing exit()")
+		debug("@ getInput: exiting program")
+		exit()
+
+def processInput(typeInput: dict, inputUser: list) -> None:
+	debug(f"@ processInput: checking the number of interrogative words")
+	if typeInput["interrogativeWordsCount"] > 1:
+		talkBot(selectRandom(overloadQuestionErrorResponses))
+
+	else:
+		try:
+			if typeInput["questionType"]:
+				debug("@ processInput: declaring response")
+				debug(f"@ processInput: response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}]")
+				response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]]
+				debug("@ processInput: Chatbot replying")
+				talkBot(response)
+
+			else:
+				talkBot(selectRandom(inputErrorResponses))
+
+		except KeyError:
+			if not typeInput["questionType"]:
+				talkBot(selectRandom(inputErrorResponses))
+
+			else:
+				talkBot(selectRandom(questionErrorResponses[typeInput["questionType"]]))
+
+def initiateConversation() -> None:
+	while True:
+		try:
+			debug(f"@ initiateConversation: executing getInput()")
+			typeInput, listUserInput = getInput()
+			debug(f"@ initiateConversation: executing processInput()")
+			processInput(typeInput, listUserInput)
+		
+		except TypeError:
+			talkBot(selectRandom(inputErrorResponses))
+			initiateConversation()
+
+		except UnboundLocalError:
+			talkBot(selectRandom(inputErrorResponses))
+			initiateConversation()
+
+
+def main() -> None:
+	debug("@ main: executing introGreet()")
+	introGreet()
+	debug("@ main: executing initiateConversation()")
+	initiateConversation()
+
+""" END: FUNCTIONS """
+
+""" ENTRY POINT: START OF THE PROGRAM """
+
+if __name__ == '__main__':
+	parser = argparse.ArgumentParser("A simple chatbot designed to assist with a medium range of questions related to Liceo De Cagayan University.")
+	parser.add_argument("--debug", action="store_true", help="Enable debugging output")
+	arguments = parser.parse_args()
+
+	if arguments.debug:
+		debugging = True
+		
+	debug("@ entry_point: starting program")
+	main()
