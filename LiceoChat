@@ -31,8 +31,8 @@ class Colors:
 
 c = Colors()
 debugging = False
-chatbotReplyDelay = True
-nlp = spacy.load("en_core_web_sm")
+chatbotReplyDelay = False
+naturalLanguageProcessing = spacy.load("en_core_web_sm")
 
 possibleResponses = {
 	"who": {
@@ -118,8 +118,17 @@ def chatbotSpeak(text: str) -> None:
 	execute(f"echo \"{toSay}\" |festival --tts &")
 	return
 
+def getObjectOfPreposition(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	for token in doc:
+		if token.dep_ == "prep":
+			for child in token.children:				
+				if child.dep_ in ["pobj", "dobj"] and child.pos_ in ["NOUN", "PROPN", "PRON"]:
+					return child.text
+	return ""
+
 def getDirectObject(text: str) -> str:
-	doc = nlp(text)
+	doc = naturalLanguageProcessing(text)
 	for token in doc:
 		if token.dep_ == "ROOT" or token.dep_ == "aux":
 			for child in token.subtree:
@@ -128,14 +137,14 @@ def getDirectObject(text: str) -> str:
 	return ""
 
 def getSubject(text: str) -> str:
-	doc = nlp(text)
+	doc = naturalLanguageProcessing(text)
 	for token in doc:
 		if "subj" in token.dep_:
 			return token.text.lower()
 	return ""
 
 def getPredicateNominative(text: str) -> str:
-	doc = nlp(text)
+	doc = naturalLanguageProcessing(text)
 	for token in doc:
 		if token.dep_ == "ROOT" and token.lemma_ == "be":
 			for child in token.children:
@@ -149,17 +158,46 @@ def getPredicateNominative(text: str) -> str:
 					continue
 				elif child.pos_ in ["NOUN", "PROPN"]:
 					return child.text
-
 	return ""
 
-def getGrammaticalNumber(text: str) -> str:
-	doc = nlp(text)
+def getMainVerb(text: str) -> str:
+    doc = naturalLanguageProcessing(text)
+    for token in doc:
+        if token.dep_ == "ROOT" and token.pos_ == "VERB":
+            return token.lemma_
+    return ""
+
+def getMainVerbIndex(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
 	for token in doc:
-		if token.dep_ == "nsubj":
-			if token.tag_ in ["NN", "PRP", "NNP"]:
+		if token.dep_ == "ROOT" and token.pos_ == "VERB":
+			start_index = token.idx
+			end_index = start_index + len(token.text)
+			return text[start_index:end_index] 
+	return ""
+
+
+def removeER(text: str) -> str:
+	if not text == "ever":
+		if text[-2:] == "er":
+			return text[:-2]
+
+		else:
+			return text
+
+	else:
+		return text
+
+def getGrammaticalNumber(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	for token in doc:
+		if token.dep_ == "nsubj" or (token.dep_ == "nsubj" and token.pos_ == "PRON"):
+			if token.tag_ in ["NN", "NNP", "PRP"]:
 				return "singular"
 			elif token.tag_ in ["NNS", "NNPS", "PRP$"]:
 				return "plural"
+		if token.dep_ == "nsubj" and token.text.lower() in ["who", "what"]:
+			return "singular"   
 	return ""
 
 def debug(text: str) -> None:
@@ -168,7 +206,6 @@ def debug(text: str) -> None:
 		with open("log.txt", "a") as logFile:
 			print(logText)
 			logFile.write(logText+"\n")
-		
 		sleep(0.05)
 		return
 	return
@@ -180,7 +217,7 @@ def talkBot(text: str) -> None:
 		print(f"{c.CYAN}[LDCU_BOT]: {c.WHITE}", end="")
 		for letter in text:
 			print(letter, end='', flush=True)
-			sleep(0.07)
+			sleep(0.05)
 		print(c.R)
 	else:
 		print(f"{c.CYAN}[LDCU_BOT]: {c.WHITE}{text}{c.R}")
@@ -192,20 +229,18 @@ def introGreet() -> None:
 
 def getInput() -> dict:
 	try:
-		interrogativeWords = (
-			"who", "where", "what", "when", "why", "how"
-		)
-
-		personalPronouns = (
-			"i", "we", "they",
-			)
+		interrogativeWords = ("who", "where", "what", "when", "why", "how")
+		personalPronouns = ("i", "we", "they")
 
 		inputType = {
 			"isQuestion": False,
 			"questionType": "",
 			"interrogativeWordsCount": 0,
 			"subjectWord": "",
-			"grammaticalNumber": ""
+			"grammaticalNumber": "",
+			"rawSubjectWord": "",
+			"objectOfPreposition": "",
+			"totalWords": 0
 			}
 
 		userInput = input(f"{c.YELLOW}[LICEAN]: {c.WHITE}")
@@ -223,26 +258,43 @@ def getInput() -> dict:
 				inputType["questionType"] = word
 				inputType["interrogativeWordsCount"] += 1
 
-		debug(f"@ getInput(): found {inputType["interrogativeWordsCount"]} interrogative words")
-		debug(f"@ getInput(): {inputType['isQuestion']=}")
-		debug(f"@ getInput(): {inputType['questionType']=}")
-
+		debug("@ getInput(): getting subject word")
 		inputType["subjectWord"] = getSubject(userInput)
+		inputType["rawSubjectWord"] = getSubject(userInput)
 
+		debug("@ getInput(): checking subject word")
 		for word in interrogativeWords:
 			if word == inputType["subjectWord"]:
 				debug("@ getInput(): getting predicate nominative")
-				inputType["subjectWord"] = getPredicateNominative(userInput)
-		
+				inputType["subjectWord"] = removeER(getPredicateNominative(userInput))
+				inputType["rawSubjectWord"] = getPredicateNominative(userInput)
+				if not inputType["subjectWord"]:
+					debug("@ getInput(): failed getting predicate nominative")
+
 		for word in personalPronouns:
 			if word == inputType["subjectWord"]:
 				debug("@ getInput(): getting direct object")
 				inputType["subjectWord"] = getDirectObject(userInput)
+				if not inputType["subjectWord"]:
+					debug("@ getInput(): failed getting direct object")
 
-		debug(f"@ getInput(): {inputType["subjectWord"]=}")
+		if not inputType["subjectWord"]:
+			debug("@ getInput(): getting main verb")
+			inputType["subjectWord"] = getMainVerb(userInput)
+			inputType["rawSubjectWord"] = getMainVerbIndex(userInput)
 
+		inputType["objectOfPreposition"] = getObjectOfPreposition(userInput)
 		inputType["grammaticalNumber"] = getGrammaticalNumber(userInput)
+		inputType["totalWords"] = len(listUserInput)
+
+		debug(f"@ getInput(): {inputType["interrogativeWordsCount"]=}")
+		debug(f"@ getInput(): {inputType['isQuestion']=}")
+		debug(f"@ getInput(): {inputType['questionType']=}")
+		debug(f"@ getInput(): {inputType["rawSubjectWord"]=}")
+		debug(f"@ getInput(): {inputType["subjectWord"]=}")
 		debug(f"@ getInput(): {inputType["grammaticalNumber"]=}")
+		debug(f"@ getInput(): {inputType["totalWords"]=}")
+		debug(f"@ getInput(): {inputType["objectOfPreposition"]=}")
 
 		return inputType, listUserInput
 
