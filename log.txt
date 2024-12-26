@@ -1,0 +1,1755 @@
+[91m[DEBUG] [94m[19:26:18] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[19:26:18] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[19:26:19] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[19:26:19] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[19:26:19] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:26:19] [92m@ chatbotSpeak(): toSay='Hello person! Ask me anything about Liceo De Cagayan University!'[0m
+[91m[DEBUG] [94m[19:26:23] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[19:26:23] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:26:45] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[19:26:45] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[19:31:20] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[19:31:20] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[19:31:20] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[19:31:20] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[19:31:20] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:31:20] [92m@ chatbotSpeak(): toSay='Hello person! Ask me anything about Liceo De Cagayan University!'[0m
+[91m[DEBUG] [94m[19:33:46] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[19:33:46] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[19:33:46] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[19:33:46] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[19:33:46] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:33:47] [92m@ chatbotSpeak(): toSay='Hi! I am a chatbot. I can provide informations about Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[19:33:52] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[19:33:52] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:34:00] [92m@ getInput(): userInput='Who is ever?'[0m
+[91m[DEBUG] [94m[19:34:00] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[19:34:00] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[19:34:01] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[19:34:01] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[19:34:01] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[19:34:01] [92m@ getInput(): inputType["subjectWord"]='ever'[0m
+[91m[DEBUG] [94m[19:34:01] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[19:34:01] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[19:34:01] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[19:34:01] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[19:34:01] [92m@ processInput(): response = possibleResponses[who][ever][0m
+[91m[DEBUG] [94m[19:34:01] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[19:34:01] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:34:01] [92m@ chatbotSpeak(): toSay='Ever is just a chill guy.'[0m
+[91m[DEBUG] [94m[19:34:03] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:34:29] [92m@ getInput(): userInput='Who are the owners of liceo?'[0m
+[91m[DEBUG] [94m[19:34:29] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[19:34:29] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[19:34:29] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[19:34:29] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[19:34:29] [92m@ getInput(): inputType["subjectWord"]='owners'[0m
+[91m[DEBUG] [94m[19:34:29] [92m@ getInput(): inputType["grammaticalNumber"]='plural'[0m
+[91m[DEBUG] [94m[19:34:29] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[19:34:30] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[19:34:30] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[19:34:30] [92m@ processInput(): response = possibleResponses[who][owners][0m
+[91m[DEBUG] [94m[19:34:30] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:34:30] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[19:34:33] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:34:37] [92m@ getInput(): userInput='Who are the owner of liceo?'[0m
+[91m[DEBUG] [94m[19:34:37] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[19:34:37] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[19:34:37] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[19:34:37] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[19:34:37] [92m@ getInput(): inputType["subjectWord"]='owner'[0m
+[91m[DEBUG] [94m[19:34:37] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[19:34:37] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[19:34:37] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[19:34:38] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[19:34:38] [92m@ processInput(): response = possibleResponses[who][owner][0m
+[91m[DEBUG] [94m[19:34:38] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[19:34:38] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:34:38] [92m@ chatbotSpeak(): toSay='The owners of Liceo De Cagayan University are Rodolfo Pelaez and his wife Elsa Pelaez.'[0m
+[91m[DEBUG] [94m[19:34:44] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:34:51] [92m@ getInput(): userInput='who is rodolfo?'[0m
+[91m[DEBUG] [94m[19:34:51] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[19:34:52] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[19:34:52] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[19:34:52] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[19:34:52] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[19:34:52] [92m@ getInput(): inputType["subjectWord"]='rodolfo'[0m
+[91m[DEBUG] [94m[19:34:52] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[19:34:52] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[19:34:52] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[19:34:52] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[19:34:52] [92m@ processInput(): response = possibleResponses[who][rodolfo][0m
+[91m[DEBUG] [94m[19:34:52] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:34:52] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[19:34:55] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:39:59] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[19:39:59] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[19:40:01] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[19:40:01] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[19:40:01] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[19:40:01] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[19:40:01] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:40:01] [92m@ chatbotSpeak(): toSay='Oh! Hi there! I am a chatbot made in Liceo De Cagayan University, how can I help you?'[0m
+[91m[DEBUG] [94m[19:40:07] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[19:40:07] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:40:16] [92m@ getInput(): userInput='who is jun?'[0m
+[91m[DEBUG] [94m[19:40:16] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[19:40:16] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[19:40:16] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[19:40:16] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[19:40:16] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[19:40:16] [92m@ getInput(): inputType["subjectWord"]='jun'[0m
+[91m[DEBUG] [94m[19:40:16] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[19:40:16] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[19:40:17] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[19:40:17] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[19:40:17] [92m@ processInput(): response = possibleResponses[who][jun][0m
+[91m[DEBUG] [94m[19:40:17] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:40:17] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[19:40:22] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:40:27] [92m@ getInput(): userInput='Who is Jun?'[0m
+[91m[DEBUG] [94m[19:40:27] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[19:40:27] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[19:40:27] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[19:40:27] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[19:40:27] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[19:40:27] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[19:40:27] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[19:40:27] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[19:40:27] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[19:40:27] [92m@ processInput(): response = possibleResponses[who][][0m
+[91m[DEBUG] [94m[19:40:27] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:40:27] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[19:40:30] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:40:35] [92m@ getInput(): userInput='Who is Jake?'[0m
+[91m[DEBUG] [94m[19:40:35] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[19:40:35] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[19:40:35] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[19:40:35] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[19:40:35] [92m@ getInput(): inputType["subjectWord"]='jake'[0m
+[91m[DEBUG] [94m[19:40:35] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[19:40:35] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[19:40:35] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[19:40:35] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[19:40:35] [92m@ processInput(): response = possibleResponses[who][jake][0m
+[91m[DEBUG] [94m[19:40:35] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:40:35] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[19:40:41] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:40:52] [92m@ getInput(): userInput='Who is Ralph?'[0m
+[91m[DEBUG] [94m[19:40:52] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[19:40:52] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[19:40:52] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[19:40:52] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[19:40:52] [92m@ getInput(): inputType["subjectWord"]='ralph'[0m
+[91m[DEBUG] [94m[19:40:52] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[19:40:52] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[19:40:52] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[19:40:52] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[19:40:52] [92m@ processInput(): response = possibleResponses[who][ralph][0m
+[91m[DEBUG] [94m[19:40:52] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:40:52] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[19:40:58] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:40:59] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[19:40:59] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[19:42:59] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[19:42:59] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[19:42:59] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[19:42:59] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[19:42:59] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:42:59] [92m@ chatbotSpeak(): toSay='Hello person! Ask me anything about Liceo De Cagayan University!'[0m
+[91m[DEBUG] [94m[19:43:04] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[19:43:04] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:43:10] [92m@ getInput(): userInput='who own liceo?'[0m
+[91m[DEBUG] [94m[19:43:10] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[19:43:10] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[19:43:10] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[19:43:10] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[19:43:10] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[19:43:11] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[19:43:11] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[19:43:11] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[19:43:11] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[19:43:11] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[19:43:11] [92m@ processInput(): response = possibleResponses[who][][0m
+[91m[DEBUG] [94m[19:43:11] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:43:11] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[19:43:17] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:53:37] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[19:53:37] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[19:53:39] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[19:53:39] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[19:53:39] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[19:53:39] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[19:53:39] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:53:39] [92m@ chatbotSpeak(): toSay='Oh! Hi there! I am a chatbot made in Liceo De Cagayan University, how can I help you?'[0m
+[91m[DEBUG] [94m[19:53:45] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[19:53:45] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:53:48] [92m@ getInput(): userInput='who own liceo?'[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ processInput(): response = possibleResponses[who][own][0m
+[91m[DEBUG] [94m[19:53:49] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:53:49] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[19:53:52] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[19:54:02] [92m@ getInput(): userInput='who is the owner of liceo?'[0m
+[91m[DEBUG] [94m[19:54:02] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[19:54:02] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[19:54:02] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[19:54:02] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[19:54:02] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[19:54:02] [92m@ getInput(): inputType["subjectWord"]='owner'[0m
+[91m[DEBUG] [94m[19:54:02] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[19:54:02] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[19:54:02] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[19:54:02] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[19:54:03] [92m@ processInput(): response = possibleResponses[who][owner][0m
+[91m[DEBUG] [94m[19:54:03] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[19:54:03] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[19:54:03] [92m@ chatbotSpeak(): toSay='The owners of Liceo De Cagayan University are Rodolfo Pelaez and his wife Elsa Pelaez.'[0m
+[91m[DEBUG] [94m[19:54:09] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:01:49] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:01:49] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:01:50] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:01:50] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:01:51] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:01:51] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:01:51] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:01:51] [92m@ chatbotSpeak(): toSay='Oh! Hi there! I am a chatbot made in Liceo De Cagayan University, how can I help you?'[0m
+[91m[DEBUG] [94m[20:02:06] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:02:06] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:02:06] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:02:07] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:02:07] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:02:07] [92m@ chatbotSpeak(): toSay='Hello person! Ask me anything about Liceo De Cagayan University!'[0m
+[91m[DEBUG] [94m[20:02:07] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:02:07] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:02:29] [92m@ getInput(): userInput='who is the owner of liceo?'[0m
+[91m[DEBUG] [94m[20:02:29] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:02:29] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:02:29] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:02:29] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:02:29] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:02:29] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[20:02:29] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:02:29] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:02:29] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:02:29] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:02:29] [92m@ processInput(): response = possibleResponses[who][own][0m
+[91m[DEBUG] [94m[20:02:29] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:02:30] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[20:02:30] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:02:41] [92m@ getInput(): userInput='who is the killer?'[0m
+[91m[DEBUG] [94m[20:02:41] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:02:41] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:02:41] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:02:41] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:02:42] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:02:42] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[20:02:42] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:02:42] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:02:42] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:02:42] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:02:42] [92m@ processInput(): response = possibleResponses[who][kill][0m
+[91m[DEBUG] [94m[20:02:42] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:02:42] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[20:02:42] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:02:56] [92m@ getInput(): userInput='who killed biden?'[0m
+[91m[DEBUG] [94m[20:02:56] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:02:56] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:02:56] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:02:56] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:02:57] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:02:57] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[20:02:57] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[20:02:57] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:02:57] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:02:57] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:02:57] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:02:57] [92m@ processInput(): response = possibleResponses[who][kill][0m
+[91m[DEBUG] [94m[20:02:57] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:02:57] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[20:02:57] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:04:20] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:04:20] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:04:22] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:04:22] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:04:22] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:04:22] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:04:22] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:04:22] [92m@ chatbotSpeak(): toSay='Hi! I am a chatbot. I can provide informations about Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[20:04:23] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:04:23] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ getInput(): userInput='who killed biden?'[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ processInput(): response = possibleResponses[who][kill][0m
+[91m[DEBUG] [94m[20:04:27] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[20:04:27] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:06:40] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:06:40] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:06:42] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:06:42] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:06:42] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:06:42] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:06:42] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:06:42] [92m@ chatbotSpeak(): toSay='Hello! How can I help you today? I am from Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[20:06:42] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:06:42] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:06:48] [92m@ getInput(): userInput='who killed biden?'[0m
+[91m[DEBUG] [94m[20:06:48] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ processInput(): response = possibleResponses[who][kill][0m
+[91m[DEBUG] [94m[20:06:49] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[20:06:49] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:26:56] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:26:56] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:26:58] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:26:58] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:26:58] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:26:58] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:26:58] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:26:58] [92m@ chatbotSpeak(): toSay='Hello person! Ask me anything about Liceo De Cagayan University!'[0m
+[91m[DEBUG] [94m[20:26:58] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:26:58] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:27:08] [92m@ getInput(): userInput='who killed biden?'[0m
+[91m[DEBUG] [94m[20:27:08] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:27:09] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:27:09] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:27:09] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:27:09] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:27:09] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[20:27:09] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[20:27:21] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:27:21] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:27:21] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:27:21] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:27:21] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:27:22] [92m@ chatbotSpeak(): toSay='Oh! Hi there! I am a chatbot made in Liceo De Cagayan University, how can I help you?'[0m
+[91m[DEBUG] [94m[20:27:22] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:27:22] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:27:24] [92m@ getInput(): userInput='who killed biden?'[0m
+[91m[DEBUG] [94m[20:27:24] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:27:24] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:27:24] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:27:24] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:27:24] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:27:24] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[20:27:24] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[20:27:25] [92m@ getInput(): killed[0m
+[91m[DEBUG] [94m[20:27:25] [92m@ getInput(): inputType["subjectWord"]=('kill', 1)[0m
+[91m[DEBUG] [94m[20:27:25] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:27:25] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:27:25] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:27:25] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:27:25] [92m@ processInput(): response = possibleResponses[who][('kill', 1)][0m
+[91m[DEBUG] [94m[20:27:25] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:27:25] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[20:27:25] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:27:52] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:27:52] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:27:54] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:27:54] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:27:54] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:27:54] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:27:54] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:27:54] [92m@ chatbotSpeak(): toSay='Hello! How can I help you today? I am from Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[20:27:54] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:27:55] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ getInput(): userInput='who are the owners of liceo?'[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ getInput(): [0m
+[91m[DEBUG] [94m[20:28:03] [92m@ getInput(): inputType["subjectWord"]='owners'[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ processInput(): response = possibleResponses[who][owners][0m
+[91m[DEBUG] [94m[20:28:03] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[20:28:03] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ getInput(): userInput='who are you?'[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ getInput(): [0m
+[91m[DEBUG] [94m[20:31:49] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ processInput(): response = possibleResponses[who][you][0m
+[91m[DEBUG] [94m[20:31:49] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ chatbotSpeak(): toSay='I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether its related to academic inquiries, campus information, or any other services we offer. Im here to provide you with accurate and helpful responses, and Im excited to help make your experience smoother and more efficient. Feel free to ask me anything, and Ill do my best to assist you!'[0m
+[91m[DEBUG] [94m[20:31:49] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:34:04] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:34:04] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:34:05] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:34:05] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:34:05] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:34:05] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:34:05] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:34:05] [92m@ chatbotSpeak(): toSay='Hello person! Ask me anything about Liceo De Cagayan University!'[0m
+[91m[DEBUG] [94m[20:34:05] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:34:05] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:34:14] [92m@ getInput(): userInput='who is the owner of liceo?'[0m
+[91m[DEBUG] [94m[20:34:14] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:34:14] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:34:14] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:34:14] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:34:14] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:34:14] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:34:14] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:34:14] [92m@ getInput(): owner[0m
+[91m[DEBUG] [94m[20:34:15] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[20:34:15] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:34:15] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:34:15] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:34:15] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:34:15] [92m@ processInput(): response = possibleResponses[who][own][0m
+[91m[DEBUG] [94m[20:34:15] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:34:15] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[20:34:15] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:34:32] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:34:32] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:34:34] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:34:34] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:34:34] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:34:34] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:34:34] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:34:34] [92m@ chatbotSpeak(): toSay='Hello! How can I help you today? I am from Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[20:34:34] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:34:34] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:34:39] [92m@ getInput(): userInput='who is the owner of liceo'[0m
+[91m[DEBUG] [94m[20:34:39] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:34:39] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:34:39] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:34:39] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:34:39] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:34:39] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:34:39] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:34:40] [92m@ getInput(): inputType["rawSubjectWord"]='owner'[0m
+[91m[DEBUG] [94m[20:34:40] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[20:34:40] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:34:40] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:34:40] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:34:40] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:34:40] [92m@ processInput(): response = possibleResponses[who][own][0m
+[91m[DEBUG] [94m[20:34:40] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:34:40] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[20:34:40] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:35:03] [92m@ getInput(): userInput='who killed biden?'[0m
+[91m[DEBUG] [94m[20:35:03] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:35:03] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:35:03] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:35:03] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:35:03] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:35:03] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:35:03] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:35:03] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[20:35:03] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[20:35:03] [92m@ getInput(): inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[20:35:04] [92m@ getInput(): inputType["subjectWord"]=('kill', 1)[0m
+[91m[DEBUG] [94m[20:35:04] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:35:04] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:35:04] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:35:04] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:35:04] [92m@ processInput(): response = possibleResponses[who][('kill', 1)][0m
+[91m[DEBUG] [94m[20:35:04] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:35:04] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[20:35:04] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:35:53] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:35:53] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:35:55] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:35:55] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:35:55] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:35:55] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:35:55] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:35:55] [92m@ chatbotSpeak(): toSay='Hello! How can I help you today? I am from Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[20:35:55] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:35:55] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:36:00] [92m@ getInput(): userInput='who killed biden?'[0m
+[91m[DEBUG] [94m[20:36:00] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:36:00] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:36:00] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:36:00] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:36:00] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:36:00] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:36:00] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:36:00] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[20:36:00] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[20:36:01] [92m@ getInput(): inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[20:36:01] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[20:36:01] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:36:01] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:36:01] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:36:01] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:36:01] [92m@ processInput(): response = possibleResponses[who][kill][0m
+[91m[DEBUG] [94m[20:36:01] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:36:01] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[20:36:01] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:37:21] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:37:21] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:37:23] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:37:23] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:37:23] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:37:23] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:37:23] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:37:23] [92m@ chatbotSpeak(): toSay='Oh! Hi there! I am a chatbot made in Liceo De Cagayan University, how can I help you?'[0m
+[91m[DEBUG] [94m[20:37:23] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:37:23] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:37:29] [92m@ getInput(): userInput='who killed biden?'[0m
+[91m[DEBUG] [94m[20:37:29] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:37:29] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:37:29] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:37:29] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:37:29] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:37:29] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:37:29] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:37:29] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[20:37:29] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[20:37:29] [92m@ getInput(): inputType["rawSubjectWord"]='killed'[0m
+[91m[DEBUG] [94m[20:37:29] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[20:37:30] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:37:30] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:37:30] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:37:30] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:37:30] [92m@ processInput(): response = possibleResponses[who][kill][0m
+[91m[DEBUG] [94m[20:37:30] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:37:30] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[20:37:30] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:44:54] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:44:54] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:44:56] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:44:56] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:44:56] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:44:56] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:44:56] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:44:56] [92m@ chatbotSpeak(): toSay='Hello! How can I help you today? I am from Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[20:44:56] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:44:56] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:45:01] [92m@ getInput(): userInput='who owned liceo?'[0m
+[91m[DEBUG] [94m[20:45:01] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:45:01] [92m@ getInput(): found 1 interrogative words[0m
+[91m[DEBUG] [94m[20:45:01] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:45:01] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:45:01] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:45:01] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:45:01] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:45:02] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[20:45:02] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[20:45:02] [92m@ getInput(): inputType["rawSubjectWord"]='owned'[0m
+[91m[DEBUG] [94m[20:45:02] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[20:45:02] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[20:45:02] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:45:02] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:45:02] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:45:02] [92m@ processInput(): response = possibleResponses[who][own][0m
+[91m[DEBUG] [94m[20:45:02] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:45:02] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[20:45:02] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:45:13] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:45:13] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:46:13] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:46:13] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:46:13] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:46:13] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:46:13] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:46:13] [92m@ chatbotSpeak(): toSay='Hi! I am a chatbot. I can provide informations about Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[20:46:13] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:46:13] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ getInput(): userInput='who is the owner of liceo?'[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ getInput(): inputType["rawSubjectWord"]='owner'[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:46:20] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:46:21] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:46:21] [92m@ processInput(): response = possibleResponses[who][own][0m
+[91m[DEBUG] [94m[20:46:21] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:46:21] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[20:46:21] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:48:47] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:48:47] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:48:48] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:48:48] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:48:48] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:48:48] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:48:48] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:48:49] [92m@ chatbotSpeak(): toSay='Hello person! Ask me anything about Liceo De Cagayan University!'[0m
+[91m[DEBUG] [94m[20:48:49] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:48:49] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:48:56] [92m@ getInput(): userInput='who is the owner of liceo?'[0m
+[91m[DEBUG] [94m[20:48:56] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:48:56] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[20:48:56] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ getInput(): inputType["rawSubjectWord"]='owner'[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ getInput(): inputType["totalWords"]=6[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ processInput(): response = possibleResponses[who][own][0m
+[91m[DEBUG] [94m[20:48:57] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[20:48:57] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:55:10] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[20:55:10] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[20:55:11] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[20:55:11] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[20:55:11] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[20:55:11] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[20:55:11] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:55:11] [92m@ chatbotSpeak(): toSay='Oh! Hi there! I am a chatbot made in Liceo De Cagayan University, how can I help you?'[0m
+[91m[DEBUG] [94m[20:55:11] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[20:55:11] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:55:24] [92m@ getInput(): userInput='who is the killer of kenedy?'[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ getInput(): inputType["rawSubjectWord"]='killer'[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ getInput(): inputType["totalWords"]=6[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ getInput(): inputType["objectOfPreposition"]='kenedy'[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ processInput(): response = possibleResponses[who][kill][0m
+[91m[DEBUG] [94m[20:55:25] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[20:55:25] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): userInput='what candy is chocolate?'[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): inputType['questionType']='what'[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[20:55:54] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[20:55:55] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:55:55] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:55:55] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:55:55] [92m@ processInput(): response = possibleResponses[what][][0m
+[91m[DEBUG] [94m[20:55:55] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:55:55] [92m@ chatbotSpeak(): toSay='Im sorry, I dont know what you meant.'[0m
+[91m[DEBUG] [94m[20:55:55] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): userInput='what type of game is Sudoku?'[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): inputType['questionType']='what'[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): inputType["totalWords"]=6[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ getInput(): inputType["objectOfPreposition"]='game'[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:56:49] [92m@ processInput(): response = possibleResponses[what][][0m
+[91m[DEBUG] [94m[20:56:50] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:56:50] [92m@ chatbotSpeak(): toSay='Im sorry, I didnt understand what you said.'[0m
+[91m[DEBUG] [94m[20:56:50] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ getInput(): userInput='what is your name?'[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ getInput(): inputType['questionType']='what'[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ getInput(): inputType["rawSubjectWord"]='name'[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ getInput(): inputType["subjectWord"]='name'[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:57:32] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:57:33] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:57:33] [92m@ processInput(): response = possibleResponses[what][name][0m
+[91m[DEBUG] [94m[20:57:33] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:57:33] [92m@ chatbotSpeak(): toSay='Im sorry, I didnt understand what you said.'[0m
+[91m[DEBUG] [94m[20:57:33] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[20:57:57] [92m@ getInput(): userInput='what is the name of your friend?'[0m
+[91m[DEBUG] [94m[20:57:57] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[20:57:57] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[20:57:57] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[20:57:57] [92m@ getInput(): inputType['questionType']='what'[0m
+[91m[DEBUG] [94m[20:57:57] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[20:57:57] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[20:57:57] [92m@ getInput(): inputType["rawSubjectWord"]='name'[0m
+[91m[DEBUG] [94m[20:57:57] [92m@ getInput(): inputType["subjectWord"]='name'[0m
+[91m[DEBUG] [94m[20:57:58] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[20:57:58] [92m@ getInput(): inputType["totalWords"]=7[0m
+[91m[DEBUG] [94m[20:57:58] [92m@ getInput(): inputType["objectOfPreposition"]='friend'[0m
+[91m[DEBUG] [94m[20:57:58] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[20:57:58] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[20:57:58] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[20:57:58] [92m@ processInput(): response = possibleResponses[what][name][0m
+[91m[DEBUG] [94m[20:57:58] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[20:57:58] [92m@ chatbotSpeak(): toSay='Im sorry, I dont know what you meant.'[0m
+[91m[DEBUG] [94m[20:57:58] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:00:01] [92m@ getInput(): userInput='who are you?'[0m
+[91m[DEBUG] [94m[21:00:01] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:00:01] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:00:01] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:00:01] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:00:01] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:00:01] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:00:02] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[21:00:02] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[21:00:02] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:00:02] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[21:00:02] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:00:02] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:00:02] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:00:02] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:00:02] [92m@ processInput(): response = possibleResponses[who][you][0m
+[91m[DEBUG] [94m[21:00:02] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[21:00:02] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:00:02] [92m@ chatbotSpeak(): toSay='I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether its related to academic inquiries, campus information, or any other services we offer. Im here to provide you with accurate and helpful responses, and Im excited to help make your experience smoother and more efficient. Feel free to ask me anything, and Ill do my best to assist you!'[0m
+[91m[DEBUG] [94m[21:00:02] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:00:23] [92m@ getInput(): userInput='who are your friend?'[0m
+[91m[DEBUG] [94m[21:00:23] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:00:23] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:00:23] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:00:23] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:00:23] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:00:23] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:00:24] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:00:24] [92m@ getInput(): inputType["rawSubjectWord"]='friend'[0m
+[91m[DEBUG] [94m[21:00:24] [92m@ getInput(): inputType["subjectWord"]='friend'[0m
+[91m[DEBUG] [94m[21:00:24] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:00:24] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[21:00:24] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:00:24] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:00:24] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:00:24] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:00:24] [92m@ processInput(): response = possibleResponses[who][friend][0m
+[91m[DEBUG] [94m[21:00:24] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:00:24] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[21:00:24] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:00:48] [92m@ getInput(): userInput="who are Jake's friend?"[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ getInput(): inputType["rawSubjectWord"]='friend'[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ getInput(): inputType["subjectWord"]='friend'[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ processInput(): response = possibleResponses[who][friend][0m
+[91m[DEBUG] [94m[21:00:49] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[21:00:49] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ getInput(): userInput='who are you?'[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:05:24] [92m@ processInput(): response = possibleResponses[who][you][0m
+[91m[DEBUG] [94m[21:05:25] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[21:05:25] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:05:25] [92m@ chatbotSpeak(): toSay='I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether its related to academic inquiries, campus information, or any other services we offer. Im here to provide you with accurate and helpful responses, and Im excited to help make your experience smoother and more efficient. Feel free to ask me anything, and Ill do my best to assist you!'[0m
+[91m[DEBUG] [94m[21:05:25] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ getInput(): userInput='do you have any friends?'[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ getInput(): inputType["totalWords"]=5[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:06:01] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:06:02] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:06:02] [92m@ chatbotSpeak(): toSay='Apologies, I didnt follow that. Could you say it one more time?'[0m
+[91m[DEBUG] [94m[21:06:02] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:08:06] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[21:08:06] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[21:08:08] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[21:08:08] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[21:08:08] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[21:08:08] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[21:08:08] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:08:08] [92m@ chatbotSpeak(): toSay='Oh! Hi there! I am a chatbot made in Liceo De Cagayan University, how can I help you?'[0m
+[91m[DEBUG] [94m[21:08:08] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[21:08:08] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:08:20] [92m@ getInput(): userInput='HI! who is ever?'[0m
+[91m[DEBUG] [94m[21:08:20] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:08:20] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:08:20] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:08:20] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ getInput(): inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ processInput(): response = possibleResponses[who][][0m
+[91m[DEBUG] [94m[21:08:21] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[21:08:21] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:08:32] [92m@ getInput(): userInput='HI! who is john?'[0m
+[91m[DEBUG] [94m[21:08:32] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:08:32] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:08:32] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:08:32] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:08:32] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[21:08:32] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[21:08:32] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:08:32] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:08:32] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:08:33] [92m@ getInput(): inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[21:08:33] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[21:08:33] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:08:33] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[21:08:33] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:08:33] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:08:33] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:08:33] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:08:33] [92m@ processInput(): response = possibleResponses[who][][0m
+[91m[DEBUG] [94m[21:08:33] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:08:33] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[21:08:33] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): userInput='who is john?'[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): inputType["rawSubjectWord"]='john'[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): inputType["subjectWord"]='john'[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ processInput(): response = possibleResponses[who][john][0m
+[91m[DEBUG] [94m[21:08:38] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:08:38] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[21:08:39] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:08:43] [92m@ getInput(): userInput='who is ever?'[0m
+[91m[DEBUG] [94m[21:08:43] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:08:43] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:08:43] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:08:43] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:08:43] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:08:43] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:08:43] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:08:43] [92m@ getInput(): inputType["rawSubjectWord"]='ever'[0m
+[91m[DEBUG] [94m[21:08:43] [92m@ getInput(): inputType["subjectWord"]='ev'[0m
+[91m[DEBUG] [94m[21:08:43] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:08:44] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[21:08:44] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:08:44] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:08:44] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:08:44] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:08:44] [92m@ processInput(): response = possibleResponses[who][ev][0m
+[91m[DEBUG] [94m[21:08:44] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:08:44] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[21:08:44] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:09:56] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[21:09:56] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[21:09:57] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[21:09:57] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[21:09:57] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[21:09:58] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[21:09:58] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:09:58] [92m@ chatbotSpeak(): toSay='Hi! I am a chatbot. I can provide informations about Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[21:09:58] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[21:09:58] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:10:02] [92m@ getInput(): userInput='who is ever?'[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ getInput(): inputType["rawSubjectWord"]='ever'[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ getInput(): inputType["subjectWord"]='ever'[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ processInput(): response = possibleResponses[who][ever][0m
+[91m[DEBUG] [94m[21:10:03] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ chatbotSpeak(): toSay='Ever is just a chill guy.'[0m
+[91m[DEBUG] [94m[21:10:03] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:29:26] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[21:29:26] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[21:29:26] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[21:29:27] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[21:29:27] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:29:27] [92m@ chatbotSpeak(): toSay='Oh! Hi there! I am a chatbot made in Liceo De Cagayan University, how can I help you?'[0m
+[91m[DEBUG] [94m[21:29:27] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[21:29:27] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:29:34] [92m@ getInput(): userInput='who is john?'[0m
+[91m[DEBUG] [94m[21:29:34] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:29:34] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:29:34] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:29:34] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ getInput(): inputType["rawSubjectWord"]='john'[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ getInput(): inputType["subjectWord"]='john'[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ processInput(): response = possibleResponses[who][john][0m
+[91m[DEBUG] [94m[21:29:35] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[21:29:35] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:29:45] [92m@ getInput(): userInput='who own liceo?'[0m
+[91m[DEBUG] [94m[21:29:45] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:29:45] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:29:45] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:29:45] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:29:45] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[21:29:45] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[21:29:45] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:29:45] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:29:45] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:29:45] [92m@ getInput(): inputType["rawSubjectWord"]='own'[0m
+[91m[DEBUG] [94m[21:29:45] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[21:29:46] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:29:46] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[21:29:46] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:29:46] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:29:46] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:29:46] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:29:46] [92m@ processInput(): response = possibleResponses[who][own][0m
+[91m[DEBUG] [94m[21:29:46] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:29:46] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[21:29:46] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): userInput='who owns liceo?'[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): inputType["rawSubjectWord"]='owns'[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[21:30:17] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:30:18] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:30:18] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:30:18] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:30:18] [92m@ processInput(): response = possibleResponses[who][own][0m
+[91m[DEBUG] [94m[21:30:18] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:30:18] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[21:30:18] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:31:14] [92m@ getInput(): userInput='who is the owner of liceo?'[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ getInput(): inputType["rawSubjectWord"]='owner'[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ getInput(): inputType["totalWords"]=6[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ getInput(): inputType["objectOfPreposition"]='liceo'[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ processInput(): response = possibleResponses[who][own][0m
+[91m[DEBUG] [94m[21:31:15] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[21:31:15] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:34:05] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[21:34:05] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[21:34:07] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[21:34:07] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[21:34:07] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[21:34:07] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[21:34:07] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:34:07] [92m@ chatbotSpeak(): toSay='Hi! I am a chatbot. I can provide informations about Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[21:34:07] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[21:34:07] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:34:11] [92m@ getInput(): userInput='who owns liceo?'[0m
+[91m[DEBUG] [94m[21:34:11] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:34:11] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:34:11] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:34:11] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ getInput(): inputType["rawSubjectWord"]='owns'[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ getInput(): inputType["objectOfPreposition"]='liceo'[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ processInput(): response = possibleResponses[who][own][0m
+[91m[DEBUG] [94m[21:34:12] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[21:34:12] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:34:26] [92m@ getInput(): userInput='who killed biden?'[0m
+[91m[DEBUG] [94m[21:34:26] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): inputType["rawSubjectWord"]='killed'[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ getInput(): inputType["objectOfPreposition"]='biden'[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ processInput(): response = possibleResponses[who][kill][0m
+[91m[DEBUG] [94m[21:34:27] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:34:27] [92m@ chatbotSpeak(): toSay='I apologize, It seems that I dont have any information connected to that person.'[0m
+[91m[DEBUG] [94m[21:34:28] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:34:35] [92m@ getInput(): userInput='who are you?'[0m
+[91m[DEBUG] [94m[21:34:35] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:34:35] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:34:35] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:34:35] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:34:35] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:34:35] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:34:36] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[21:34:36] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[21:34:36] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:34:36] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[21:34:36] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[21:34:36] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:34:36] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:34:36] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:34:36] [92m@ processInput(): response = possibleResponses[who][you][0m
+[91m[DEBUG] [94m[21:34:36] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[21:34:36] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:34:36] [92m@ chatbotSpeak(): toSay='I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether its related to academic inquiries, campus information, or any other services we offer. Im here to provide you with accurate and helpful responses, and Im excited to help make your experience smoother and more efficient. Feel free to ask me anything, and Ill do my best to assist you!'[0m
+[91m[DEBUG] [94m[21:34:36] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:35:34] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[21:35:34] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[21:39:43] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[21:39:43] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[21:39:43] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[21:39:43] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[21:39:43] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:39:43] [92m@ chatbotSpeak(): toSay='Oh! Hi there! I am a chatbot made in Liceo De Cagayan University, how can I help you?'[0m
+[91m[DEBUG] [94m[21:39:43] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[21:39:43] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[21:39:46] [92m@ getInput(): userInput='who own liceo?'[0m
+[91m[DEBUG] [94m[21:39:46] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[21:39:46] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[21:39:46] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[21:39:46] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[21:39:46] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[21:39:46] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ getInput(): inputType["rawSubjectWord"]='own'[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ getInput(): inputType["objectOfPreposition"]='liceo'[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ processInput(): response = possibleResponses[who][own][0m
+[91m[DEBUG] [94m[21:39:47] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[21:39:47] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[22:15:55] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[22:15:55] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[17:34:59] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[17:34:59] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[17:34:59] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[17:34:59] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[17:34:59] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[17:34:59] [92m@ chatbotSpeak(): toSay='Oh! Hi there! I am a chatbot made in Liceo De Cagayan University, how can I help you?'[0m
+[91m[DEBUG] [94m[17:34:59] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[17:34:59] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[17:35:35] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[17:35:35] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[17:44:53] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[17:44:53] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[17:44:53] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[17:44:53] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[17:44:53] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[17:44:53] [92m@ chatbotSpeak(): toSay='Hello! How can I help you today? I am from Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[17:44:53] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[17:44:53] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[17:45:05] [92m@ getInput(): userInput='Who are the owners of liceo?'[0m
+[91m[DEBUG] [94m[17:45:05] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[17:45:05] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[17:45:05] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[17:45:05] [92m@ getInput(): inputType["subjectWord"]='owners'[0m
+[91m[DEBUG] [94m[17:45:05] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[17:45:05] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[17:45:05] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[17:45:05] [92m@ getInput(): inputType["rawSubjectWord"]='owners'[0m
+[91m[DEBUG] [94m[17:45:05] [92m@ getInput(): inputType["grammaticalNumber"]='plural'[0m
+[91m[DEBUG] [94m[17:45:06] [92m@ getInput(): inputType["totalWords"]=6[0m
+[91m[DEBUG] [94m[17:45:06] [92m@ getInput(): inputType["objectOfPreposition"]='liceo'[0m
+[91m[DEBUG] [94m[17:45:06] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[17:45:06] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[17:45:06] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[17:45:06] [92m@ processInput(): response = possibleResponses[who][owners][liceo][0m
+[91m[DEBUG] [94m[17:45:06] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[17:45:06] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[17:45:06] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[17:46:48] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[17:46:49] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[17:46:52] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[17:46:52] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[17:46:52] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[17:46:52] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[17:46:52] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[17:46:52] [92m@ chatbotSpeak(): toSay='Hello! How can I help you today? I am from Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[17:46:52] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[17:46:52] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[17:46:59] [92m@ getInput(): userInput='Who are the owners of liceo?'[0m
+[91m[DEBUG] [94m[17:46:59] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[17:46:59] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ getInput(): inputType["rawSubjectWord"]='owners'[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ getInput(): inputType["grammaticalNumber"]='plural'[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ getInput(): inputType["totalWords"]=6[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ getInput(): inputType["objectOfPreposition"]='liceo'[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ processInput(): response = possibleResponses[who][own][liceo][0m
+[91m[DEBUG] [94m[17:47:00] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ chatbotSpeak(): toSay='The owners of Liceo De Cagayan University are Rodolfo Pelaez and his wife Elsa Pelaez.'[0m
+[91m[DEBUG] [94m[17:47:00] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ getInput(): userInput='Who are the killers of the family jaeger'[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ getInput(): inputType["rawSubjectWord"]='killers'[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ getInput(): inputType["grammaticalNumber"]='plural'[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ getInput(): inputType["totalWords"]=8[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ getInput(): inputType["objectOfPreposition"]='jaeger'[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ processInput(): response = possibleResponses[who][kill][jaeger][0m
+[91m[DEBUG] [94m[17:47:25] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[17:47:25] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[18:04:49] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[18:04:49] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[01:06:28] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[01:06:29] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[01:06:29] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[01:06:29] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[01:06:29] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:06:29] [92m@ chatbotSpeak(): toSay='Hello person! Ask me anything about Liceo De Cagayan University!'[0m
+[91m[DEBUG] [94m[01:06:29] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[01:06:29] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:06:33] [92m@ getInput(): userInput='Why are you here?'[0m
+[91m[DEBUG] [94m[01:06:33] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:06:33] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:06:33] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:06:33] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:06:33] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:06:33] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:06:33] [92m@ getInput(): inputType['questionType']='why'[0m
+[91m[DEBUG] [94m[01:06:33] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:06:34] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[01:06:34] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[01:06:34] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[01:06:34] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:06:34] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:06:34] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:06:34] [92m@ processInput(): response = possibleResponses[why][you][0m
+[91m[DEBUG] [94m[01:06:34] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:06:34] [92m@ chatbotSpeak(): toSay='I honestly dont know why.'[0m
+[91m[DEBUG] [94m[01:06:34] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:06:47] [92m@ getInput(): userInput='Who owns liceo?'[0m
+[91m[DEBUG] [94m[01:06:47] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:06:47] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:06:47] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:06:47] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[01:06:47] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[01:06:47] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ getInput(): inputType["rawSubjectWord"]='owns'[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ getInput(): inputType["objectOfPreposition"]='liceo'[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ processInput(): response = possibleResponses[who][own][liceo][0m
+[91m[DEBUG] [94m[01:06:48] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ chatbotSpeak(): toSay='The owners of Liceo De Cagayan University are Rodolfo Pelaez and his wife Elsa Pelaez.'[0m
+[91m[DEBUG] [94m[01:06:48] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): userInput='Who created liceo?'[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): inputType["subjectWord"]='create'[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): inputType["rawSubjectWord"]='created'[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ getInput(): inputType["objectOfPreposition"]='liceo'[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:07:00] [92m@ processInput(): response = possibleResponses[who][create][liceo][0m
+[91m[DEBUG] [94m[01:07:01] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:07:01] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[01:07:01] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:14:37] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[01:14:37] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[01:16:23] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[01:16:23] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[01:16:23] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[01:16:23] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[01:16:23] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:16:23] [92m@ chatbotSpeak(): toSay='Hello! How can I help you today? I am from Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[01:16:23] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[01:16:23] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): userInput='Who are you?'[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): 0[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ processInput(): response = possibleResponses[who][you][0m
+[91m[DEBUG] [94m[01:16:32] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:16:32] [92m@ chatbotSpeak(): toSay='I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether its related to academic inquiries, campus information, or any other services we offer. Im here to provide you with accurate and helpful responses, and Im excited to help make your experience smoother and more efficient. Feel free to ask me anything, and Ill do my best to assist you!'[0m
+[91m[DEBUG] [94m[01:16:33] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:16:52] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[01:16:52] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[01:16:55] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[01:16:55] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[01:16:55] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[01:16:55] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[01:16:55] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:16:55] [92m@ chatbotSpeak(): toSay='Hello! How can I help you today? I am from Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[01:16:55] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[01:16:55] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:16:58] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[01:16:58] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[01:18:01] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[01:18:01] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[01:18:02] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[01:18:02] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[01:18:02] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:18:02] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[01:18:02] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:18:05] [92m@ getInput(): userInput='Who are you?'[0m
+[91m[DEBUG] [94m[01:18:05] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:18:05] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:18:05] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ processInput(): response = possibleResponses[who][you][0m
+[91m[DEBUG] [94m[01:18:06] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:18:06] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:19:47] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[01:19:47] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[01:19:49] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[01:19:49] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[01:19:49] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[01:19:49] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[01:19:49] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:19:49] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[01:19:49] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): userInput='Who are you?'[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): listUserInput[iteration]='Who'[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): listUserInput[iteration]='are'[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): listUserInput[iteration]='you?'[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:19:52] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[01:19:53] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[01:19:53] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:19:53] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[01:19:53] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[01:19:53] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:19:53] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:19:53] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:19:53] [92m@ processInput(): response = possibleResponses[who][you][0m
+[91m[DEBUG] [94m[01:19:53] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[01:19:53] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:19:53] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:20:03] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[01:20:03] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[01:20:05] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[01:20:05] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[01:20:05] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[01:20:05] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[01:20:05] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:20:05] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[01:20:05] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:20:08] [92m@ getInput(): userInput='Who are you'[0m
+[91m[DEBUG] [94m[01:20:08] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): listUserInput[iteration]='Who'[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): listUserInput[iteration]='are'[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): listUserInput[iteration]='you'[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): inputType["subjectWordIndex"]=2[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:20:09] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:20:10] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:20:10] [92m@ processInput(): response = possibleResponses[who][you][0m
+[91m[DEBUG] [94m[01:20:10] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[01:20:10] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:20:10] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:20:57] [92m@ getInput(): userInput='Who is the world chess champion'[0m
+[91m[DEBUG] [94m[01:20:57] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:20:57] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:20:57] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:20:57] [92m@ getInput(): listUserInput[iteration]='Who'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["rawSubjectWord"]='champion'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): listUserInput[iteration]='is'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["rawSubjectWord"]='champion'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): listUserInput[iteration]='the'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["rawSubjectWord"]='champion'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): listUserInput[iteration]='world'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["rawSubjectWord"]='champion'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): listUserInput[iteration]='chess'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["rawSubjectWord"]='champion'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): listUserInput[iteration]='champion'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["rawSubjectWord"]='champion'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["subjectWord"]='champion'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["subjectWordIndex"]=5[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["rawSubjectWord"]='champion'[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[01:20:58] [92m@ getInput(): inputType["totalWords"]=6[0m
+[91m[DEBUG] [94m[01:20:59] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:20:59] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:20:59] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:20:59] [92m@ processInput(): response = possibleResponses[who][champion][0m
+[91m[DEBUG] [94m[01:20:59] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:20:59] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:23:17] [92m@ getInput(): userInput='Who is the worlds smartest man?'[0m
+[91m[DEBUG] [94m[01:23:17] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:23:17] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:23:17] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:23:17] [92m@ getInput(): listUserInput[iteration]='Who'[0m
+[91m[DEBUG] [94m[01:23:17] [92m@ getInput(): inputType["rawSubjectWord"]='worlds'[0m
+[91m[DEBUG] [94m[01:23:17] [92m@ getInput(): listUserInput[iteration]='is'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType["rawSubjectWord"]='worlds'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): listUserInput[iteration]='the'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType["rawSubjectWord"]='worlds'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): listUserInput[iteration]='worlds'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType["rawSubjectWord"]='worlds'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): listUserInput[iteration]='smartest'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType["rawSubjectWord"]='worlds'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): listUserInput[iteration]='man?'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType["rawSubjectWord"]='worlds'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType["subjectWord"]='worlds'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType["subjectWordIndex"]=3[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType["grammaticalNumber"]='plural'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType["rawSubjectWord"]='worlds'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType["objectOfPreposition"]='man'[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ getInput(): inputType["totalWords"]=6[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:23:18] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:23:19] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:23:19] [92m@ processInput(): response = possibleResponses[who][worlds][man][0m
+[91m[DEBUG] [94m[01:23:19] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:23:19] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:38:43] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[01:38:43] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[01:39:05] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[01:39:05] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[01:39:05] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[01:39:05] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[01:39:05] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:39:05] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[01:39:05] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:39:14] [92m@ getInput(): userInput='Who is the killer of jake?'[0m
+[91m[DEBUG] [94m[01:39:14] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:39:14] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:39:14] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:39:14] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:39:14] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[01:39:14] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:39:14] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[01:39:14] [92m@ getInput(): inputType["subjectWordIndex"]=3[0m
+[91m[DEBUG] [94m[01:39:14] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[01:39:14] [92m@ getInput(): inputType["rawSubjectWord"]='killer'[0m
+[91m[DEBUG] [94m[01:39:15] [92m@ getInput(): inputType["objectOfPreposition"]='jake'[0m
+[91m[DEBUG] [94m[01:39:15] [92m@ getInput(): inputType["totalWords"]=6[0m
+[91m[DEBUG] [94m[01:39:15] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:39:15] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:39:15] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:39:15] [92m@ processInput(): response = possibleResponses[who][kill][jake][0m
+[91m[DEBUG] [94m[01:39:15] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:39:15] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:57:34] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[01:57:34] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[01:57:35] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[01:57:35] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[01:57:35] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[01:57:35] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[01:57:35] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:57:36] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[01:57:36] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): userInput='Who is the owner of liceo?'[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): inputType["subjectWord"]='own'[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): inputType["subjectWordIndex"]=3[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): inputType["rawSubjectWord"]='owner'[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): inputType["objectOfPreposition"]='liceo'[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ getInput(): inputType["totalWords"]=6[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ processInput(): response = possibleResponses[who][own][liceo][0m
+[91m[DEBUG] [94m[01:57:40] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:57:40] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): userInput='Who is ever?'[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): inputType["subjectWord"]='ever'[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): inputType["rawSubjectWord"]='ever'[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ processInput(): response = possibleResponses[who][ever][0m
+[91m[DEBUG] [94m[01:57:53] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:57:53] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): userInput='Who is jake?'[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): inputType["subjectWord"]='jake'[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): inputType["rawSubjectWord"]='jake'[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): inputType["objectOfPreposition"]=''[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[01:59:19] [92m@ processInput(): response = possibleResponses[who][jake][0m
+[91m[DEBUG] [94m[01:59:19] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[01:59:20] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): userInput='Who killed jake?'[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): inputType["subjectWordIndex"]=1[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): inputType["rawSubjectWord"]='killed'[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): inputType["objectOfPreposition"]='jake'[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ processInput(): response = possibleResponses[who][kill][jake][0m
+[91m[DEBUG] [94m[02:27:49] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[02:27:49] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[02:32:17] [92m@ getInput(): userInput='Who killed jake?'[0m
+[91m[DEBUG] [94m[02:32:17] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[02:32:17] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[02:32:17] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[02:32:17] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[02:32:17] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[02:32:17] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ getInput(): inputType["subjectWordIndex"]=1[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ getInput(): inputType["rawSubjectWord"]='killed'[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ getInput(): inputType["objectOfPreposition"]='jake'[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ processInput(): response = possibleResponses[who][kill][jake][0m
+[91m[DEBUG] [94m[02:32:18] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[02:32:18] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[02:32:21] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[02:32:21] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[02:32:46] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[02:32:46] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[02:32:46] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[02:32:46] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[02:32:46] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[02:32:46] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[02:32:46] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[02:32:50] [92m@ getInput(): userInput='Who killed jake?'[0m
+[91m[DEBUG] [94m[02:32:50] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[02:32:50] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[02:32:50] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[02:32:50] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[02:32:50] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[02:32:50] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[02:32:50] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[02:32:50] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[02:32:50] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[02:32:50] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[02:32:50] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[02:32:51] [92m@ getInput(): inputType["subjectWordIndex"]=1[0m
+[91m[DEBUG] [94m[02:32:51] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[02:32:51] [92m@ getInput(): inputType["rawSubjectWord"]='killed'[0m
+[91m[DEBUG] [94m[02:32:51] [92m@ getInput(): inputType["objectOfPreposition"]='jake'[0m
+[91m[DEBUG] [94m[02:32:51] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[02:32:51] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[02:32:51] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[02:32:51] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[02:32:51] [92m@ processInput(): response = possibleResponses[who][kill][jake][0m
+[91m[DEBUG] [94m[02:32:51] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[02:32:51] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): userInput='Who killed jake'[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): inputType["subjectWordIndex"]=1[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): inputType["rawSubjectWord"]='killed'[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): inputType["objectOfPreposition"]='jake'[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[02:33:34] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[02:33:35] [92m@ processInput(): response = possibleResponses[who][kill][jake][0m
+[91m[DEBUG] [94m[02:33:35] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[02:33:35] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[02:33:41] [92m@ getInput(): userInput='Who killed jake?'[0m
+[91m[DEBUG] [94m[02:33:41] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[02:33:41] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[02:33:41] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): getting predicate nominative[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): inputType["subjectWord"]='kill'[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): inputType["subjectWordIndex"]=1[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): inputType["rawSubjectWord"]='killed'[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): inputType["objectOfPreposition"]='jake'[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ processInput(): response = possibleResponses[who][kill][jake][0m
+[91m[DEBUG] [94m[02:33:42] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[02:33:42] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[03:10:24] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[03:10:24] [92m@ getInput(): exiting program[0m
