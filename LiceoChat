@@ -7,9 +7,9 @@
 
 Interogative:
 	who:		[#########-] 90%
-	what:		[###-------] 30%
-	where:		[###-------] 30%
-	when:		[###-------] 30%
+	what:		[########--] 80%
+	where:		[########--] 80%
+	when:		[########--] 80%
 
 Non-Intergative:
 	overall: 	[##--------] 20%
@@ -46,9 +46,9 @@ class Colors:
 """ START: GLOBAL VARIABLES """
 
 c = Colors()
-chatbotSpeakFlag = False
+chatbotSpeakFlag = True
 debugging = False
-chatbotReplyDelay = False
+chatbotReplyDelay = True
 naturalLanguageProcessing = spacy.load("en_core_web_sm")
 
 possibleResponses = {
@@ -56,10 +56,28 @@ possibleResponses = {
 		"own": { 
 			"liceo": "The owners of Liceo De Cagayan University are Rodolfo Pelaez and his wife Elsa Pelaez.",
 			},
-		"you": "I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether it's related to academic inquiries, campus information, or any other services we offer. I'm here to provide you with accurate and helpful responses, and I'm excited to help make your experience smoother and more efficient. Feel free to ask me anything, and I'll do my best to assist you!"
+		"you": "I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether it's related to academic inquiries, campus information, or any other services we offer. I'm here to provide you with accurate and helpful responses, and I'm excited to help make your experience smoother and more efficient. Feel free to ask me anything, and I'll do my best to assist you!",
+		"gabriele": {
+			"sanaga": "Gabriele Sanaga is the most paloy person in the world",
+			"oporto": "Gabriele Oporto was Ever Sanaga's classmate."
+		},
+		"chairperson": {
+			"tvl": {
+				"tvl": "The chairperson in TVL 1 is Miss Wynne Lim and the chairperson in TVL 2 is Mister Charlie Yabes.",
+				"liceo": "The chairperson in TVL 1 is Miss Wynne Lim and the chairperson in TVL 2 is Mister Charlie Yabes."
+			}
+		},
+		"create": {
+			"you": "I am created by Ever Sanaga. A legendary programmer known for his mastery in Python."
+		}
 	},
 	"what": {
-		"test":"test"
+		"can": {
+			"you": {
+				"do": "I can answer questions and have a chat with you. Just ask!"
+			}
+		},
+		"name":"I am LiceoChat, I'm happy to answer any questions related to Liceo De Cagayan University."
 	},
 	"where": {
 		"liceo": "Oh! I know where you can find Liceo De Cagayan University. It is located at Kauswagan, Rodolfo N. Pelaez Boulevard, Cagayan De Oro City"
@@ -138,7 +156,7 @@ def chatbotSpeak(text: str) -> None:
 		return
 	return
 
-def getObjectOfPreposition(text: str) -> str:
+def getglobalObject(text: str) -> str:
 	doc = naturalLanguageProcessing(text)
 	for token in doc:
 		if token.dep_ == "prep":
@@ -146,7 +164,7 @@ def getObjectOfPreposition(text: str) -> str:
 				if child.dep_ == "pobj" and child.pos_ in ["NOUN", "PROPN"]:
 					return child.text
 		if token.dep_ in ["dobj", "attr"] and token.pos_ in ["NOUN", "PROPN"]:
-			return token.text
+			return token.text.lower()
 	return ""
 
 def getDirectObject(text: str) -> str:
@@ -155,9 +173,16 @@ def getDirectObject(text: str) -> str:
 		if token.dep_ == "ROOT" or token.dep_ == "aux":
 			for child in token.subtree:
 				if child.dep_ == "dobj":
-					return child.text
+					return child.text.lower()
 	return ""
 	
+def getDirectObjectEx(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	for token in doc:
+		if token.dep_ == "dobj":
+			return token.text.lower()
+	return ""
+
 def getSubject(text: str) -> str:
 	doc = naturalLanguageProcessing(text)
 	for token in doc:
@@ -170,21 +195,43 @@ def getPredicateNominative(text: str) -> list:
 	for token in doc:
 		if token.dep_ == "ROOT" and token.lemma_ == "be":
 			for child in token.children:
+				debug(f"@ getPredicateNominative(): {child.text.lower()=}")
 				if child.text.lower() == "ever" and child.pos_ == "ADV":
 					return ["ever", "sanaga"][::-1]
+				elif child.text.lower() == "ryan" and child.pos_ == "ADV":
+					return ["ryan", "gaas"][::-1]
 				if child.dep_ == "attr" or child.dep_ == "nsubj":
 					if child.text.lower() not in ["who", "what"]:
-						predicate_tokens = [child.text]
+						predicate_tokens = [child.text.lower()]
 						for subchild in child.children:
 							if subchild.dep_ == "compound":
-								predicate_tokens.append(subchild.text)
+								predicate_tokens.append(subchild.text.lower())
 						return predicate_tokens
 			for child in token.subtree:
 				if child.dep_ == "nsubj" and child.text.lower() in ["who", "what"]:
 					continue
 				elif child.pos_ in ["NOUN", "PROPN"]:
-					return [child.text]
+					return [child.text.lower()]
 	return ""
+
+def getFirstPrepositionalObject(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	for token in doc:
+		if token.dep_ == "prep":
+			for child in token.children:
+				if child.dep_ == "pobj" and child.pos_ in ["NOUN", "PROPN"]:
+					return child.text.lower()
+	return ""
+
+def getNestedPrepositionalObject(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	prepositional_objects = []
+	for token in doc:
+		if token.dep_ == "prep":
+			for child in token.children:
+				if child.dep_ == "pobj" and child.pos_ in ["NOUN", "PROPN"]:
+					prepositional_objects.append(child.text.lower())
+	return prepositional_objects[-1] if prepositional_objects else ""
 
 def getMainVerb(text: str) -> str:
     doc = naturalLanguageProcessing(text)
@@ -202,16 +249,31 @@ def getMainVerbIndex(text: str) -> str:
 			return text[start_index:end_index] 
 	return ""
 
-def clean(text: str) -> str:
-	if not text == "ever":
-		if text[-2:] == "er":
-			return text[:-2]
+def getProperNoun(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	for token in doc:
+		if token.pos_ == "PROPN":
+			return token.text.lower()
+	return ""
 
-		if text[-3:] == "ers":
-			return text[:-3]
+def clean(text: str) -> str:
+	debug(f"@ clean(): {text=}")
+	if text:
+		if not text == "ever":
+			if text[-2:] == "er":
+				return text[:-2]
+
+			elif text[-3:] == "ers":
+				return text[:-3]
+
+			elif text[-1] == "s":
+				return text[:-1]
+
+			else:
+				return text
+
 		else:
 			return text
-
 	else:
 		return text
 
@@ -244,7 +306,7 @@ def talkBot(text: str) -> None:
 		print(f"{c.CYAN}[LDCU_BOT]: {c.WHITE}", end="")
 		for letter in text:
 			print(letter, end='', flush=True)
-			sleep(0.05)
+			sleep(0.01)
 		print(c.R)
 	else:
 		print(f"{c.CYAN}[LDCU_BOT]: {c.WHITE}{text}{c.R}")
@@ -257,6 +319,7 @@ def introGreet() -> None:
 def getInput() -> dict:
 	try:
 		interrogativeWords = ("who", "where", "what", "when", "why", "how")
+		modalVerbs = ("can", "could", "may", "might", "will", "would", "shall", "should", "must", "ought")
 		personalPronouns = ("i", "we", "they")
 
 		# NOTE:
@@ -272,18 +335,22 @@ def getInput() -> dict:
 			"subjectWordNameEx": "",
 			"grammaticalNumber": "",
 			"rawSubjectWord": "",
-			"objectOfPreposition": "",
+			"globalObject": "",
+			"nestedGlobalObject": "",
+			"modalVerb": "",
 			"totalWords": 0,
 			}
 
-		userInput = input(f"{c.YELLOW}[LICEAN]: {c.WHITE}").capitalize()
+		userInput = input(f"{c.YELLOW}[LICEAN]: {c.WHITE}").title()
 
 		if not userInput:
 			return
 
 		listUserInput = userInput.split(" ")
-		debug(f"@ getInput(): {userInput=}")
-		debug(f"@ getInput(): checking user input for interrogative words")
+
+		for word in modalVerbs:
+			if word in userInput.lower():
+				inputType["modalVerb"] = word
 
 		for word in interrogativeWords:
 			if word in userInput.lower():
@@ -291,9 +358,16 @@ def getInput() -> dict:
 				inputType["questionType"] = word
 				inputType["interrogativeWordsCount"] += 1
 
+		if inputType["isQuestion"]:
+			if not userInput[-1] == "?":
+				userInput += "?"
+
+		debug(f"@ getInput(): {userInput=}")
+		debug(f"@ getInput(): checking user input for interrogative words")
 		debug("@ getInput(): getting subject word")
+
 		inputType["subjectWord"] = clean(getSubject(userInput))
-		inputType["rawSubjectWord"] = getSubject(userInput)
+		inputType["rawSubjectWord"] = getSubject(userInput).lower()
 
 		debug("@ getInput(): checking subject word")
 		for word in interrogativeWords:
@@ -304,12 +378,12 @@ def getInput() -> dict:
 				# debug(f"@ getInput(): {predicateNominative}")
 				if predicateNominative:
 					inputType["subjectWord"] = clean(predicateNominative[0])
-					inputType["rawSubjectWord"] = predicateNominative[0]
+					inputType["rawSubjectWord"] = predicateNominative[0].lower()
 					# debug(f"@ getInput(): {predicateNominative}")
 					if len(predicateNominative) > 1:
-						inputType["subjectWordName"] = predicateNominative[1]
+						inputType["subjectWordName"] = predicateNominative[1].lower()
 						if len(predicateNominative) > 2:
-							inputType["subjectWordNameEx"] = predicateNominative[2]
+							inputType["subjectWordNameEx"] = predicateNominative[2].lower()
 				else:
 					debug("@ getInput(): failed getting predicate nominative")
 					inputType["subjectWord"] = ""
@@ -323,10 +397,10 @@ def getInput() -> dict:
 
 		if not inputType["subjectWord"]:
 			debug("@ getInput(): getting main verb")
-			inputType["subjectWord"] = getMainVerb(userInput)
-			inputType["rawSubjectWord"] = getMainVerbIndex(userInput)
+			inputType["subjectWord"] = clean(getMainVerb(userInput))
+			inputType["rawSubjectWord"] = getMainVerbIndex(userInput).lower()
 
-		inputType["objectOfPreposition"] = getObjectOfPreposition(userInput)
+		inputType["globalObject"] = getglobalObject(userInput)
 		inputType["grammaticalNumber"] = getGrammaticalNumber(userInput)
 		inputType["totalWords"] = len(listUserInput)
 
@@ -341,14 +415,32 @@ def getInput() -> dict:
 			predicateNominative = getPredicateNominative(userInput)[::-1]
 			# debug(f"@ getInput(): {len(predicateNominative)}")
 			if predicateNominative:
+				debug(f"@ getInput(): output of getPredicateNominative() ---\\> {predicateNominative}")
 				inputType["subjectWord"] = clean(predicateNominative[0])
-				inputType["rawSubjectWord"] = predicateNominative[0]
+				inputType["rawSubjectWord"] = predicateNominative[0].lower()
 				# debug(f"@ getInput(): {predicateNominative}")
 				if len(predicateNominative) > 1:
 					# debug("@ getInput(): declaring subjectWordName")
-					inputType["subjectWordName"] = predicateNominative[1]
+					inputType["subjectWordName"] = predicateNominative[1].lower()
 					if len(predicateNominative) > 2:
-						inputType["subjectWordNameEx"] = predicateNominative[2]
+						inputType["subjectWordNameEx"] = predicateNominative[2].lower()
+
+		if not inputType["globalObject"]:
+			debug("@ getInput(): getting direct to globalObject")
+			inputType["globalObject"] = getDirectObjectEx(userInput)
+			debug(f"@ getInput(): output of getDirectObjectEx() ---\\> {getDirectObjectEx(userInput)}")
+			if not inputType["globalObject"]:
+				debug("@ getInput(): failed getDirectObjectEx() trying again getProperNoun()")
+				inputType["globalObject"] = getProperNoun(userInput)
+
+		if inputType["rawSubjectWord"] == inputType["globalObject"]:
+			debug("@ getInput(): re declaring globalObject")
+			inputType["globalObject"] = getFirstPrepositionalObject(userInput)
+			if not inputType["globalObject"] == getNestedPrepositionalObject(userInput):
+				inputType["nestedGlobalObject"] = getNestedPrepositionalObject(userInput)
+
+		if inputType["questionType"] == "what":
+			inputType["globalObject"] = getMainVerb(userInput)
 
 		debug(f"@ getInput(): {inputType['isQuestion']=}")
 		debug(f"@ getInput(): {inputType['questionType']=}")
@@ -359,7 +451,8 @@ def getInput() -> dict:
 		debug(f"@ getInput(): {inputType["subjectWordNameEx"]=}")
 		debug(f"@ getInput(): {inputType["grammaticalNumber"]=}")
 		debug(f"@ getInput(): {inputType["rawSubjectWord"]=}")
-		debug(f"@ getInput(): {inputType["objectOfPreposition"]=}")
+		debug(f"@ getInput(): {inputType["globalObject"]=}")
+		debug(f"@ getInput(): {inputType["nestedGlobalObject"]=}")
 		debug(f"@ getInput(): {inputType["totalWords"]=}")
 
 		return inputType, listUserInput
@@ -376,6 +469,7 @@ def processInput(typeInput: dict, inputUser: list) -> None:
 	# Add capability to deal with greetings and other type of questions that
 	# does not start with an interogative word.
 
+	# debug(f"branch #2.2 ---\\> {possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["subjectWordName"]]}")
 	if typeInput["interrogativeWordsCount"] > 1:
 		talkBot(selectRandom(overloadQuestionErrorResponses))
 
@@ -383,25 +477,48 @@ def processInput(typeInput: dict, inputUser: list) -> None:
 		try:
 			if typeInput["questionType"]:
 				debug("@ processInput(): declaring response")
-				if typeInput["subjectWordName"]:
-					if typeInput["subjectWordNameEx"]:
-						debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordName"]}][{typeInput["subjectWordNameEx"]}]")
-					else:
-						debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordName"]}]")
-
-				elif typeInput["subjectWord"]:
-					if typeInput["objectOfPreposition"]:
-						debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["objectOfPreposition"]}]")
-						response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["objectOfPreposition"]]
-
-					else:
-						debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}]")
-						response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]]
-
+				if typeInput["questionType"] == "what":
+					if typeInput["modalVerb"]:
+						debug("@ processInput(): branch #1.1")
+						debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["modalVerb"]}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}]")
+						response = possibleResponses[typeInput["questionType"]][typeInput["modalVerb"]][typeInput["subjectWord"]][typeInput["globalObject"]]
 				else:
-					if typeInput["objectOfPreposition"]:
-						debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["objectOfPreposition"]}]")
-						response = possibleResponses[typeInput["questionType"]][typeInput["objectOfPreposition"]]
+					if typeInput["subjectWordName"]:
+						if typeInput["subjectWordNameEx"]:
+							debug("@ processInput(): branch #2.1")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordName"]}][{typeInput["subjectWordNameEx"]}]")
+							response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordName"]}][{typeInput["subjectWordNameEx"]}]
+						else:
+							debug("@ processInput(): branch #2.2")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordName"]}]")
+							response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["subjectWordName"]]
+
+					elif typeInput["subjectWord"]:
+						if typeInput["globalObject"]:
+							if typeInput["nestedGlobalObject"]:
+								debug("@ processInput(): branch #2.3")
+								debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}][{typeInput["nestedGlobalObject"]}]")
+								response = possibleResponses[typeInput['questionType']][typeInput["subjectWord"]][typeInput["globalObject"]][typeInput["nestedGlobalObject"]]
+							else:
+								debug("@ processInput(): branch #2.4")
+								debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}]")
+								response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["globalObject"]]
+								debug(f"@ processInput(): datatype of response ---\\> {type(response)}")
+								if type(response) == dict:
+									debug("@ processInput(): branch #2.5")
+									debug("@ processInput(): response is dictionary, redifining response")
+									debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}][{typeInput["globalObject"]}]")
+									response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}][{typeInput["globalObject"]}]
+						else:
+							debug("@ processInput(): branch #2.6")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}]")
+							response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]]
+
+					else:
+						if typeInput["globalObject"]:
+							debug("@ processInput(): branch #2.7")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["globalObject"]}]")
+							response = possibleResponses[typeInput["questionType"]][typeInput["globalObject"]]
 
 				debug("@ processInput(): chatbot replying")
 				talkBot(response)
