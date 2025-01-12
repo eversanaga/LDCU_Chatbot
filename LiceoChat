@@ -7,9 +7,9 @@
 
 Interogative:
 	who:		[#########-] 90%
-	what:		[########--] 80%
-	where:		[########--] 80%
-	when:		[########--] 80%
+	what:		[########!-] 85%
+	where:		[########!-] 85%
+	when:		[########!-] 85%
 
 Non-Intergative:
 	overall: 	[##--------] 20%
@@ -25,6 +25,8 @@ import spacy
 import readline
 import argparse
 from os import system as execute
+from requests import get
+from weather import fetchWeather
 
 """ END: LIBRARIES """
 
@@ -45,22 +47,85 @@ class Colors:
 
 """ START: GLOBAL VARIABLES """
 
+weatherAPIKey = "faea01bba46677a17a6f902bf2f3096b"
 c = Colors()
-chatbotSpeakFlag = True
+chatbotSpeakFlag = False
 debugging = False
 chatbotReplyDelay = True
 naturalLanguageProcessing = spacy.load("en_core_web_sm")
 
+jokes = (
+	"Why was the equal sign so humble? Because it knew it wasn't less than or greater than anyone else!",
+	"Why don’t skeletons fight each other? They don’t have the guts.",
+	"What do you call fake spaghetti? An impasta!",
+	"I would tell you a construction joke, but I’m still working on it.",
+	"Why can’t your nose be 12 inches long? Because then it’d be a foot!")
+
+funny_jokes = (
+	"Why don't oysters donate to charity? Because they are shellfish.",
+	"I asked the librarian if the library had any books on suicide. She said they were all checked out.",
+	"Why did the scarecrow win an award? Because he was outstanding in his field!",
+	"How does a penguin build its house? Igloos it together.",
+	"Why did the chicken join a band? Because it had the drumsticks.",
+	"Why are chatbots terrible comedians? They always give the punchline away in the response!")
+
+facts = (
+	"An octopus has three hearts—two pump blood to the gills, and one pumps it to the rest of the body.",
+	"Astronauts describe the smell of space as a mix of gunpowder, seared steak, and raspberries.",
+	"The longest English word in a major dictionary is pneumonoultramicroscopicsilicovolcanoconiosis, a type of lung disease.",
+	"Botanically, bananas are berries, but strawberries are not!",
+	"Light takes about 8 minutes and 20 seconds to travel from the Sun to Earth.",
+	"The word 'queue' has four silent letters—it’s just the letter 'q' with a fancy tail!")
+
+interesting_facts = (
+	"Honey never spoils—archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still safe to eat.",
+	"A day on Venus is longer than a year on Venus due to its slow rotation on its axis.",
+	"Sloths can hold their breath longer than dolphins—they can slow their heart rate and stay underwater for up to 40 minutes.",
+	"Sharks existed before trees—they've been around for more than 400 million years.",
+	"The dot over the letters 'i' and 'j' is called a tittle.",
+	"Octopuses have blue blood due to the copper-based molecule hemocyanin, which is more efficient than hemoglobin in cold, low-oxygen environments.")
+
+cool_facts = (
+	"The surface area of a human lung is roughly the same as a tennis court.",
+	"Water can boil and freeze at the same time—this phenomenon is called the triple point and happens under specific pressure and temperature conditions.",
+	"The shortest war in history was between Britain and Zanzibar on August 27, 1896, lasting only 38 minutes.",
+	"A single strand of spider silk is thinner than a human hair but five times stronger than steel of the same diameter.",
+	"There’s a species of jellyfish known as Turritopsis dohrnii that is biologically immortal—it can revert to its polyp stage and start its life cycle anew.",
+	"Saturn's moon Titan has rivers, lakes, and seas of liquid methane and ethane, making it the only other place in the solar system known to have stable liquids on its surface.")
+
 possibleResponses = {
+	"can": {
+		"you": {
+			"help": {
+				"me": "Of course! Is there any questions you want me to answer?"
+			},
+			"tell": {
+				"joke": jokes,
+				"fact": facts
+			},
+		},
+	},
+	"tell": {
+		"joke": {
+			"joke": jokes,
+			"funny": funny_jokes,
+		},
+		"fact": {
+			"fact": facts,
+			"interesting": interesting_facts,
+			"cool": cool_facts,
+		},
+	},
 	"who": {
+		"jun": {
+			"jerome": {
+				"balagot": "Jun Jerome Balagot is a robotics teacher in Liceo de Cagayan University. He is one of the most humble teacher in Liceo."
+			}
+		},
 		"own": { 
 			"liceo": "The owners of Liceo De Cagayan University are Rodolfo Pelaez and his wife Elsa Pelaez.",
 			},
 		"you": "I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether it's related to academic inquiries, campus information, or any other services we offer. I'm here to provide you with accurate and helpful responses, and I'm excited to help make your experience smoother and more efficient. Feel free to ask me anything, and I'll do my best to assist you!",
-		"gabriele": {
-			"sanaga": "Gabriele Sanaga is the most paloy person in the world",
-			"oporto": "Gabriele Oporto was Ever Sanaga's classmate."
-		},
 		"chairperson": {
 			"tvl": {
 				"tvl": "The chairperson in TVL 1 is Miss Wynne Lim and the chairperson in TVL 2 is Mister Charlie Yabes.",
@@ -68,7 +133,23 @@ possibleResponses = {
 			}
 		},
 		"create": {
-			"you": "I am created by Ever Sanaga. A legendary programmer known for his mastery in Python."
+			"you": "I am created by Ever Sanaga. An ICT student in Liceo De Cagayan University."
+		},
+		"paint": {
+			"mona": {
+				"lisa": "Leonardo da Vinci painted the Mona Lisa.",
+			},
+		},
+		"invent": {
+			"light": {
+				"bulb": "Thomas Edison is credited with inventing the practical light bulb."
+			}
+		},
+		"charlie": {
+			"yabes": "Charlie C. Yabes is the chairperson in TVL 2. Together with Miss Wynne Lim, they are one of the seasoned teachers in Liceo de Cagayan University.",
+		},
+		"wynne": {
+			"lim": "Wynne Lim is the chairperson in TVL 1. Together with Mister Charlie Yabes, they are one of the experienced teachers in Liceo de Cagayan University.",
 		}
 	},
 	"what": {
@@ -77,13 +158,47 @@ possibleResponses = {
 				"do": "I can answer questions and have a chat with you. Just ask!"
 			}
 		},
-		"name":"I am LiceoChat, I'm happy to answer any questions related to Liceo De Cagayan University."
+		"name":"I am LiceoChat, I'm happy to answer any questions related to Liceo De Cagayan University.",
+		"liceo" : {
+			"liceo": "Liceo de Cagayan University is a private, non-sectarian institution in Cagayan de Oro, Philippines, offering diverse programs with a focus on academic excellence and community development.",
+			"cagayan": {
+				"cagayan": "Liceo de Cagayan University is a private, non-sectarian institution in Cagayan de Oro, Philippines, offering diverse programs with a focus on academic excellence and community development.",
+				"university": "Liceo de Cagayan University is a private, non-sectarian institution in Cagayan de Oro, Philippines, offering diverse programs with a focus on academic excellence and community development."
+			},
+			"de": {
+				"cagayan": "Liceo de Cagayan University is a private, non-sectarian institution in Cagayan de Oro, Philippines, offering diverse programs with a focus on academic excellence and community development.",
+			}
+		},
+		"time": {
+			"time": timenow.now().strftime("The current time is %I:%M %p on %A."),
+		},
+		"weather": {
+			"weather": fetchWeather(weatherAPIKey),
+			"today": fetchWeather(weatherAPIKey)
+		},
+		"smallest": {
+			"country": "Vatican City is the smallest country in the world by land area.",
+			"animal": "The smallest known animal is a parasitic wasp called Dicopomorpha echmepterygis, with males measuring only about 0.139 mm in length.",
+		},
+		"up": "The ceiling, the sky, and my processing power! What's up with you?",
+		"life": {
+			"meaning": "Nice question! The meaning of life is to seek purpose, forge connections, and create value in the time we are given.",
+			"answer": "For me, the answer to life is to learn, grow, and help others in meaningful ways."
+		}
+
 	},
 	"where": {
 		"liceo": "Oh! I know where you can find Liceo De Cagayan University. It is located at Kauswagan, Rodolfo N. Pelaez Boulevard, Cagayan De Oro City"
 	},
 	"when": {
 		"liceo": "Liceo was founded in the year 1955."
+	},
+	"how": {
+		"weather": {
+			"weather": fetchWeather(weatherAPIKey),
+			"today": fetchWeather(weatherAPIKey),
+		},
+		"you": "I'm doing fine, how about you?"
 	}
 }
 
@@ -148,6 +263,27 @@ def printBanner() -> None:
 	execute("./LiceoLogo")
 	return
 
+def clean(text: str) -> str:
+	debug(f"@ clean(): {text=}")
+	if text:
+		if not text == "ever":
+			if text[-2:] == "er":
+				return text[:-2]
+
+			elif text[-3:] == "ers":
+				return text[:-3]
+
+			elif text[-1] == "s":
+				return text[:-1]
+
+			else:
+				return text
+
+		else:
+			return text
+	else:
+		return text
+
 def chatbotSpeak(text: str) -> None:
 	if chatbotSpeakFlag:
 		toSay = text.replace("'", "")
@@ -156,7 +292,29 @@ def chatbotSpeak(text: str) -> None:
 		return
 	return
 
-def getglobalObject(text: str) -> str:
+def getAuxVerb(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	for token in doc:
+		if token.pos_ == "AUX":
+			return token.text.lower()
+	return ""
+
+def getFirstAdverb(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	for token in doc:
+		if token.pos_ == "ADV" and token.dep_ in ["npadvmod", "advmod"]:
+			return token.text.lower()
+	return ""
+def getFirstAdjective(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	for token in doc:
+		if token.pos_ == "ADJ":
+			return token.text.lower()
+		elif token.dep_ in ["amod", "compound"] and token.pos_ in ["NOUN", "PROPN"]:
+			return token.text.lower()
+	return ""
+
+def getGlobalObject(text: str) -> str:
 	doc = naturalLanguageProcessing(text)
 	for token in doc:
 		if token.dep_ == "prep":
@@ -233,14 +391,16 @@ def getNestedPrepositionalObject(text: str) -> str:
 					prepositional_objects.append(child.text.lower())
 	return prepositional_objects[-1] if prepositional_objects else ""
 
-def getMainVerb(text: str) -> str:
-    doc = naturalLanguageProcessing(text)
-    for token in doc:
-        if token.dep_ == "ROOT" and token.pos_ == "VERB":
-            return token.lemma_
-    return ""
+def getGlobalObjectEx(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	for token in doc:
+		if token.dep_ == "ROOT" and token.pos_ == "VERB":
+			return token.lemma_.lower()
+	return ""
 
-def getMainVerbIndex(text: str) -> str:
+def getMainVerb
+
+def getGlobalObjectExIndex(text: str) -> str:
 	doc = naturalLanguageProcessing(text)
 	for token in doc:
 		if token.dep_ == "ROOT" and token.pos_ == "VERB":
@@ -252,31 +412,10 @@ def getMainVerbIndex(text: str) -> str:
 def getProperNoun(text: str) -> str:
 	doc = naturalLanguageProcessing(text)
 	for token in doc:
-		if token.pos_ == "PROPN":
-			return token.text.lower()
+		if token.pos_ == "PROPN" and not token.is_stop:
+			if token.text.lower() not in ["word", "thing", "stuff", "idea"]:
+				return token.text.lower()
 	return ""
-
-def clean(text: str) -> str:
-	debug(f"@ clean(): {text=}")
-	if text:
-		if not text == "ever":
-			if text[-2:] == "er":
-				return text[:-2]
-
-			elif text[-3:] == "ers":
-				return text[:-3]
-
-			elif text[-1] == "s":
-				return text[:-1]
-
-			else:
-				return text
-
-		else:
-			return text
-	else:
-		return text
-
 def getGrammaticalNumber(text: str) -> str:
 	doc = naturalLanguageProcessing(text)
 	for token in doc:
@@ -288,17 +427,15 @@ def getGrammaticalNumber(text: str) -> str:
 		if token.dep_ == "nsubj" and token.text.lower() in ["who", "what"]:
 			return "singular"   
 	return ""
-
 def debug(text: str) -> None:
 	if debugging:
 		logText = f"{c.RED}[DEBUG] {c.BLUE}[{timenow.now().time().strftime('%H:%M:%S')}] {c.GREEN}{text}{c.R}"
 		with open("log.txt", "a") as logFile:
 			print(logText)
 			logFile.write(logText+"\n")
-		sleep(0.02)
+		sleep(0.008)
 		return
 	return
-
 def talkBot(text: str) -> None:
 	debug("@ talkBot(): executing chatbotSpeak()")
 	chatbotSpeak(text)
@@ -320,7 +457,8 @@ def getInput() -> dict:
 	try:
 		interrogativeWords = ("who", "where", "what", "when", "why", "how")
 		modalVerbs = ("can", "could", "may", "might", "will", "would", "shall", "should", "must", "ought")
-		personalPronouns = ("i", "we", "they")
+		personalPronouns = ("i", "they")
+		adverbsOfTime = ("today", "tomorrow", "yesterday", "now", "later", "soon", "tonight", "this morning", "this evening")
 
 		# NOTE:
 		# Add more type for more accuracy in recognizing text.
@@ -336,8 +474,12 @@ def getInput() -> dict:
 			"grammaticalNumber": "",
 			"rawSubjectWord": "",
 			"globalObject": "",
-			"nestedGlobalObject": "",
+			"globalObjectEx": "",
 			"modalVerb": "",
+			"auxVerb": "",
+			"adjectiveWord": "",
+			"adjectiveWordEx": "",
+			"adverbTime": "",
 			"totalWords": 0,
 			}
 
@@ -348,26 +490,64 @@ def getInput() -> dict:
 
 		listUserInput = userInput.split(" ")
 
+		debug("@ getInput(): checking userInput for a modalVerb")
 		for word in modalVerbs:
-			if word in userInput.lower():
-				inputType["modalVerb"] = word
+			for words in listUserInput:
+				if word == words.lower():
+					debug(f"@ getInput(): [{word}] | [{words.lower()}]")
+					inputType["modalVerb"] = word
+					debug(f"@ getInput(): modalVerb found ---\\> {inputType["modalVerb"]=}")
 
+		debug("@ getInput(): checking userInput for an interrogativeWord")
 		for word in interrogativeWords:
-			if word in userInput.lower():
-				inputType["isQuestion"] = True
-				inputType["questionType"] = word
-				inputType["interrogativeWordsCount"] += 1
+			for words in listUserInput:
+				if word == words[:len(word)].lower():
+					inputType["isQuestion"] = True
+					inputType["questionType"] = word
+					inputType["interrogativeWordsCount"] += 1
+
+		debug("@ getInput(): checking userInput for an auxVerb")
+		inputType["auxVerb"] = getAuxVerb(userInput)
+		if inputType["auxVerb"]:
+			debug(f"@ getInput(): auxVerb found ---\\> {inputType["auxVerb"]=}")
+		else:
+			debug("@ getInput(): found no auxVerb")
+
+		debug("@ getInput(): checking userInput for an adverbTime")
+		for word in adverbsOfTime:
+			for words in listUserInput:
+				if word == words[:len(word)].lower():
+					inputType["adverbTime"] = word
 
 		if inputType["isQuestion"]:
 			if not userInput[-1] == "?":
+				debug("@ getInput(): appending \"?\" in userInput")
 				userInput += "?"
-
+		
 		debug(f"@ getInput(): {userInput=}")
+		try:
+			if listUserInput[0][len(inputType["questionType"])] == "s":
+				debug("@ getInput(): found 's' in the questionType")
+				debug("@ getInput(): arranging userInput")
+				listUserInput.pop(0)
+				listUserInput.insert(0, inputType["questionType"])
+				listUserInput.insert(1, "is")
+				userInput = " ".join(listUserInput).title()
+				debug(f"@ getInput(): final userInput ---\\> {userInput=}")
+			
+		except IndexError:
+			pass
+
 		debug(f"@ getInput(): checking user input for interrogative words")
 		debug("@ getInput(): getting subject word")
 
+		inputType["adjectiveWord"] = getFirstAdjective(userInput)
 		inputType["subjectWord"] = clean(getSubject(userInput))
 		inputType["rawSubjectWord"] = getSubject(userInput).lower()
+
+		debug(f"@ getInput(): adjectiveWord ---\\> {inputType["adjectiveWord"]=}")
+		debug(f"@ getInput(): getting subject word branch ---\\> {inputType["subjectWord"]=}")
+		debug(f"@ getInput(): getting subject word branch ---\\> {inputType["rawSubjectWord"]=}")
 
 		debug("@ getInput(): checking subject word")
 		for word in interrogativeWords:
@@ -379,6 +559,8 @@ def getInput() -> dict:
 				if predicateNominative:
 					inputType["subjectWord"] = clean(predicateNominative[0])
 					inputType["rawSubjectWord"] = predicateNominative[0].lower()
+					debug(f"@ getInput(): checking subject word branch ---\\> {inputType["subjectWord"]=}")
+					debug(f"@ getInput(): checking subject word branch ---\\> {inputType["rawSubjectWord"]=}")
 					# debug(f"@ getInput(): {predicateNominative}")
 					if len(predicateNominative) > 1:
 						inputType["subjectWordName"] = predicateNominative[1].lower()
@@ -388,21 +570,28 @@ def getInput() -> dict:
 					debug("@ getInput(): failed getting predicate nominative")
 					inputType["subjectWord"] = ""
 
+		debug("@ getInput(): getting direct object")
 		for word in personalPronouns:
 			if word == inputType["subjectWord"]:
-				debug("@ getInput(): getting direct object")
 				inputType["subjectWord"] = getDirectObject(userInput)
-				if not inputType["subjectWord"]:
+				debug(f"@ getInput(): getting subject word branch ---\\> {inputType["subjectWord"]=}")
+				debug(f"@ getInput(): getting subject word branch ---\\> {inputType["rawSubjectWord"]=}")
+				if inputType["subjectWord"] == inputType["questionType"]:
+					inputType["globalObjectEx"] = getGlobalObjectEx(userInput)
+				elif not inputType["subjectWord"]:
 					debug("@ getInput(): failed getting direct object")
 
 		if not inputType["subjectWord"]:
 			debug("@ getInput(): getting main verb")
-			inputType["subjectWord"] = clean(getMainVerb(userInput))
-			inputType["rawSubjectWord"] = getMainVerbIndex(userInput).lower()
+			inputType["subjectWord"] = clean(getGlobalObjectEx(userInput))
+			inputType["rawSubjectWord"] = getGlobalObjectExIndex(userInput).lower()
+			debug(f"@ getInput(): getting main branch ---\\> {inputType["subjectWord"]=}")
+			debug(f"@ getInput(): getting main branch ---\\> {inputType["rawSubjectWord"]=}")
 
-		inputType["globalObject"] = getglobalObject(userInput)
+		inputType["globalObject"] = getGlobalObject(userInput).lower()
 		inputType["grammaticalNumber"] = getGrammaticalNumber(userInput)
 		inputType["totalWords"] = len(listUserInput)
+		debug(f"@ getInput(): getting globalObject branch ---\\> {inputType["globalObject"]=}")
 
 		for iteration in range(len(listUserInput)):
 			# debug(f"@ getInput(): {listUserInput[iteration]=}")
@@ -411,36 +600,83 @@ def getInput() -> dict:
 				inputType["subjectWordIndex"] = iteration
 
 		debug("@ getInput(): checking for surname")
-		if listUserInput[inputType["subjectWordIndex"]+1]:
-			predicateNominative = getPredicateNominative(userInput)[::-1]
-			# debug(f"@ getInput(): {len(predicateNominative)}")
-			if predicateNominative:
-				debug(f"@ getInput(): output of getPredicateNominative() ---\\> {predicateNominative}")
-				inputType["subjectWord"] = clean(predicateNominative[0])
-				inputType["rawSubjectWord"] = predicateNominative[0].lower()
-				# debug(f"@ getInput(): {predicateNominative}")
+		try:
+			if listUserInput[inputType["subjectWordIndex"]+1]:
+				predicateNominative = getPredicateNominative(userInput)[::-1]
+				# debug(f"@ getInput(): {len(predicateNominative)}")
 				if len(predicateNominative) > 1:
-					# debug("@ getInput(): declaring subjectWordName")
-					inputType["subjectWordName"] = predicateNominative[1].lower()
+					firstPredicate = predicateNominative[0]
+					secondPredicate = predicateNominative[1]
+					predicateNominative[0] = secondPredicate
+					predicateNominative[1] = firstPredicate
+					debug(f"@ getInput(): output of getPredicateNominative() ---\\> {predicateNominative=}")
+					inputType["subjectWord"] = clean(predicateNominative[1])
+					inputType["rawSubjectWord"] = predicateNominative[1].lower()
+					# debug(f"@ getInput(): {predicateNominative}")
+					inputType["subjectWordName"] = predicateNominative[0].lower()
 					if len(predicateNominative) > 2:
 						inputType["subjectWordNameEx"] = predicateNominative[2].lower()
+				elif len(predicateNominative) == 1:
+					debug(f"@ getInput(): output of getPredicateNominative() ---\\> {predicateNominative=}")
+					inputType["subjectWord"] = clean(predicateNominative[0])
+					inputType["rawSubjectWord"] = predicateNominative[0].lower()
+		except IndexError:
+			pass
 
 		if not inputType["globalObject"]:
 			debug("@ getInput(): getting direct to globalObject")
-			inputType["globalObject"] = getDirectObjectEx(userInput)
-			debug(f"@ getInput(): output of getDirectObjectEx() ---\\> {getDirectObjectEx(userInput)}")
+			inputType["globalObject"] = getDirectObjectEx(userInput).lower()
+			debug(f"@ getInput(): output of getDirectObjectEx() ---\\> {getDirectObjectEx(userInput)=}")
+			for word in interrogativeWords:
+				if word == inputType["globalObject"]:
+					inputType["globalObject"] = ""
 			if not inputType["globalObject"]:
 				debug("@ getInput(): failed getDirectObjectEx() trying again getProperNoun()")
 				inputType["globalObject"] = getProperNoun(userInput)
+				debug(f"@ getInput(): getProperNoun() to globalObject ---\\> {inputType["globalObject"]=}")
 
 		if inputType["rawSubjectWord"] == inputType["globalObject"]:
 			debug("@ getInput(): re declaring globalObject")
-			inputType["globalObject"] = getFirstPrepositionalObject(userInput)
+			inputType["globalObject"] = getFirstPrepositionalObject(userInput).lower()
+			debug(f"@ getInput(): getFirstPrepositionalObject() to globalObject ---\\> {inputType["globalObject"]=}")
 			if not inputType["globalObject"] == getNestedPrepositionalObject(userInput):
-				inputType["nestedGlobalObject"] = getNestedPrepositionalObject(userInput)
+				inputType["globalObjectEx"] = getNestedPrepositionalObject(userInput)
 
-		if inputType["questionType"] == "what":
-			inputType["globalObject"] = getMainVerb(userInput)
+		if inputType["rawSubjectWord"] == inputType["globalObject"]:
+			debug("@ getInput(): subjectWord and globalObject is the same, redefining subjectWord")
+			inputType["subjectWord"] = getPredicateNominative(userInput)
+
+		if inputType["modalVerb"]:
+			if not inputType["questionType"] or inputType["questionType"] == "what":
+				debug("@ getInput(): found modalVerb, defining globalObject")
+				inputType["globalObject"] = getGlobalObjectEx(userInput)
+				debug(f"@ getInput(): getGlobalObjectEx() to globalObject ---\\> {inputType["globalObject"]=}")
+				debug("@ getInput(): trying to get a direct object")
+				if getDirectObject(userInput):
+					inputType["globalObjectEx"] = getDirectObject(userInput)
+				else:
+					debug("@ getInput(): failed to get direct object")
+
+		if inputType["adjectiveWord"] == inputType["rawSubjectWord"]:
+			inputType["adjectiveWord"] = getFirstAdverb(userInput)
+
+		if inputType["subjectWordName"] == inputType["globalObject"]:
+			inputType["globalObject"] = getProperNoun(userInput)
+			debug(f"@ getInput(): getProperNoun() to globalObject ---\\> {inputType["globalObject"]=}")
+			debug("@ getInput(): checking if globalObject and subjectWordName are still the same")
+			if inputType["subjectWordName"] == inputType["globalObject"]:
+				debug("@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject")
+				inputType["globalObject"] = ""
+
+			if inputType["globalObject"] == inputType["subjectWord"]:
+				inputType["globalObject"] = ""
+
+		inputType["adjectiveWordEx"] = getFirstAdverb(userInput)
+		if inputType["adjectiveWord"] == inputType["adjectiveWordEx"]:
+			inputType["adjectiveWordEx"] = ""
+
+		# if not inputType["globalObjectEx"]:
+		# inputType["globalObjectEx"] = getGlobalObjectEx()
 
 		debug(f"@ getInput(): {inputType['isQuestion']=}")
 		debug(f"@ getInput(): {inputType['questionType']=}")
@@ -452,7 +688,12 @@ def getInput() -> dict:
 		debug(f"@ getInput(): {inputType["grammaticalNumber"]=}")
 		debug(f"@ getInput(): {inputType["rawSubjectWord"]=}")
 		debug(f"@ getInput(): {inputType["globalObject"]=}")
-		debug(f"@ getInput(): {inputType["nestedGlobalObject"]=}")
+		debug(f"@ getInput(): {inputType["globalObjectEx"]=}")
+		debug(f"@ getInput(): {inputType["modalVerb"]=}")
+		debug(f"@ getInput(): {inputType["auxVerb"]=}")
+		debug(f"@ getInput(): {inputType["adjectiveWord"]=}")
+		debug(f"@ getInput(): {inputType["adjectiveWordEx"]=}")
+		debug(f"@ getInput(): {inputType["adverbTime"]=}")
 		debug(f"@ getInput(): {inputType["totalWords"]=}")
 
 		return inputType, listUserInput
@@ -477,59 +718,217 @@ def processInput(typeInput: dict, inputUser: list) -> None:
 		try:
 			if typeInput["questionType"]:
 				debug("@ processInput(): declaring response")
-				if typeInput["questionType"] == "what":
-					if typeInput["modalVerb"]:
-						debug("@ processInput(): branch #1.1")
+
+				if typeInput["questionType"] == "where" and typeInput["globalObject"]:
+					if typeInput["adjectiveWord"]:
+						debug("@ processInput(): branch #1.0")
+						debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["adjectiveWord"]}][{typeInput["globalObject"]}]")
+						response = possibleResponses[typeInput["questionType"]][typeInput["adjectiveWord"]][typeInput["globalObject"]]
+
+				elif typeInput["questionType"] == "how" and typeInput["globalObject"]:
+					if typeInput["subjectWordName"]:
+						debug("@ processInput(): branch #2.0")
+						debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["globalObject"]}][{typeInput["rawSubjectWord"]}][{typeInput["subjectWordName"]}]")
+						response = possibleResponses[typeInput["questionType"]][typeInput["globalObject"]][typeInput["rawSubjectWord"]][typeInput["subjectWordName"]]
+					else:
+						if typeInput["adverbTime"]:
+							debug("@ processInput(): branch #2.01")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["globalObject"]}][{typeInput["adverbTime"]}]")
+							response = possibleResponses[typeInput["questionType"]][typeInput["globalObject"]][typeInput["adverbTime"]]
+						else:
+							debug("@ processInput(): branch #2.02")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["globalObject"]}][{typeInput["globalObject"]}]")
+							response = possibleResponses[typeInput["questionType"]][typeInput["globalObject"]][typeInput["globalObject"]]
+
+				elif typeInput["modalVerb"]:
+					if typeInput["questionType"] == "what":
+						debug("@ processInput(): branch #3.0")
 						debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["modalVerb"]}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}]")
 						response = possibleResponses[typeInput["questionType"]][typeInput["modalVerb"]][typeInput["subjectWord"]][typeInput["globalObject"]]
-				else:
-					if typeInput["subjectWordName"]:
-						if typeInput["subjectWordNameEx"]:
-							debug("@ processInput(): branch #2.1")
-							debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordName"]}][{typeInput["subjectWordNameEx"]}]")
-							response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordName"]}][{typeInput["subjectWordNameEx"]}]
-						else:
-							debug("@ processInput(): branch #2.2")
-							debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordName"]}]")
-							response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["subjectWordName"]]
 
-					elif typeInput["subjectWord"]:
-						if typeInput["globalObject"]:
-							if typeInput["nestedGlobalObject"]:
-								debug("@ processInput(): branch #2.3")
-								debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}][{typeInput["nestedGlobalObject"]}]")
-								response = possibleResponses[typeInput['questionType']][typeInput["subjectWord"]][typeInput["globalObject"]][typeInput["nestedGlobalObject"]]
+				elif typeInput["subjectWordName"]:
+					if typeInput["subjectWordNameEx"]:
+						try:
+							debug("@ processInput(): branch #4.0")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordName"]}][{typeInput["subjectWordNameEx"]}]")
+							response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["subjectWordName"]][typeInput["subjectWordNameEx"]]
+
+						except KeyError:
+							if typeInput["adjectiveWordEx"]:
+								debug("@ processInput(): branch #4.1")
+								debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["adjectiveWordEx"]}][{typeInput["subjectWordName"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordNameEx"]}]")
 							else:
-								debug("@ processInput(): branch #2.4")
-								debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}]")
-								response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["globalObject"]]
-								debug(f"@ processInput(): datatype of response ---\\> {type(response)}")
-								if type(response) == dict:
-									debug("@ processInput(): branch #2.5")
-									debug("@ processInput(): response is dictionary, redifining response")
-									debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}][{typeInput["globalObject"]}]")
-									response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}][{typeInput["globalObject"]}]
+								debug("@ processInput(): branch #4.2")
+								debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWordName"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordNameEx"]}]")
+								response = possibleResponses[typeInput["questionType"]][typeInput["subjectWordName"]][typeInput["subjectWord"]][typeInput["subjectWordNameEx"]]
+					else:
+						if typeInput["adjectiveWord"]:
+							debug("@ processInput(): branch #5.0")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["adjectiveWord"]}][{typeInput["rawSubjectWord"]}][{typeInput["subjectWordName"]}]")
+							response = possibleResponses[typeInput["questionType"]][typeInput["adjectiveWord"]][typeInput["rawSubjectWord"]][typeInput["subjectWordName"]]
 						else:
-							debug("@ processInput(): branch #2.6")
-							debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}]")
-							response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]]
+							if typeInput["globalObject"]:
+								debug("@ processInput(): branch #5.01")
+								debug("@ processInput(): restructuring response")
+								debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordName"]}][{typeInput["globalObject"]}]")
+								response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["subjectWordName"]][typeInput["globalObject"]]
+							else:
+								debug("@ processInput(): branch #5.02")
+								debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWord"]}][{typeInput["subjectWordName"]}]")
+								response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["subjectWordName"]]
+
+				elif typeInput["subjectWord"]:
+					if typeInput["globalObject"]:
+						try:
+							if typeInput["globalObjectEx"]:
+								debug("@ processInput(): branch #6.0")
+								debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["rawSubjectWord"]}][{typeInput["globalObjectEx"]}][{typeInput["globalObject"]}]")
+								response = possibleResponses[typeInput['questionType']][typeInput["rawSubjectWord"]][typeInput["globalObjectEx"]][typeInput["globalObject"]]
+								if typeInput["questionType"] != typeInput["subjectWord"]:
+									debug("@ processInput(): branch #6.01")
+									debug("@ processInput(): questionType and subjectWord are not the same, redefining response")
+									debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}][{typeInput["globalObjectEx"]}]")
+									response = possibleResponses[typeInput['questionType']][typeInput["subjectWord"]][typeInput["globalObject"]][typeInput["globalObjectEx"]]
+						except KeyError:
+							debug("@ processInput(): branch #6.02")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["rawSubjectWord"]}][{typeInput["globalObject"]}][{typeInput["adjectiveWord"]}]")
+							response = possibleResponses[typeInput['questionType']][typeInput["rawSubjectWord"]][typeInput["globalObject"]][typeInput["adjectiveWord"]]
+
+
+						else:
+							if typeInput["questionType"] == "what" and typeInput["globalObject"] and typeInput["rawSubjectWord"]:
+								if typeInput["adjectiveWord"]:
+									if typeInput["adjectiveWordEx"]:
+										debug("@ processInput(): branch #7.0")
+										debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["adjectiveWordEx"]}][{typeInput["adjectiveWord"]}][{typeInput["globalObject"]}][{typeInput["rawSubjectWord"]}]")
+										response = possibleResponses[typeInput["questionType"]][typeInput['adjectiveWordEx']][typeInput["adjectiveWord"]][typeInput["globalObject"]][typeInput["rawSubjectWord"]]
+									else:
+										debug("@ processInput(): branch #8.0")
+										debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["adjectiveWord"]}][{typeInput["globalObject"]}][{typeInput["rawSubjectWord"]}]")
+										response = possibleResponses[typeInput["questionType"]][typeInput["adjectiveWord"]][typeInput["globalObject"]][typeInput["rawSubjectWord"]]
+								else:
+									if typeInput["adverbTime"]:
+										debug("@ processInput(): branch #9.0")
+										debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["globalObject"]}][{typeInput["adverbTime"]}]")
+										response = possibleResponses[typeInput["questionType"]][typeInput["globalObject"]][typeInput["adverbTime"]]
+									else:
+										debug("@ processInput(): branch #10.0")
+										debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["globalObject"]}][{typeInput["rawSubjectWord"]}]")
+										response = possibleResponses[typeInput["questionType"]][typeInput["globalObject"]][typeInput["rawSubjectWord"]]
+										debug(f"@ processInput(): datatype of response ---\\> {type(response)}")
+							else:
+								if typeInput["adjectiveWord"]:
+									try:
+										debug("@ processInput(): branch #11.0")
+										debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["adjectiveWord"]}][{typeInput["globalObject"]}]")
+										response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["adjectiveWord"]][typeInput["globalObject"]]
+									except KeyError:
+										debug("@ processInput(): branch #11.1")
+										debug("@ processInput(): restructuring response")
+										debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["adjectiveWord"]}][{typeInput["globalObject"]}][{typeInput["subjectWord"]}]")
+										response = possibleResponses[typeInput["questionType"]][typeInput["adjectiveWord"]][typeInput["globalObject"]][typeInput["subjectWord"]]
+								else:
+									try:
+										debug("@ processInput(): branch #12.0")
+										debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["rawSubjectWord"]}][{typeInput["globalObject"]}]")
+										response = possibleResponses[typeInput["questionType"]][typeInput["rawSubjectWord"]][typeInput["globalObject"]]
+										debug(f"@ processInput(): datatype of response ---\\> {type(response)}")
+										if type(response) == dict:
+											debug("@ processInput(): branch #12.01")
+											debug("@ processInput(): response is dictionary, redefining response")
+											debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}][{typeInput["globalObject"]}]")
+											response = possibleResponses[typeInput['questionType']][typeInput["subjectWord"]][typeInput["globalObject"]][typeInput["globalObject"]]
+									except:
+										debug("@ processInput(): branch #12.1")
+										debug("@ processInput(): response is None, redefining response")
+										debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}]")
+										response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["globalObject"]]
 
 					else:
-						if typeInput["globalObject"]:
-							debug("@ processInput(): branch #2.7")
-							debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["globalObject"]}]")
-							response = possibleResponses[typeInput["questionType"]][typeInput["globalObject"]]
+						if typeInput["adjectiveWord"]:
+							debug("@ processInput(): branch #13.0")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["adjectiveWord"]}][{typeInput["rawSubjectWord"]}]")
+							response = possibleResponses[typeInput["questionType"]][typeInput["adjectiveWord"]][typeInput["rawSubjectWord"]]
+						else:
+							debug("@ processInput(): branch #14.0")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["rawSubjectWord"]}]")
+							response = possibleResponses[typeInput["questionType"]][typeInput["rawSubjectWord"]]
+							debug(f"@ processInput(): datatype of response ---\\> {type(response)}")
+							if type(response) == dict:
+								debug("@ processInput(): branch #14.01")
+								debug("@ processInput(): response is dictionary, redefining response")
+								debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["subjectWord"]}]")
+								response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["subjectWord"]]
+							elif not response:
+								debug("@ processInput(): branch #14.02")
+								debug("@ processInput(): response is None, redefining response")
+								debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}]")
+								response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]]
 
+				elif typeInput["questionType"] and typeInput["adjectiveWord"]:
+					debug("@ processInput(): branch #19.0")
+					debug("@ processInput(): only questionType and adjectiveWord found, defining response")
+					debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["adjectiveWord"]}]")
+					response = possibleResponses[typeInput["questionType"]][typeInput["adjectiveWord"]]
+
+				else:
+					if typeInput["globalObject"]:
+						debug("@ processInput(): branch #15.0")
+						debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["globalObject"]}]")
+						response = possibleResponses[typeInput["questionType"]][typeInput["globalObject"]]
+
+
+			# elif typeInput["auxVerb"]:
+				# pass
+
+
+			elif typeInput["modalVerb"]:
+				if typeInput["globalObject"]:
+					if not typeInput["globalObjectEx"]:
+						debug("@ processInput(): branch #16.0")
+						debug(f"@ processInput(): response = possibleResponses[{typeInput["modalVerb"]}][{typeInput["rawSubjectWord"]}][{typeInput["globalObject"]}]")
+						response = possibleResponses[typeInput["modalVerb"]][typeInput["rawSubjectWord"]][typeInput["globalObject"]]
+					else:
+						if typeInput["adjectiveWord"]:
+							debug("@ processInput(): branch #16.01")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput["modalVerb"]}][{typeInput["rawSubjectWord"]}][{typeInput["globalObject"]}][{typeInput["adjectiveWord"]}][{typeInput["globalObjectEx"]}]")
+							response = possibleResponses[typeInput["modalVerb"]][typeInput["rawSubjectWord"]][typeInput["globalObject"]][typeInput["adjectiveWord"]][typeInput["globalObjectEx"]]
+						else:
+							debug("@ processInput(): branch #16.02")
+							debug(f"@ processInput(): response = possibleResponses[{typeInput["modalVerb"]}][{typeInput["rawSubjectWord"]}][{typeInput["globalObject"]}][{typeInput["globalObjectEx"]}]")
+							response = possibleResponses[typeInput["modalVerb"]][typeInput["rawSubjectWord"]][typeInput["globalObject"]][typeInput["globalObjectEx"]]
+
+			elif typeInput["subjectWord"] and typeInput["globalObject"]:
+				debug("@ processInput(): checking for adjectiveWord")
+				if typeInput["adjectiveWord"]:
+					debug("@ processInput(): branch #17.0")
+					debug("@ processInput(): found an adjective")
+					debug(f"@ processInput(): response = possibleResponses[{typeInput["subjectWord"]}][{typeInput["globalObject"]}][{typeInput["adjectiveWord"]}]")
+					response = possibleResponses[typeInput["subjectWord"]][typeInput["globalObject"]][typeInput["adjectiveWord"]]
+				else:
+					debug("@ processInput(): branch #18.0")
+					debug("@ processInput(): no adjective found")
+					debug(f"@ processInput(): response = possibleResponses[{typeInput["subjectWord"]}][{typeInput["globalObject"]}]")
+					response = possibleResponses[typeInput["subjectWord"]][typeInput["globalObject"]]
+					debug(f"@ processInput(): datatype of response ---\\> {type(response)}")
+					if type(response) == dict:
+						debug("@ processInput(): branch #18.01")
+						debug("@ processInput(): response is dictionary, redefining response")
+						debug(f"@ processInput(): response = possibleResponses[{typeInput["subjectWord"]}][{typeInput["globalObject"]}][{typeInput["globalObject"]}]")
+						response = possibleResponses[typeInput["subjectWord"]][typeInput["globalObject"]][typeInput["globalObject"]]
+
+			if type(response) == tuple:
+				debug("@ processInput(): response is tuple")
+				debug("@ processInput(): chatbot replying")
+				talkBot(selectRandom(response))
+			else:
 				debug("@ processInput(): chatbot replying")
 				talkBot(response)
 
-			else:
-				talkBot(selectRandom(inputErrorResponses))
-
 		except KeyError:
 			if not typeInput["questionType"]:
+				debug("@ processInput(): raising inputErrorResponses")
 				talkBot(selectRandom(inputErrorResponses))
-
 			else:
 				talkBot(selectRandom(questionErrorResponses[typeInput["questionType"]]))
 
