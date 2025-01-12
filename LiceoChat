@@ -7,18 +7,18 @@
 
 Interogative:
 	who:		[#########-] 90%
-	what:		[########!-] 85%
-	where:		[########!-] 85%
-	when:		[########!-] 85%
+	what:		[#########-] 90%
+	where:	[#########-] 90%
+	when:		[#########-] 90%
 
 Non-Intergative:
-	overall: 	[##--------] 20%
+	overall: 	[#######---] 70%
 
 """
 
 """ START: LIBRARIES """
 
-from datetime import datetime as timenow
+from datetime import datetime
 from random import choice as selectRandom
 from time import sleep
 import spacy
@@ -49,7 +49,7 @@ class Colors:
 
 weatherAPIKey = "faea01bba46677a17a6f902bf2f3096b"
 c = Colors()
-chatbotSpeakFlag = False
+chatbotSpeakFlag = True
 debugging = False
 chatbotReplyDelay = True
 naturalLanguageProcessing = spacy.load("en_core_web_sm")
@@ -94,6 +94,15 @@ cool_facts = (
 	"Saturn's moon Titan has rivers, lakes, and seas of liquid methane and ethane, making it the only other place in the solar system known to have stable liquids on its surface.")
 
 possibleResponses = {
+	"do": {
+		"you": {
+			"like": {
+				"music": "",
+				"people": "",
+				"animals": ""
+			},
+		},
+	},
 	"can": {
 		"you": {
 			"help": {
@@ -126,11 +135,14 @@ possibleResponses = {
 			"liceo": "The owners of Liceo De Cagayan University are Rodolfo Pelaez and his wife Elsa Pelaez.",
 			},
 		"you": "I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether it's related to academic inquiries, campus information, or any other services we offer. I'm here to provide you with accurate and helpful responses, and I'm excited to help make your experience smoother and more efficient. Feel free to ask me anything, and I'll do my best to assist you!",
-		"chairperson": {
+		"chairpersons": {
 			"tvl": {
 				"tvl": "The chairperson in TVL 1 is Miss Wynne Lim and the chairperson in TVL 2 is Mister Charlie Yabes.",
 				"liceo": "The chairperson in TVL 1 is Miss Wynne Lim and the chairperson in TVL 2 is Mister Charlie Yabes."
-			}
+			},
+			"liceo": {
+				"tvl": "The chairperson in TVL 1 is Miss Wynne Lim and the chairperson in TVL 2 is Mister Charlie Yabes.",
+			},
 		},
 		"create": {
 			"you": "I am created by Ever Sanaga. An ICT student in Liceo De Cagayan University."
@@ -170,7 +182,7 @@ possibleResponses = {
 			}
 		},
 		"time": {
-			"time": timenow.now().strftime("The current time is %I:%M %p on %A."),
+			"time": datetime.now().strftime("The current time is %I:%M %p on %A."),
 		},
 		"weather": {
 			"weather": fetchWeather(weatherAPIKey),
@@ -198,7 +210,13 @@ possibleResponses = {
 			"weather": fetchWeather(weatherAPIKey),
 			"today": fetchWeather(weatherAPIKey),
 		},
-		"you": "I'm doing fine, how about you?"
+		"you": {
+			"you": (
+				"I'm doing fine, how about you?",
+				"I'm doing great, thanks for asking! How about yourself?",
+				"I'm feeling awesome! How are you doing?",
+				"I'm well, thank you. And you?"),
+		},
 	}
 }
 
@@ -229,6 +247,7 @@ inputErrorResponses = (
 )
 
 questionErrorResponses = {
+		"do": ("I apologize, I don't have any information about that topic."),
 		"who": ("Sorry, I don't know who that person is.",
 		"I apologize, It seems that I don't have any information connected to that person."),
 
@@ -288,16 +307,10 @@ def chatbotSpeak(text: str) -> None:
 	if chatbotSpeakFlag:
 		toSay = text.replace("'", "")
 		debug(f"@ chatbotSpeak(): {toSay=}")
-		execute(f"echo \"{toSay}\" |festival --tts &")
+		# execute(f"echo \"{toSay}\" |festival --tts &")
+		execute(f"espeak -p 50 -s 140 \"{text}\" &")
 		return
 	return
-
-def getAuxVerb(text: str) -> str:
-	doc = naturalLanguageProcessing(text)
-	for token in doc:
-		if token.pos_ == "AUX":
-			return token.text.lower()
-	return ""
 
 def getFirstAdverb(text: str) -> str:
 	doc = naturalLanguageProcessing(text)
@@ -311,6 +324,13 @@ def getFirstAdjective(text: str) -> str:
 		if token.pos_ == "ADJ":
 			return token.text.lower()
 		elif token.dep_ in ["amod", "compound"] and token.pos_ in ["NOUN", "PROPN"]:
+			return token.text.lower()
+	return ""
+
+def getMainVerb(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	for token in doc:
+		if token.pos_ == "VERB" and token.dep_ != "aux":
 			return token.text.lower()
 	return ""
 
@@ -345,6 +365,13 @@ def getSubject(text: str) -> str:
 	doc = naturalLanguageProcessing(text)
 	for token in doc:
 		if "subj" in token.dep_:
+			return token.text.lower()
+	return ""
+
+def getObjectOfPreposition(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	for token in doc:
+		if "pobj" in token.dep_:
 			return token.text.lower()
 	return ""
 
@@ -391,16 +418,14 @@ def getNestedPrepositionalObject(text: str) -> str:
 					prepositional_objects.append(child.text.lower())
 	return prepositional_objects[-1] if prepositional_objects else ""
 
-def getGlobalObjectEx(text: str) -> str:
+def getRootVerb(text: str) -> str:
 	doc = naturalLanguageProcessing(text)
 	for token in doc:
 		if token.dep_ == "ROOT" and token.pos_ == "VERB":
 			return token.lemma_.lower()
 	return ""
 
-def getMainVerb
-
-def getGlobalObjectExIndex(text: str) -> str:
+def getRootVerbIndex(text: str) -> str:
 	doc = naturalLanguageProcessing(text)
 	for token in doc:
 		if token.dep_ == "ROOT" and token.pos_ == "VERB":
@@ -429,7 +454,7 @@ def getGrammaticalNumber(text: str) -> str:
 	return ""
 def debug(text: str) -> None:
 	if debugging:
-		logText = f"{c.RED}[DEBUG] {c.BLUE}[{timenow.now().time().strftime('%H:%M:%S')}] {c.GREEN}{text}{c.R}"
+		logText = f"{c.RED}[DEBUG] {c.BLUE}[{datetime.now().time().strftime('%H:%M:%S')}] {c.GREEN}{text}{c.R}"
 		with open("log.txt", "a") as logFile:
 			print(logText)
 			logFile.write(logText+"\n")
@@ -455,11 +480,16 @@ def introGreet() -> None:
 
 def getInput() -> dict:
 	try:
+		# Update time
+		possibleResponses["what"]["time"]["time"] = datetime.now().strftime("The current time is %I:%M %p on %A.")
+		emotionVerbs = [
+    "adore", "appreciate", "cherish", "enjoy", "favor", "love", "like", "respect", 
+    "revere", "treasure", "delight", "relish", "worship", "despise", "detest", 
+    "dislike", "hate"]
 		interrogativeWords = ("who", "where", "what", "when", "why", "how")
 		modalVerbs = ("can", "could", "may", "might", "will", "would", "shall", "should", "must", "ought")
 		personalPronouns = ("i", "they")
 		adverbsOfTime = ("today", "tomorrow", "yesterday", "now", "later", "soon", "tonight", "this morning", "this evening")
-
 		# NOTE:
 		# Add more type for more accuracy in recognizing text.
 
@@ -476,7 +506,6 @@ def getInput() -> dict:
 			"globalObject": "",
 			"globalObjectEx": "",
 			"modalVerb": "",
-			"auxVerb": "",
 			"adjectiveWord": "",
 			"adjectiveWordEx": "",
 			"adverbTime": "",
@@ -506,12 +535,9 @@ def getInput() -> dict:
 					inputType["questionType"] = word
 					inputType["interrogativeWordsCount"] += 1
 
-		debug("@ getInput(): checking userInput for an auxVerb")
-		inputType["auxVerb"] = getAuxVerb(userInput)
-		if inputType["auxVerb"]:
-			debug(f"@ getInput(): auxVerb found ---\\> {inputType["auxVerb"]=}")
-		else:
-			debug("@ getInput(): found no auxVerb")
+		if not inputType["isQuestion"]:
+			if listUserInput[0].lower() == "do":
+				inputType["questionType"] = "do"
 
 		debug("@ getInput(): checking userInput for an adverbTime")
 		for word in adverbsOfTime:
@@ -519,9 +545,17 @@ def getInput() -> dict:
 				if word == words[:len(word)].lower():
 					inputType["adverbTime"] = word
 
+		debug("@ getInput(): checking userInput for an emotionVerb")
+		for word in emotionVerbs:
+			for words in listUserInput:
+				if word == words.lower():
+					debug("@ getInput(): found an emotionVerb")
+					if inputType["questionType"] == "do":
+						inputType["globalObjectEx"] = word
+						debug(f"@ getInput(): questionType is \"do\", setting globalObjectEx to \"{word}\"")
+
 		if inputType["isQuestion"]:
 			if not userInput[-1] == "?":
-				debug("@ getInput(): appending \"?\" in userInput")
 				userInput += "?"
 		
 		debug(f"@ getInput(): {userInput=}")
@@ -577,14 +611,14 @@ def getInput() -> dict:
 				debug(f"@ getInput(): getting subject word branch ---\\> {inputType["subjectWord"]=}")
 				debug(f"@ getInput(): getting subject word branch ---\\> {inputType["rawSubjectWord"]=}")
 				if inputType["subjectWord"] == inputType["questionType"]:
-					inputType["globalObjectEx"] = getGlobalObjectEx(userInput)
+					inputType["globalObjectEx"] = getRootVerb(userInput)
 				elif not inputType["subjectWord"]:
 					debug("@ getInput(): failed getting direct object")
 
 		if not inputType["subjectWord"]:
 			debug("@ getInput(): getting main verb")
-			inputType["subjectWord"] = clean(getGlobalObjectEx(userInput))
-			inputType["rawSubjectWord"] = getGlobalObjectExIndex(userInput).lower()
+			inputType["subjectWord"] = clean(getRootVerb(userInput))
+			inputType["rawSubjectWord"] = getRootVerbIndex(userInput).lower()
 			debug(f"@ getInput(): getting main branch ---\\> {inputType["subjectWord"]=}")
 			debug(f"@ getInput(): getting main branch ---\\> {inputType["rawSubjectWord"]=}")
 
@@ -624,16 +658,19 @@ def getInput() -> dict:
 			pass
 
 		if not inputType["globalObject"]:
-			debug("@ getInput(): getting direct to globalObject")
-			inputType["globalObject"] = getDirectObjectEx(userInput).lower()
-			debug(f"@ getInput(): output of getDirectObjectEx() ---\\> {getDirectObjectEx(userInput)=}")
-			for word in interrogativeWords:
-				if word == inputType["globalObject"]:
-					inputType["globalObject"] = ""
-			if not inputType["globalObject"]:
-				debug("@ getInput(): failed getDirectObjectEx() trying again getProperNoun()")
-				inputType["globalObject"] = getProperNoun(userInput)
-				debug(f"@ getInput(): getProperNoun() to globalObject ---\\> {inputType["globalObject"]=}")
+			if inputType["questionType"] == "how":
+				inputType["globalObject"] = getObjectOfPreposition(userInput)
+			else:
+				debug("@ getInput(): getting direct to globalObject")
+				inputType["globalObject"] = getDirectObjectEx(userInput).lower()
+				debug(f"@ getInput(): output of getDirectObjectEx() ---\\> {getDirectObjectEx(userInput)=}")
+				for word in interrogativeWords:
+					if word == inputType["globalObject"]:
+						inputType["globalObject"] = ""
+				if not inputType["globalObject"]:
+					debug("@ getInput(): failed getDirectObjectEx() trying again getProperNoun()")
+					inputType["globalObject"] = getProperNoun(userInput)
+					debug(f"@ getInput(): getProperNoun() to globalObject ---\\> {inputType["globalObject"]=}")
 
 		if inputType["rawSubjectWord"] == inputType["globalObject"]:
 			debug("@ getInput(): re declaring globalObject")
@@ -649,8 +686,8 @@ def getInput() -> dict:
 		if inputType["modalVerb"]:
 			if not inputType["questionType"] or inputType["questionType"] == "what":
 				debug("@ getInput(): found modalVerb, defining globalObject")
-				inputType["globalObject"] = getGlobalObjectEx(userInput)
-				debug(f"@ getInput(): getGlobalObjectEx() to globalObject ---\\> {inputType["globalObject"]=}")
+				inputType["globalObject"] = getRootVerb(userInput)
+				debug(f"@ getInput(): getRootVerb() to globalObject ---\\> {inputType["globalObject"]=}")
 				debug("@ getInput(): trying to get a direct object")
 				if getDirectObject(userInput):
 					inputType["globalObjectEx"] = getDirectObject(userInput)
@@ -675,8 +712,10 @@ def getInput() -> dict:
 		if inputType["adjectiveWord"] == inputType["adjectiveWordEx"]:
 			inputType["adjectiveWordEx"] = ""
 
-		# if not inputType["globalObjectEx"]:
-		# inputType["globalObjectEx"] = getGlobalObjectEx()
+		if inputType["questionType"] == "do":
+			inputType["subjectWordName"] = getMainVerb(userInput)
+
+		
 
 		debug(f"@ getInput(): {inputType['isQuestion']=}")
 		debug(f"@ getInput(): {inputType['questionType']=}")
@@ -690,7 +729,6 @@ def getInput() -> dict:
 		debug(f"@ getInput(): {inputType["globalObject"]=}")
 		debug(f"@ getInput(): {inputType["globalObjectEx"]=}")
 		debug(f"@ getInput(): {inputType["modalVerb"]=}")
-		debug(f"@ getInput(): {inputType["auxVerb"]=}")
 		debug(f"@ getInput(): {inputType["adjectiveWord"]=}")
 		debug(f"@ getInput(): {inputType["adjectiveWordEx"]=}")
 		debug(f"@ getInput(): {inputType["adverbTime"]=}")
@@ -790,10 +828,10 @@ def processInput(typeInput: dict, inputUser: list) -> None:
 									debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["subjectWord"]}][{typeInput["globalObject"]}][{typeInput["globalObjectEx"]}]")
 									response = possibleResponses[typeInput['questionType']][typeInput["subjectWord"]][typeInput["globalObject"]][typeInput["globalObjectEx"]]
 						except KeyError:
-							debug("@ processInput(): branch #6.02")
-							debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["rawSubjectWord"]}][{typeInput["globalObject"]}][{typeInput["adjectiveWord"]}]")
-							response = possibleResponses[typeInput['questionType']][typeInput["rawSubjectWord"]][typeInput["globalObject"]][typeInput["adjectiveWord"]]
-
+							if typeInput["adjectiveWord"]:
+								debug("@ processInput(): branch #6.02")
+								debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["rawSubjectWord"]}][{typeInput["globalObject"]}][{typeInput["adjectiveWord"]}]")
+								response = possibleResponses[typeInput['questionType']][typeInput["rawSubjectWord"]][typeInput["globalObject"]][typeInput["adjectiveWord"]]
 
 						else:
 							if typeInput["questionType"] == "what" and typeInput["globalObject"] and typeInput["rawSubjectWord"]:
@@ -846,9 +884,14 @@ def processInput(typeInput: dict, inputUser: list) -> None:
 
 					else:
 						if typeInput["adjectiveWord"]:
-							debug("@ processInput(): branch #13.0")
-							debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["adjectiveWord"]}][{typeInput["rawSubjectWord"]}]")
-							response = possibleResponses[typeInput["questionType"]][typeInput["adjectiveWord"]][typeInput["rawSubjectWord"]]
+							try:
+								debug("@ processInput(): branch #13.0")
+								debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["adjectiveWord"]}][{typeInput["rawSubjectWord"]}]")
+								response = possibleResponses[typeInput["questionType"]][typeInput["adjectiveWord"]][typeInput["rawSubjectWord"]]
+							except KeyError:
+								debug("@ processInput(): branch #13.01")
+								debug(f"@ processInput(): response = possibleResponses[{typeInput["questionType"]}][{typeInput["subjectWord"]}]")
+								response = possibleResponses[typeInput["questionType"]][typeInput["subjectWord"]][typeInput["subjectWord"]]
 						else:
 							debug("@ processInput(): branch #14.0")
 							debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["rawSubjectWord"]}]")
@@ -876,10 +919,6 @@ def processInput(typeInput: dict, inputUser: list) -> None:
 						debug("@ processInput(): branch #15.0")
 						debug(f"@ processInput(): response = possibleResponses[{typeInput['questionType']}][{typeInput["globalObject"]}]")
 						response = possibleResponses[typeInput["questionType"]][typeInput["globalObject"]]
-
-
-			# elif typeInput["auxVerb"]:
-				# pass
 
 
 			elif typeInput["modalVerb"]:
