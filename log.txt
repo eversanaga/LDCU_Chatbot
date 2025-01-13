@@ -28541,3 +28541,1869 @@
 [91m[DEBUG] [94m[20:19:19] [92m@ initiateConversation(): executing getInput()[0m
 [91m[DEBUG] [94m[20:19:20] [92m@ getInput(): executing exit()[0m
 [91m[DEBUG] [94m[20:19:20] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[11:00:05] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[11:00:05] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[11:00:05] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[11:00:05] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[11:00:05] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:00:05] [92m@ chatbotSpeak(): toSay='Hello! How can I help you today? I am from Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[11:00:06] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[11:00:06] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): userInput='Hi!'[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): re declaring globalObject[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): getFirstPrepositionalObject() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): subjectWord and globalObject is the same, redefining subjectWord[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ getInput(): inputType["totalWords"]=1[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:00:15] [92m@ chatbotSpeak(): toSay='Sorry, I didnt understand you clearly. Could you say that again?'[0m
+[91m[DEBUG] [94m[11:00:16] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): userInput='How Are You?'[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getPredicateNominative(): child.text.lower()='how'[0m
+[91m[DEBUG] [94m[11:00:31] [92m@ getPredicateNominative(): child.text.lower()='you'[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['you'][0m
+[91m[DEBUG] [94m[11:00:32] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType['questionType']='how'[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ processInput(): branch #14.0[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ processInput(): response = possibleResponses[how][you][0m
+[91m[DEBUG] [94m[11:00:32] [92m@ processInput(): datatype of response ---\> <class 'dict'>[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ processInput(): branch #14.01[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ processInput(): response is dictionary, redefining response[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ processInput(): response = possibleResponses[how][you][you][0m
+[91m[DEBUG] [94m[11:00:32] [92m@ processInput(): response is tuple[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ chatbotSpeak(): toSay='Im doing great, thanks for asking! How about yourself?'[0m
+[91m[DEBUG] [94m[11:00:32] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): userInput='Im Good Too'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ clean(): text='i'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]='good'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ clean(): text='m'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]='m'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]='m'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["subjectWord"]='m'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["rawSubjectWord"]='m'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["globalObjectEx"]='m'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["adjectiveWord"]='good'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["adjectiveWordEx"]='too'[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:00:44] [92m@ chatbotSpeak(): toSay='Sorry, I didnt quite get that. Could you repeat what you just said?'[0m
+[91m[DEBUG] [94m[11:00:45] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): userInput='Hello'[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): re declaring globalObject[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): getFirstPrepositionalObject() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): subjectWord and globalObject is the same, redefining subjectWord[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ getInput(): inputType["totalWords"]=1[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:16:06] [92m@ chatbotSpeak(): toSay='Sorry, I didnt quite grasp what you said. Could you say it again?'[0m
+[91m[DEBUG] [94m[11:16:07] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:29:09] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[11:29:09] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[11:29:21] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[11:29:21] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[11:29:21] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[11:29:21] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[11:29:21] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:29:21] [92m@ chatbotSpeak(): toSay='Hello! How can I help you today? I am from Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[11:29:22] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[11:29:22] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): userInput='Hello!'[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): re declaring globalObject[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): getFirstPrepositionalObject() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): subjectWord and globalObject is the same, redefining subjectWord[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["rootWord"]='hello'[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ getInput(): inputType["totalWords"]=1[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:29:29] [92m@ chatbotSpeak(): toSay='Im sorry, I didnt quite understand. Could you repeat that?'[0m
+[91m[DEBUG] [94m[11:29:30] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:29:36] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[11:29:36] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[11:34:09] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[11:34:09] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[11:34:09] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[11:34:09] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[11:34:09] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:34:09] [92m@ chatbotSpeak(): toSay='Hi! I’m a chatbot from Liceo De Cagayan University. How can I make your day easier?'[0m
+[91m[DEBUG] [94m[11:34:10] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[11:34:10] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): userInput='Hello'[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): re declaring globalObject[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): getFirstPrepositionalObject() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): subjectWord and globalObject is the same, redefining subjectWord[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["rootWord"]='hello'[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ getInput(): inputType["totalWords"]=1[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ processInput(): branch 19.0[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ processInput(): input is a greeting, getting response from introGreet()[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ processInput(): response = introGreet()[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:34:14] [92m@ chatbotSpeak(): toSay='Greetings! I can answer your questions about Liceo De Cagayan University. What would you like to know?'[0m
+[91m[DEBUG] [94m[11:34:15] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:34:25] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:34:25] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:34:25] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:34:25] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:34:25] [92m@ getInput(): userInput='What Are You?'[0m
+[91m[DEBUG] [94m[11:34:25] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:34:25] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:34:25] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getPredicateNominative(): child.text.lower()='what'[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getPredicateNominative(): child.text.lower()='you'[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['you'][0m
+[91m[DEBUG] [94m[11:34:26] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType['questionType']='what'[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ processInput(): branch #14.0[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ processInput(): response = possibleResponses[what][you][0m
+[91m[DEBUG] [94m[11:34:26] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ chatbotSpeak(): toSay='Im sorry, I dont know what you meant.'[0m
+[91m[DEBUG] [94m[11:34:26] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): userInput='When Was Liceo Founded?'[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ clean(): text='found'[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]='found'[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]='founded'[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]='liceo'[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType['questionType']='when'[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["subjectWord"]='found'[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["rawSubjectWord"]='founded'[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["globalObject"]='liceo'[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ processInput(): branch #12.0[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ processInput(): response = possibleResponses[when][founded][liceo][0m
+[91m[DEBUG] [94m[11:34:49] [92m@ processInput(): branch #12.1[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ processInput(): response is None, redefining response[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ processInput(): response = possibleResponses[when][found][liceo][0m
+[91m[DEBUG] [94m[11:34:49] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:34:49] [92m@ chatbotSpeak(): toSay='Im sorry, I dont know when that is.'[0m
+[91m[DEBUG] [94m[11:34:50] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): userInput='Yes'[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): re declaring globalObject[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): getFirstPrepositionalObject() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): subjectWord and globalObject is the same, redefining subjectWord[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:35:49] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["rootWord"]='yes'[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ getInput(): inputType["totalWords"]=1[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ processInput(): branch 19.0[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ processInput(): input is a greeting, getting response from introGreet()[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ processInput(): response = introGreet()[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:35:50] [92m@ chatbotSpeak(): toSay='Hello! I’m your virtual assistant from Liceo De Cagayan University. How can I be of service?'[0m
+[91m[DEBUG] [94m[11:35:51] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ getInput(): userInput='Are You Okay?'[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]='okay'[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:36:03] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getPredicateNominative(): child.text.lower()='you'[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['you'][0m
+[91m[DEBUG] [94m[11:36:04] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["adjectiveWord"]='okay'[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ chatbotSpeak(): toSay='Apologies, I didnt catch that. Can you repeat what you said?'[0m
+[91m[DEBUG] [94m[11:36:04] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): userInput='How Are You?'[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getPredicateNominative(): child.text.lower()='how'[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getPredicateNominative(): child.text.lower()='you'[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['you'][0m
+[91m[DEBUG] [94m[11:36:14] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType['questionType']='how'[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ processInput(): branch #14.0[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ processInput(): response = possibleResponses[how][you][0m
+[91m[DEBUG] [94m[11:36:14] [92m@ processInput(): datatype of response ---\> <class 'dict'>[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ processInput(): branch #14.01[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ processInput(): response is dictionary, redefining response[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ processInput(): response = possibleResponses[how][you][you][0m
+[91m[DEBUG] [94m[11:36:14] [92m@ processInput(): response is tuple[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:36:14] [92m@ chatbotSpeak(): toSay='Im well, thank you. And you?'[0m
+[91m[DEBUG] [94m[11:36:15] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): userInput='Whats Up!?'[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): found 's' in the questionType[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): arranging userInput[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): final userInput ---\> userInput='What Is Up!'[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ clean(): text='up'[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='up'[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='up'[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getPredicateNominative(): child.text.lower()='what'[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getPredicateNominative(): child.text.lower()='up'[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['up'][0m
+[91m[DEBUG] [94m[11:36:19] [92m@ clean(): text='up'[0m
+[91m[DEBUG] [94m[11:36:19] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType['questionType']='what'[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["subjectWord"]='up'[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["rawSubjectWord"]='up'[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ processInput(): branch #14.0[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ processInput(): response = possibleResponses[what][up][0m
+[91m[DEBUG] [94m[11:36:20] [92m@ processInput(): datatype of response ---\> <class 'str'>[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ chatbotSpeak(): toSay='The ceiling, the sky, and my processing power! Whats up with you?'[0m
+[91m[DEBUG] [94m[11:36:20] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): userInput='Hows The Weather?'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): found 's' in the questionType[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): arranging userInput[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): final userInput ---\> userInput='How Is The Weather?'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ clean(): text='weather'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='weath'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='weather'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getPredicateNominative(): child.text.lower()='how'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getPredicateNominative(): child.text.lower()='weather'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['weather'][0m
+[91m[DEBUG] [94m[11:39:51] [92m@ clean(): text='weather'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]='weather'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType['questionType']='how'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["subjectWord"]='weath'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["rawSubjectWord"]='weather'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["globalObject"]='weather'[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ processInput(): branch #2.02[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ processInput(): response = possibleResponses[how][weather][weather][0m
+[91m[DEBUG] [94m[11:39:51] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:39:51] [92m@ chatbotSpeak(): toSay='The current weather in Cagayan De Oro City is overcast clouds with a temperature of 31.06°C.'[0m
+[91m[DEBUG] [94m[11:39:52] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): userInput='Whats The Time?'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): found 's' in the questionType[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): arranging userInput[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): final userInput ---\> userInput='What Is The Time?'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ clean(): text='time'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='time'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='time'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getPredicateNominative(): child.text.lower()='what'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getPredicateNominative(): child.text.lower()='time'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['time'][0m
+[91m[DEBUG] [94m[11:40:09] [92m@ clean(): text='time'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]='time'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): re declaring globalObject[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): getFirstPrepositionalObject() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]='time'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType['questionType']='what'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["subjectWord"]='time'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["rawSubjectWord"]='time'[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ processInput(): branch #14.0[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ processInput(): response = possibleResponses[what][time][0m
+[91m[DEBUG] [94m[11:40:09] [92m@ processInput(): datatype of response ---\> <class 'dict'>[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ processInput(): branch #14.01[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ processInput(): response is dictionary, redefining response[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ processInput(): response = possibleResponses[what][time][time][0m
+[91m[DEBUG] [94m[11:40:09] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:40:09] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:40:10] [92m@ chatbotSpeak(): toSay='The current time is 11:39 AM on Monday.'[0m
+[91m[DEBUG] [94m[11:40:10] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): userInput='Whats The Time?'[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): found 's' in the questionType[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): arranging userInput[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): final userInput ---\> userInput='What Is The Time?'[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ clean(): text='time'[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='time'[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='time'[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:40:13] [92m@ getPredicateNominative(): child.text.lower()='what'[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getPredicateNominative(): child.text.lower()='time'[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['time'][0m
+[91m[DEBUG] [94m[11:40:14] [92m@ clean(): text='time'[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]='time'[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): re declaring globalObject[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): getFirstPrepositionalObject() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]='time'[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType['questionType']='what'[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["subjectWord"]='time'[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["rawSubjectWord"]='time'[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ processInput(): branch #14.0[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ processInput(): response = possibleResponses[what][time][0m
+[91m[DEBUG] [94m[11:40:14] [92m@ processInput(): datatype of response ---\> <class 'dict'>[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ processInput(): branch #14.01[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ processInput(): response is dictionary, redefining response[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ processInput(): response = possibleResponses[what][time][time][0m
+[91m[DEBUG] [94m[11:40:14] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ chatbotSpeak(): toSay='The current time is 11:40 AM on Monday.'[0m
+[91m[DEBUG] [94m[11:40:14] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): userInput='Whats The Weather Today?'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): found 's' in the questionType[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): arranging userInput[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): final userInput ---\> userInput='What Is The Weather Today?'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ clean(): text='weather'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='weath'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='weather'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getPredicateNominative(): child.text.lower()='what'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getPredicateNominative(): child.text.lower()='weather'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['weather'][0m
+[91m[DEBUG] [94m[11:40:37] [92m@ clean(): text='weather'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]='weather'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): re declaring globalObject[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): getFirstPrepositionalObject() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]='weather'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType['questionType']='what'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["subjectWord"]='weath'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["rawSubjectWord"]='weather'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["globalObject"]='weather'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["adverbTime"]='today'[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ getInput(): inputType["totalWords"]=5[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ processInput(): branch #9.0[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ processInput(): response = possibleResponses[what][weather][today][0m
+[91m[DEBUG] [94m[11:40:37] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:40:37] [92m@ chatbotSpeak(): toSay='The current weather in Cagayan De Oro City is overcast clouds with a temperature of 31.06°C.'[0m
+[91m[DEBUG] [94m[11:40:38] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): [can] | [can][0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): modalVerb found ---\> inputType["modalVerb"]='can'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): userInput='Where Can I Find The Smallest Country?'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ clean(): text='i'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]='smallest'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='country'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]='country'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType['questionType']='where'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["subjectWord"]='country'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["globalObject"]='country'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["modalVerb"]='can'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["adjectiveWord"]='smallest'[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ getInput(): inputType["totalWords"]=7[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ processInput(): branch #1.0[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ processInput(): response = possibleResponses[where][smallest][country][0m
+[91m[DEBUG] [94m[11:42:05] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:42:05] [92m@ chatbotSpeak(): toSay='I apologize, I have no information regarding to where that location is.'[0m
+[91m[DEBUG] [94m[11:42:06] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): [can] | [can][0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): modalVerb found ---\> inputType["modalVerb"]='can'[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): userInput='What Can You Do?'[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)='what'[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): found modalVerb, defining globalObject[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): getRootVerb() to globalObject ---\> inputType["globalObject"]='do'[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): trying to get a direct object[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): inputType['questionType']='what'[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): inputType["globalObject"]='do'[0m
+[91m[DEBUG] [94m[11:42:56] [92m@ getInput(): inputType["globalObjectEx"]='what'[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ getInput(): inputType["modalVerb"]='can'[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ processInput(): branch #3.0[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ processInput(): response = possibleResponses[what][can][you][do][0m
+[91m[DEBUG] [94m[11:42:57] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ chatbotSpeak(): toSay='I can answer questions and have a chat with you. Just ask!'[0m
+[91m[DEBUG] [94m[11:42:57] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): userInput='Who Are The Chairpersons Of Tvl?'[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]='chairpersons'[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getPredicateNominative(): child.text.lower()='who'[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getPredicateNominative(): child.text.lower()='chairpersons'[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['chairpersons'][0m
+[91m[DEBUG] [94m[11:43:14] [92m@ clean(): text='chairpersons'[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): re declaring globalObject[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): getFirstPrepositionalObject() to globalObject ---\> inputType["globalObject"]='tvl'[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["subjectWord"]='chairperson'[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["rawSubjectWord"]='chairpersons'[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["globalObject"]='tvl'[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ getInput(): inputType["totalWords"]=6[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ processInput(): branch #12.0[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ processInput(): response = possibleResponses[who][chairpersons][tvl][0m
+[91m[DEBUG] [94m[11:43:14] [92m@ processInput(): datatype of response ---\> <class 'dict'>[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ processInput(): branch #12.01[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ processInput(): response is dictionary, redefining response[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ processInput(): response = possibleResponses[who][chairperson][tvl][tvl][0m
+[91m[DEBUG] [94m[11:43:14] [92m@ processInput(): branch #12.1[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ processInput(): response is None, redefining response[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ processInput(): response = possibleResponses[who][chairperson][tvl][0m
+[91m[DEBUG] [94m[11:43:14] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ chatbotSpeak(): toSay='Sorry, I dont know who that person is.'[0m
+[91m[DEBUG] [94m[11:43:14] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): userInput='Who Are The Chairpersons Of Tvl In Liceo?'[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]='chairpersons'[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getPredicateNominative(): child.text.lower()='who'[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getPredicateNominative(): child.text.lower()='chairpersons'[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['chairpersons'][0m
+[91m[DEBUG] [94m[11:43:23] [92m@ clean(): text='chairpersons'[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): re declaring globalObject[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): getFirstPrepositionalObject() to globalObject ---\> inputType["globalObject"]='tvl'[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["subjectWord"]='chairperson'[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["rawSubjectWord"]='chairpersons'[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["globalObject"]='tvl'[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["globalObjectEx"]='liceo'[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ getInput(): inputType["totalWords"]=8[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ processInput(): branch #6.0[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ processInput(): response = possibleResponses[who][chairpersons][liceo][tvl][0m
+[91m[DEBUG] [94m[11:43:23] [92m@ processInput(): branch #6.01[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ processInput(): questionType and subjectWord are not the same, redefining response[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ processInput(): response = possibleResponses[who][chairperson][tvl][liceo][0m
+[91m[DEBUG] [94m[11:43:23] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:43:23] [92m@ chatbotSpeak(): toSay='The chairperson in TVL 1 is Miss Wynne Lim and the chairperson in TVL 2 is Mister Charlie Yabes.'[0m
+[91m[DEBUG] [94m[11:43:24] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): userInput='Who Is Jun Jerome Balagot?'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]='jun'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]='balagot'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getPredicateNominative(): child.text.lower()='who'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getPredicateNominative(): child.text.lower()='balagot'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['jun', 'jerome', 'balagot'][0m
+[91m[DEBUG] [94m[11:43:37] [92m@ clean(): text='jerome'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["subjectWord"]='jerome'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["subjectWordName"]='jun'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["subjectWordNameEx"]='balagot'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["rawSubjectWord"]='jerome'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["globalObject"]='balagot'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["adjectiveWord"]='jun'[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ getInput(): inputType["totalWords"]=5[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ processInput(): branch #4.0[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ processInput(): response = possibleResponses[who][jerome][jun][balagot][0m
+[91m[DEBUG] [94m[11:43:37] [92m@ processInput(): branch #4.2[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ processInput(): response = possibleResponses[who][jun][jerome][balagot][0m
+[91m[DEBUG] [94m[11:43:37] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:43:37] [92m@ chatbotSpeak(): toSay='Jun Jerome Balagot is a robotics teacher in Liceo de Cagayan University. He is one of the most humble teacher in Liceo.'[0m
+[91m[DEBUG] [94m[11:43:38] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): userInput='Who Created You?'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ clean(): text='who'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='who'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='who'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): failed getting predicate nominative[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ clean(): text='create'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]='create'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]='created'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)='you'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType['questionType']='who'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType["subjectWord"]='create'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType["rawSubjectWord"]='created'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType["globalObject"]='you'[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:43:52] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ processInput(): branch #12.0[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ processInput(): response = possibleResponses[who][created][you][0m
+[91m[DEBUG] [94m[11:43:53] [92m@ processInput(): branch #12.1[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ processInput(): response is None, redefining response[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ processInput(): response = possibleResponses[who][create][you][0m
+[91m[DEBUG] [94m[11:43:53] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ chatbotSpeak(): toSay='I am created by Ever Sanaga. An ICT student in Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[11:43:53] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): userInput='Tell Me A Funny Jole'[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]='funny'[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ clean(): text='tell'[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]='jole'[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["subjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["rawSubjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["globalObject"]='jole'[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["adjectiveWord"]='funny'[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ getInput(): inputType["totalWords"]=5[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ processInput(): checking for adjectiveWord[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ processInput(): branch #17.0[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ processInput(): found an adjective[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ processInput(): response = possibleResponses[tell][jole][funny][0m
+[91m[DEBUG] [94m[11:44:05] [92m@ processInput(): raising inputErrorResponses[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:44:05] [92m@ chatbotSpeak(): toSay='Sorry, I didnt quite grasp what you said. Could you say it again?'[0m
+[91m[DEBUG] [94m[11:44:06] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): userInput='Tell Me A Funny Jke'[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]='funny'[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ clean(): text='tell'[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]='jke'[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["subjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["rawSubjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["globalObject"]='jke'[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["adjectiveWord"]='funny'[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ getInput(): inputType["totalWords"]=5[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ processInput(): checking for adjectiveWord[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ processInput(): branch #17.0[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ processInput(): found an adjective[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ processInput(): response = possibleResponses[tell][jke][funny][0m
+[91m[DEBUG] [94m[11:44:08] [92m@ processInput(): raising inputErrorResponses[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:44:08] [92m@ chatbotSpeak(): toSay='Sorry, I didnt understand. Could you say that again for me?'[0m
+[91m[DEBUG] [94m[11:44:09] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): userInput='Tell Me A Funny Joke'[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]='funny'[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ clean(): text='tell'[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]='joke'[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["subjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["rawSubjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["globalObject"]='joke'[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["adjectiveWord"]='funny'[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ getInput(): inputType["totalWords"]=5[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:44:11] [92m@ processInput(): checking for adjectiveWord[0m
+[91m[DEBUG] [94m[11:44:12] [92m@ processInput(): branch #17.0[0m
+[91m[DEBUG] [94m[11:44:12] [92m@ processInput(): found an adjective[0m
+[91m[DEBUG] [94m[11:44:12] [92m@ processInput(): response = possibleResponses[tell][joke][funny][0m
+[91m[DEBUG] [94m[11:44:12] [92m@ processInput(): response is tuple[0m
+[91m[DEBUG] [94m[11:44:12] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:44:12] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:44:12] [92m@ chatbotSpeak(): toSay='I asked the librarian if the library had any books on suicide. She said they were all checked out.'[0m
+[91m[DEBUG] [94m[11:44:13] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): userInput='Tell A Fact'[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:44:41] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ clean(): text='tell'[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]='fact'[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["subjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["rawSubjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["globalObject"]='fact'[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ processInput(): checking for adjectiveWord[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ processInput(): branch #18.0[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ processInput(): no adjective found[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ processInput(): response = possibleResponses[tell][fact][0m
+[91m[DEBUG] [94m[11:44:42] [92m@ processInput(): datatype of response ---\> <class 'dict'>[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ processInput(): branch #18.01[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ processInput(): response is dictionary, redefining response[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ processInput(): response = possibleResponses[tell][fact][fact][0m
+[91m[DEBUG] [94m[11:44:42] [92m@ processInput(): response is tuple[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:44:42] [92m@ chatbotSpeak(): toSay='Light takes about 8 minutes and 20 seconds to travel from the Sun to Earth.'[0m
+[91m[DEBUG] [94m[11:44:43] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): userInput='Tell An Interesting Fact'[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]='interesting'[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ clean(): text='tell'[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]='fact'[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["subjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["rawSubjectWord"]='tell'[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["globalObject"]='fact'[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["adjectiveWord"]='interesting'[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ processInput(): checking for adjectiveWord[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ processInput(): branch #17.0[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ processInput(): found an adjective[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ processInput(): response = possibleResponses[tell][fact][interesting][0m
+[91m[DEBUG] [94m[11:44:56] [92m@ processInput(): response is tuple[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:44:56] [92m@ chatbotSpeak(): toSay='Octopuses have blue blood due to the copper-based molecule hemocyanin, which is more efficient than hemoglobin in cold, low-oxygen environments.'[0m
+[91m[DEBUG] [94m[11:44:58] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:46:13] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[11:46:13] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[11:49:38] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[11:49:38] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[11:49:38] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[11:49:38] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[11:49:38] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:49:38] [92m@ chatbotSpeak(): toSay='Hi! I’m a chatbot from Liceo De Cagayan University. How can I make your day easier?'[0m
+[91m[DEBUG] [94m[11:49:39] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[11:49:39] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:49:52] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:49:52] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:49:52] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:49:52] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:49:52] [92m@ getInput(): userInput='Whats Up?'[0m
+[91m[DEBUG] [94m[11:49:52] [92m@ getInput(): found 's' in the questionType[0m
+[91m[DEBUG] [94m[11:49:52] [92m@ getInput(): arranging userInput[0m
+[91m[DEBUG] [94m[11:49:52] [92m@ getInput(): final userInput ---\> userInput='What Is Up?'[0m
+[91m[DEBUG] [94m[11:49:52] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:49:52] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:49:52] [92m@ clean(): text='up'[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='up'[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='up'[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getPredicateNominative(): child.text.lower()='what'[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getPredicateNominative(): child.text.lower()='up'[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['up'][0m
+[91m[DEBUG] [94m[11:49:53] [92m@ clean(): text='up'[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType['questionType']='what'[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["subjectWord"]='up'[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["rawSubjectWord"]='up'[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ processInput(): branch #14.0[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ processInput(): response = possibleResponses[what][up][0m
+[91m[DEBUG] [94m[11:49:53] [92m@ processInput(): datatype of response ---\> <class 'str'>[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:49:53] [92m@ chatbotSpeak(): toSay='The ceiling, the sky, and my processing power! Whats up with you?'[0m
+[91m[DEBUG] [94m[11:49:54] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:50:22] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[11:50:22] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[11:50:34] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[11:50:34] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[11:50:34] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[11:50:34] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[11:50:35] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:50:35] [92m@ chatbotSpeak(): toSay='Hi! I’m a chatbot from Liceo De Cagayan University. How can I make your day easier?'[0m
+[91m[DEBUG] [94m[11:50:35] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[11:50:35] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): userInput='Hi Chatbot!'[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]='hi'[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ clean(): text=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]='hi'[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): inputType["grammaticalNumber"]=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): inputType["rawSubjectWord"]=''[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): inputType["rootWord"]='chatbot'[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): inputType["globalObject"]='hi'[0m
+[91m[DEBUG] [94m[11:50:40] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ getInput(): inputType["adjectiveWord"]='hi'[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ getInput(): inputType["totalWords"]=2[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ processInput(): branch 19.0[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ processInput(): input is a greeting, getting response from introGreet()[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ processInput(): response = introGreet()[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ chatbotSpeak(): toSay='Hello! How can I help you today? I am from Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[11:50:41] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): userInput='How Are You?'[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getPredicateNominative(): child.text.lower()='how'[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getPredicateNominative(): child.text.lower()='you'[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['you'][0m
+[91m[DEBUG] [94m[11:51:00] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType['questionType']='how'[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ processInput(): branch #14.0[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ processInput(): response = possibleResponses[how][you][0m
+[91m[DEBUG] [94m[11:51:00] [92m@ processInput(): datatype of response ---\> <class 'dict'>[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ processInput(): branch #14.01[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ processInput(): response is dictionary, redefining response[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ processInput(): response = possibleResponses[how][you][you][0m
+[91m[DEBUG] [94m[11:51:00] [92m@ processInput(): response is tuple[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:51:00] [92m@ chatbotSpeak(): toSay='Im doing fine, how about you?'[0m
+[91m[DEBUG] [94m[11:51:01] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): userInput='Im Good'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ clean(): text='i'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]='good'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ clean(): text='m'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]='m'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]='m'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["subjectWord"]='m'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["rawSubjectWord"]='m'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["rootWord"]='m'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["globalObjectEx"]='m'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["adjectiveWord"]='good'[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ getInput(): inputType["totalWords"]=2[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ processInput(): branch 19.0[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ processInput(): input is a greeting, getting response from introGreet()[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ processInput(): response = introGreet()[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:51:07] [92m@ chatbotSpeak(): toSay='Hello! I’m your virtual assistant from Liceo De Cagayan University. How can I be of service?'[0m
+[91m[DEBUG] [94m[11:51:08] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:51:13] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:51:13] [92m@ chatbotSpeak(): toSay='Im sorry, I missed that. Can you repeat it for me?'[0m
+[91m[DEBUG] [94m[11:51:14] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:53:23] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:53:23] [92m@ chatbotSpeak(): toSay='Sorry, I didnt understand you clearly. Could you say that again?'[0m
+[91m[DEBUG] [94m[11:53:23] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:54:50] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[11:54:50] [92m@ getInput(): exiting program[0m
+[91m[DEBUG] [94m[11:56:14] [92m@ entry_point: starting program[0m
+[91m[DEBUG] [94m[11:56:14] [92m@ entry_point: executing main()[0m
+[91m[DEBUG] [94m[11:56:14] [92m@ main(): executing printBanner()[0m
+[91m[DEBUG] [94m[11:56:14] [92m@ main(): executing introGreet()[0m
+[91m[DEBUG] [94m[11:56:14] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:56:14] [92m@ chatbotSpeak(): toSay='Hi there! Im here to assist you with anything about Liceo De Cagayan University.'[0m
+[91m[DEBUG] [94m[11:56:15] [92m@ main(): executing initiateConversation()[0m
+[91m[DEBUG] [94m[11:56:15] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): userInput='How Are You?'[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getPredicateNominative(): child.text.lower()='how'[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getPredicateNominative(): child.text.lower()='you'[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): output of getPredicateNominative() ---\> predicateNominative=['you'][0m
+[91m[DEBUG] [94m[11:56:21] [92m@ clean(): text='you'[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType['isQuestion']=True[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType['questionType']='how'[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["interrogativeWordsCount"]=1[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["subjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["rawSubjectWord"]='you'[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ getInput(): inputType["totalWords"]=3[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ processInput(): declaring response[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ processInput(): branch #14.0[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ processInput(): response = possibleResponses[how][you][0m
+[91m[DEBUG] [94m[11:56:21] [92m@ processInput(): datatype of response ---\> <class 'dict'>[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ processInput(): branch #14.01[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ processInput(): response is dictionary, redefining response[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ processInput(): response = possibleResponses[how][you][you][0m
+[91m[DEBUG] [94m[11:56:21] [92m@ processInput(): response is tuple[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:56:21] [92m@ chatbotSpeak(): toSay='Im doing fine, how about you?'[0m
+[91m[DEBUG] [94m[11:56:22] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): userInput='Im Good'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ clean(): text='i'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]='good'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]=''[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getting main verb[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ clean(): text='m'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getting main branch ---\> inputType["subjectWord"]='m'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getting main branch ---\> inputType["rawSubjectWord"]='m'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getting direct to globalObject[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): output of getDirectObjectEx() ---\> getDirectObjectEx(userInput)=''[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): failed getDirectObjectEx() trying again getProperNoun()[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): getProperNoun() to globalObject ---\> inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): checking if globalObject and subjectWordName are still the same[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): globalObject and subjectWordName are still the same, clearing globalObject[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["subjectWord"]='m'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["rawSubjectWord"]='m'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["rootWord"]='m'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["globalObject"]=''[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["globalObjectEx"]='m'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["adjectiveWord"]='good'[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ getInput(): inputType["totalWords"]=2[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ processInput(): branch 19.0[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ processInput(): response = possibleResponses[m][good][0m
+[91m[DEBUG] [94m[11:56:27] [92m@ processInput(): response is tuple[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ processInput(): chatbot replying[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:56:27] [92m@ chatbotSpeak(): toSay='Good to know! What can I do for you?'[0m
+[91m[DEBUG] [94m[11:56:28] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): [will] | [will][0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): modalVerb found ---\> inputType["modalVerb"]='will'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): userInput='I Will Ask Questions'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ clean(): text='i'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='questions'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]='questions'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): found modalVerb, defining globalObject[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): getRootVerb() to globalObject ---\> inputType["globalObject"]='ask'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): trying to get a direct object[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["subjectWord"]='questions'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["globalObject"]='ask'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["globalObjectEx"]='questions'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["modalVerb"]='will'[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["adjectiveWord"]=''[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ processInput(): branch #16.02[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ processInput(): response = possibleResponses[will][i][ask][questions][0m
+[91m[DEBUG] [94m[11:56:48] [92m@ processInput(): raising inputErrorResponses[0m
+[91m[DEBUG] [94m[11:56:48] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:56:49] [92m@ chatbotSpeak(): toSay='Apologies, I didnt follow that. Could you say it one more time?'[0m
+[91m[DEBUG] [94m[11:56:49] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): checking userInput for a modalVerb[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): checking userInput for an interrogativeWord[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): checking userInput for an adverbTime[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): checking userInput for an emotionVerb[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): userInput='Im Gonna Ask Questions'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): checking user input for interrogative words[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): getting subject word[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ clean(): text='i'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): adjectiveWord ---\> inputType["adjectiveWord"]='gon'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): checking subject word[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): getting direct object[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): getting subject word branch ---\> inputType["subjectWord"]='questions'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): getting subject word branch ---\> inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): getting globalObject branch ---\> inputType["globalObject"]='questions'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): checking for surname[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType['isQuestion']=False[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType['questionType']=''[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["interrogativeWordsCount"]=0[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["subjectWord"]='questions'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["subjectWordIndex"]=0[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["subjectWordName"]=''[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["subjectWordNameEx"]=''[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["grammaticalNumber"]='singular'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["rawSubjectWord"]='i'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["rootWord"]=''[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["globalObject"]='questions'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["globalObjectEx"]=''[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["modalVerb"]=''[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["adjectiveWord"]='gon'[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["adjectiveWordEx"]=''[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["adverbTime"]=''[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ getInput(): inputType["totalWords"]=4[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ initiateConversation(): executing processInput()[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ processInput(): checking the number of interrogative words[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ processInput(): checking for adjectiveWord[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ processInput(): branch #17.0[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ processInput(): found an adjective[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ processInput(): response = possibleResponses[questions][questions][gon][0m
+[91m[DEBUG] [94m[11:57:08] [92m@ processInput(): raising inputErrorResponses[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ talkBot(): executing chatbotSpeak()[0m
+[91m[DEBUG] [94m[11:57:08] [92m@ chatbotSpeak(): toSay='Sorry, I didnt quite hear that. Could you say it again?'[0m
+[91m[DEBUG] [94m[11:57:09] [92m@ initiateConversation(): executing getInput()[0m
+[91m[DEBUG] [94m[11:58:17] [92m@ getInput(): executing exit()[0m
+[91m[DEBUG] [94m[11:58:17] [92m@ getInput(): exiting program[0m

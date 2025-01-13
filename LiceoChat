@@ -94,6 +94,15 @@ cool_facts = (
 	"Saturn's moon Titan has rivers, lakes, and seas of liquid methane and ethane, making it the only other place in the solar system known to have stable liquids on its surface.")
 
 possibleResponses = {
+	"m": {
+		"alright": "That's good to hear! How can I help you today?",
+		"good": (
+	"That's great! What can I assist you with today?",
+    "Glad to hear that! How may I be of service?",
+    "Awesome! What do you need help with today?",
+    "That's wonderful! Let me know how I can assist you.",
+    "Good to know! What can I do for you?"),
+	},
 	"do": {
 		"you": {
 			"like": {
@@ -200,10 +209,15 @@ possibleResponses = {
 
 	},
 	"where": {
+		"smallest": {
+			"country": "Vatican City is the smallest country in the world by land area.",
+		},
 		"liceo": "Oh! I know where you can find Liceo De Cagayan University. It is located at Kauswagan, Rodolfo N. Pelaez Boulevard, Cagayan De Oro City"
 	},
 	"when": {
-		"liceo": "Liceo was founded in the year 1955."
+		"found": {
+			"liceo": "Liceo was founded in the year 1955."	
+		}
 	},
 	"how": {
 		"weather": {
@@ -272,6 +286,16 @@ greets = (
 	"Hello! How can I help you today? I am from Liceo De Cagayan University.",
 	"Oh! Hi there! I am a chatbot made in Liceo De Cagayan University, how can I help you?",
 	"Hello person! Ask me anything about Liceo De Cagayan University!",
+	"Hi there! I'm here to assist you with anything about Liceo De Cagayan University.",
+    "Hello! Need help? I'm your chatbot guide for Liceo De Cagayan University.",
+    "Greetings! I can answer your questions about Liceo De Cagayan University. What would you like to know?",
+    "Hey! I’m your friendly chatbot from Liceo De Cagayan University. How can I assist you today?",
+    "Hello! Ask me anything about Liceo De Cagayan University, and I’ll do my best to help.",
+    "Hi! I’m a chatbot from Liceo De Cagayan University. How can I make your day easier?",
+    "Oh, hello! I specialize in everything about Liceo De Cagayan University. What do you need?",
+    "Hi! Got questions about Liceo De Cagayan University? I’ve got the answers!",
+    "Hello! I’m your virtual assistant from Liceo De Cagayan University. How can I be of service?",
+    "Hi there! I’m ready to help you with anything related to Liceo De Cagayan University!"
 	)
 
 """ END: GLOBAL VARIABLES """
@@ -307,8 +331,8 @@ def chatbotSpeak(text: str) -> None:
 	if chatbotSpeakFlag:
 		toSay = text.replace("'", "")
 		debug(f"@ chatbotSpeak(): {toSay=}")
-		# execute(f"echo \"{toSay}\" |festival --tts &")
-		execute(f"espeak -p 50 -s 140 \"{text}\" &")
+		execute(f"echo \"{toSay}\" |festival --tts &")
+		# execute(f"espeak -p 50 -s 140 \"{text}\" &")
 		return
 	return
 
@@ -425,6 +449,13 @@ def getRootVerb(text: str) -> str:
 			return token.lemma_.lower()
 	return ""
 
+def getRootWord(text: str) -> str:
+	doc = naturalLanguageProcessing(text)
+	for token in doc:
+		if token.dep_ == "ROOT":
+			return token.text.lower()
+	return ""
+
 def getRootVerbIndex(text: str) -> str:
 	doc = naturalLanguageProcessing(text)
 	for token in doc:
@@ -475,8 +506,7 @@ def talkBot(text: str) -> None:
 	return
 
 def introGreet() -> None:
-	talkBot(selectRandom(greets))
-	return
+	return selectRandom(greets)
 
 def getInput() -> dict:
 	try:
@@ -503,6 +533,7 @@ def getInput() -> dict:
 			"subjectWordNameEx": "",
 			"grammaticalNumber": "",
 			"rawSubjectWord": "",
+			"rootWord": "",
 			"globalObject": "",
 			"globalObjectEx": "",
 			"modalVerb": "",
@@ -715,7 +746,8 @@ def getInput() -> dict:
 		if inputType["questionType"] == "do":
 			inputType["subjectWordName"] = getMainVerb(userInput)
 
-		
+		if not inputType["isQuestion"] and inputType["totalWords"] < 3:
+			inputType["rootWord"] = getRootWord(userInput)
 
 		debug(f"@ getInput(): {inputType['isQuestion']=}")
 		debug(f"@ getInput(): {inputType['questionType']=}")
@@ -726,6 +758,7 @@ def getInput() -> dict:
 		debug(f"@ getInput(): {inputType["subjectWordNameEx"]=}")
 		debug(f"@ getInput(): {inputType["grammaticalNumber"]=}")
 		debug(f"@ getInput(): {inputType["rawSubjectWord"]=}")
+		debug(f"@ getInput(): {inputType["rootWord"]=}")
 		debug(f"@ getInput(): {inputType["globalObject"]=}")
 		debug(f"@ getInput(): {inputType["globalObjectEx"]=}")
 		debug(f"@ getInput(): {inputType["modalVerb"]=}")
@@ -956,6 +989,17 @@ def processInput(typeInput: dict, inputUser: list) -> None:
 						debug(f"@ processInput(): response = possibleResponses[{typeInput["subjectWord"]}][{typeInput["globalObject"]}][{typeInput["globalObject"]}]")
 						response = possibleResponses[typeInput["subjectWord"]][typeInput["globalObject"]][typeInput["globalObject"]]
 
+			elif typeInput["rootWord"]:
+				if typeInput["adjectiveWord"]:
+					debug("@ processInput(): branch 19.0")
+					debug(f"@ processInput(): response = possibleResponses[{typeInput["rootWord"]}][{typeInput["adjectiveWord"]}]")
+					response = possibleResponses[typeInput["rootWord"]][typeInput["adjectiveWord"]]
+				else:
+					debug("@ processInput(): branch 19.01")
+					debug("@ processInput(): input is a greeting, getting response from introGreet()")
+					debug("@ processInput(): response = introGreet()")
+					response = introGreet()
+
 			if type(response) == tuple:
 				debug("@ processInput(): response is tuple")
 				debug("@ processInput(): chatbot replying")
@@ -992,7 +1036,7 @@ def main() -> None:
 	debug("@ main(): executing printBanner()")
 	printBanner()
 	debug("@ main(): executing introGreet()")
-	introGreet()
+	talkBot(introGreet())
 	debug("@ main(): executing initiateConversation()")
 	initiateConversation()
 
