@@ -1,0 +1,370 @@
+#!/bin/python
+
+""" Libraries """
+
+from datetime import datetime
+import spacy
+import json
+import readline
+from string import ascii_lowercase
+from time import sleep
+import argparse
+from os import system as execute
+
+""" Colors """
+
+class Colors:
+	R = "\033[0m"
+	BLACK = "\033[90m"
+	RED = "\033[91m"
+	GREEN = "\033[92m"
+	BYELLOW = "\033[93m"
+	DYELLOW = "\033[33m"
+	BLUE = "\033[94m"
+	MAGENTA = "\033[95m"
+	CYAN = "\033[96m"
+	WHITE = "\033[97m"
+
+""" Global Variables """
+
+n = spacy.load("en_core_web_sm")
+c = Colors()
+responsesFileLocation = "response.json"
+responses = {}
+interrogativeWords = ("who", "where", "what", "when", "why", "how")
+fineTune = ("highest", "fastest")
+debugging = False
+reloadFlag = True
+chatbotReplyDelay = True
+
+""" Functions """
+
+def showSeal() -> None:
+	execute("./LiceoSeal")
+	return
+
+def talkBot(text: str) -> None:
+	if chatbotReplyDelay:
+		print(f"{c.CYAN}[LDCU_BOT]: {c.WHITE}", end="")
+		for letter in text:
+			print(letter, end='', flush=True)
+			sleep(0.01)
+		print(c.R)
+	else:
+		print(f"{c.CYAN}[LDCU_BOT]: {c.WHITE}{text}{c.R}")
+	return
+
+def fail(text: str) -> None:
+	if debugging:
+		logText = f"{c.MAGENTA} [FAILED] {c.BLUE}[{datetime.now().time().strftime('%H:%M:%S')}] {c.GREEN}{text}{c.R}"
+		with open("log.txt", "a") as logFile:
+			print(logText)
+			logFile.write(logText+"\n")
+		sleep(0.007)
+		return
+	return
+
+def success(text: str) -> None:
+	if debugging:
+		logText = f"{c.CYAN}[SUCCESS] {c.BLUE}[{datetime.now().time().strftime('%H:%M:%S')}] {c.GREEN}{text}{c.R}"
+		with open("log.txt", "a") as logFile:
+			print(logText)
+			logFile.write(logText+"\n")
+		sleep(0.007)
+		return
+	return
+
+def debug(text: str) -> None:
+	if debugging:
+		logText = f"{c.RED} [DEBUG]  {c.BLUE}[{datetime.now().time().strftime('%H:%M:%S')}] {c.GREEN}{text}{c.R}"
+		with open("log.txt", "a") as logFile:
+			print(logText)
+			logFile.write(logText+"\n")
+		sleep(0.007)
+		return
+	return
+
+def loadResponses(filePath: str) -> dict:
+	debug("@ loadResponses(): Loading responses..")
+	try:
+		with open(filePath, 'r') as f:
+			data = json.load(f)
+			success("@ loadResponses(): Successfully loaded the responses")
+		return data
+	except (FileNotFoundError, json.JSONDecodeError):
+		fail(f"@ loadResponses(): Failed to load the responses from {filePath}")
+		return {}
+
+def saveResponses(filePath: str, data: str) -> None:
+	with open(filePath, "w") as f:
+		json.dump(data, f, indent=4)
+
+	reloadFlag = True
+
+def addResponse(data: dict, keys: list) -> None:
+
+	value = input(f"{c.CYAN}[LDCU_BOT]:{c.WHITE} What do I respond? {c.R}")
+
+	current = data
+	for key in keys[:-1]:
+		if key not in current or not isinstance(current[key], dict):
+			current[key] = {}
+		current = current[key]
+	current[keys[-1]] = value
+
+def responseSegmentAppend(listToAppend: list, propnBank=[]) -> list:
+	listToReturn = []
+	
+	for elem in listToAppend:
+		listToReturn.append(elem)
+
+	if propnBank:
+		for i in range(0, len(propnBank)):
+			listToReturn.append(propnBank[i])
+
+	return listToReturn
+
+def displayData(data: dict, text: str) -> None:
+	if data:
+		success(f"@ displayData(): Displaying {text}")
+		print(c.BYELLOW+"||"+"---#####--"*8+"||"+ c.WHITE)
+		print(json.dumps(data, indent=4))
+		print(c.BYELLOW+"||"+"---#####--"*8+"||"+ c.WHITE)
+		return
+	fail(f"@ displayData(): Failed to display {text}")
+	return
+
+def getInterrogativeWord(text: str) -> str:
+	for word in text.lower().split(" "):
+		for r in interrogativeWords:
+			try:
+				if r == word[:len(r)]:
+					return r
+			except IndexError:
+				pass
+	return ""
+
+def extractInterjections(text: str, token) -> list:
+	listInterjections = []
+	for i in token:
+		if i.pos_.lower() == "intj":
+			listInterjections.append(i.text.lower())
+	return listInterjections
+
+def extractProperNoun(text: str, token) -> list:
+	listProperNouns = []
+	for i in token:
+		if i.pos_.lower() == "propn" and not i.text.lower() in fineTune:
+			listProperNouns.append(i.text.lower())
+	return listProperNouns
+
+def extractPronouns(text: str, token) -> list:
+	listPronouns = []
+	for i in token:
+		if i.pos_.lower() == "pron" and not i.text.lower() in interrogativeWords:
+			listPronouns.append(i.text.lower())
+	return listPronouns
+
+def getAuxiliary(text: str, token) -> str:
+	for i in token:
+		if i.pos_.lower() == "aux":
+			return i.text.lower()
+	return ""
+
+def getAdjective(text: str, token) -> str:
+	for i in token:
+		if i.pos_.lower() == "adj" or i.text.lower() in fineTune:
+			return i.text.lower()
+	return ""
+
+def getAdjectivalMod(text: str, token) -> str:
+	for i in token:
+		if i.dep_.lower() == "advmod":
+			return i.text.lower()
+	return ""
+
+def getAdverbialMod(text: str, token) -> str:
+	for i in token:
+		if i.dep_.lower() == "amod":
+			return i.text.lower()
+	return ""
+
+def getRootWord(text: str, token) -> str:
+	for i in token:
+		if i.dep_.lower() == "root":
+			return i.text.lower()
+	return ""
+
+def getNominalSubject(text: str, token) -> str:
+	for i in token:
+		if i.dep_.lower() == "nsubj":
+			return i.text.lower()
+	return ""
+
+def getDirectObject(text: str, token) -> str:
+	for i in token:
+		if i.dep_.lower() == "dobj":
+			return i.text.lower()
+	return ""
+
+def getObjectOfPreposition(text: str, token) -> str:
+	for i in token:
+		if i.dep_.lower() == "pobj":
+			return i.text.lower()
+	return ""
+
+def getInputType() -> dict:
+
+	userInput = input(f"{c.DYELLOW}[LICEAN]: {c.WHITE}").title()
+
+	if not userInput:
+		return
+
+	spacyDoc = n(userInput)
+	data = {
+		"interrogativeWord": "",
+		"properNouns": [],
+		"pronouns": [],
+		"adjective": [],
+		"interjections": [],
+		"rootWord": "",
+		"nominalSubject": "",
+		"directObject": "",
+		"objOfPreposition": "",
+		"adverbialMod": "",
+		"adjectivalMod": "",
+		"auxiliary": "",
+		"totalWords": 0,
+		"d.dep_": {},
+		"d.pos_": {},
+		"h.dep_": {},
+		"h.pos_": {}
+	}
+
+	for i in spacyDoc:
+		data["d.dep_"][i.text.lower()] = i.dep_.lower()
+		data["d.pos_"][i.text.lower()] = i.pos_.lower()
+		data["h.dep_"][i.head.text.lower()] = i.head.dep_.lower()
+		data["h.pos_"][i.head.text.lower()] = i.head.pos_.lower()
+
+	data["interrogativeWord"] = getInterrogativeWord(userInput)
+	data["properNouns"] = extractProperNoun(userInput, spacyDoc)
+	data["pronouns"] = extractPronouns(userInput, spacyDoc)
+	data["adjective"] = getAdjective(userInput, spacyDoc)
+	data["interjections"] = extractInterjections(userInput, spacyDoc)
+	data["rootWord"] = getRootWord(userInput, spacyDoc)
+	data["nominalSubject"] = getNominalSubject(userInput, spacyDoc)
+	data["directObject"] = getDirectObject(userInput, spacyDoc)
+	data["objOfPreposition"] = getObjectOfPreposition(userInput, spacyDoc)
+	data["adverbialMod"] = getAdverbialMod(userInput, spacyDoc)
+	data["adjectivalMod"] = getAdjectivalMod(userInput, spacyDoc)
+	data["auxiliary"] = getAuxiliary(userInput, spacyDoc)
+	data["totalWords"] = len(userInput.split(" "))
+
+	displayData(data, "Input types")
+	return data
+
+def processInput() -> None:
+	global responses
+	global reloadFlag
+
+	debug("@ processInput(): Checking for reloadFlag..")
+	if reloadFlag:
+		debug("@ processInput(): reloadFlag is enabled, executing loadResponses()")
+		responses = loadResponses(responsesFileLocation)
+		reloadFlag = False
+		debug(f"@ processInput(): Disabling reloadFlag, {reloadFlag=}")
+
+	if not responses:
+		fail("@ processInput(): No responses loaded. Initializing empty response dictionary.")
+		responses = {}
+
+	debug("@ processInput(): Executing getInputType()")
+	inputType = getInputType()
+
+	propNounBank = []
+	listResponse = []
+	if len(inputType["properNouns"]) > 1:
+		for n in range(0, len(inputType["properNouns"])):
+			propNounBank.append(inputType["properNouns"][n])
+		displayData(propNounBank, "Proper Noun Bank")
+
+	response = ""
+
+	"""
+		1)
+			rule for the question format "who are you?"
+			interrogativeWord -> nominalSubject = response
+
+		2) 
+			rule for the question input that has a surname "who is charlie yabes?"
+			interrogativeWord -> propNounBank['a'] -> propNounBank[n] .. = response
+
+		3)
+			rule for the question format "who created you?"
+			interrogativeWord -> rootWord -> directObject = response
+
+	"""
+	try:
+		if inputType["interrogativeWord"] == "who":
+			if inputType["interrogativeWord"] != inputType["nominalSubject"]:
+				try:
+				# 1)
+					listResponse = responseSegmentAppend([inputType["interrogativeWord"], inputType["nominalSubject"]])
+					debug(f"@ processInput(): 1) responses[{inputType['interrogativeWord']}][{inputType['nominalSubject']}]")
+					response = responses[inputType["interrogativeWord"]][inputType["nominalSubject"]]
+					if type(response) == dict:
+						raise KeyError("")
+
+				except KeyError:
+				# 2)
+					if len(inputType["properNouns"]) > 1:
+						if len(inputType["properNouns"]) > 2:
+							if len(inputType["properNouns"]) > 3:
+								if len(inputType["properNouns"]) > 4:
+									listResponse = responseSegmentAppend([inputType["interrogativeWord"]], propnBank=propNounBank)
+									debug(f"@ processInput(): 2) responses[{inputType['interrogativeWord']}][{propNounBank[0]}][{propNounBank[1]}][{propNounBank[2]}][{propNounBank[3]}][{propNounBank[4]}]")
+									response = responses[inputType["interrogativeWord"]][propNounBank[0]][propNounBank[1]][propNounBank[2]][propNounBank[3]]
+								else:
+									listResponse = responseSegmentAppend([inputType["interrogativeWord"]], propnBank=propNounBank)
+									debug(f"@ processInput(): 2) responses[{inputType['interrogativeWord']}][{propNounBank[0]}][{propNounBank[1]}][{propNounBank[2]}][{propNounBank[3]}]")
+									response = responses[inputType["interrogativeWord"]][propNounBank[0]][propNounBank[1]][propNounBank[2]][propNounBank[3]]
+							else:
+								listResponse = responseSegmentAppend([inputType["interrogativeWord"]], propnBank=propNounBank)
+								debug(f"@ processInput(): 2) responses[{inputType['interrogativeWord']}][{propNounBank[0]}][{propNounBank[1]}][{propNounBank[2]}]")
+								response = responses[inputType["interrogativeWord"]][propNounBank[0]][propNounBank[1]][propNounBank[2]]
+						else:
+							listResponse = responseSegmentAppend([inputType["interrogativeWord"]], propnBank=propNounBank)
+							debug(f"@ processInput(): 2) responses[{inputType['interrogativeWord']}][{propNounBank[0]}][{propNounBank[1]}]")
+							response = responses[inputType["interrogativeWord"]][propNounBank[0]][propNounBank[1]]
+
+			elif inputType["rootWord"] and inputType["directObject"]:
+			# 3)
+				responseSegmentAppend([inputType['interrogativeWord'], inputType["rootWord"], inputType["directObject"]])
+				debug(f"@ processInput(): 3) responses[{inputType['interrogativeWord']}][{inputType['rootWord']}][{inputType['directObject']}]")
+
+		talkBot(response)
+
+	except KeyError:
+		addResponse(responses, listResponse)
+		saveResponses(responsesFileLocation, responses)
+		displayData(responses, "responses")
+
+def main() -> None:
+	debug("@ main(): Displaying Liceo De Cagayan Seal")
+	showSeal()
+	while True:
+		debug("@ main(): executing processInput()")
+		processInput()
+
+if __name__ == '__main__':
+	parser = argparse.ArgumentParser("A simple chatbot designed to assist with a medium range of questions related to Liceo De Cagayan University.")
+	parser.add_argument("--debug", action="store_true", help="Enable debugging output")
+	arguments = parser.parse_args()
+
+	if arguments.debug:
+		debugging = True
+
+	debug("@ entry_point: starting program")
+	debug("@ entry_point: executing main()")
+	main()
