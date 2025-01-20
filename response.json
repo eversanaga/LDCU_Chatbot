@@ -3,6 +3,18 @@
         "you": "I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether it's related to academic inquiries, campus information, or any other services we offer. I'm here to provide you with accurate and helpful responses, and I'm excited to help make your experience smoother and more efficient. Feel free to ask me anything, and I'll do my best to assist you!",
         "charlie": {
             "yabes": "Charlie C. Yabes is the chairperson in TVL 2. Together with Miss Wynne Lim, they are one of the seasoned teachers in Liceo de Cagayan University."
+        },
+        "wynne": {
+            "lim": "Wynne Lim is the chairperson in TVL 1. Together with Mister Charlie Yabes, they are one of the experienced teachers in Liceo de Cagayan University."
+        },
+        "chairpersons": {
+            "tvl": {
+                "liceo": {
+                    "de": {
+                        "cagayan": "The chairperson in TVL 1 is Miss Wynne Lim and the chairperson in TVL 2 is Mister Charlie Yabes"
+                    }
+                }
+            }
         }
     }
 }

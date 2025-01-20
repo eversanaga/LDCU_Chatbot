@@ -2,6 +2,7 @@
 
 """ Libraries """
 
+import difflib
 from datetime import datetime
 import spacy
 import json
@@ -39,11 +40,22 @@ chatbotReplyDelay = True
 
 """ Functions """
 
+def divider(func):
+	def wrapper(*args, **kwargs):
+		print(c.BYELLOW+"||"+"---#####--"*8+"||"+c.WHITE)
+		result = func(*args, **kwargs)
+		print(c.BYELLOW+"||"+"---#####--"*8+"||"+c.R)
+		return result
+	return wrapper
+
+@divider
 def showSeal() -> None:
 	execute("./LiceoSeal")
 	return
 
+@divider
 def talkBot(text: str) -> None:
+	debug(f"@ talkBot(): {text=}")
 	if chatbotReplyDelay:
 		print(f"{c.CYAN}[LDCU_BOT]: {c.WHITE}", end="")
 		for letter in text:
@@ -103,7 +115,12 @@ def saveResponses(filePath: str, data: str) -> None:
 
 def addResponse(data: dict, keys: list) -> None:
 
-	value = input(f"{c.CYAN}[LDCU_BOT]:{c.WHITE} What do I respond? {c.R}")
+	debug("@ addResponse(): Displaying keys")
+	displayData(keys)
+
+	talkBot(f"Unfortunately I have no information about that. Can you provide any information regarding that topic?")
+	value = input(f"{c.DYELLOW}[LICEAN]: {c.WHITE}")
+	talkBot(f"Thank you for providing information. It will be added in the {responsesFileLocation}")
 
 	current = data
 	for key in keys[:-1]:
@@ -118,21 +135,30 @@ def responseSegmentAppend(listToAppend: list, propnBank=[]) -> list:
 	for elem in listToAppend:
 		listToReturn.append(elem)
 
+	displayData(listToReturn)
+
 	if propnBank:
 		for i in range(0, len(propnBank)):
-			listToReturn.append(propnBank[i])
+			if not i == 0:
+				listToReturn.append(propnBank[i])
+
+			keys = str(eval(f"responses['{listToReturn[i]}'].keys()"))[11:-2].replace(",", "").replace("'", "").split(" ")
+			for elem in keys:
+				# debug(f"@ responseSegmentAppend(): keys for loop")
+				displayData(keys)
+				if propnBank[i] in elem:
+					debug(f"@ responseSegmentAppend(): {propnBank=}")
+					debug(f"@ responseSegmentAppend(): Appending {elem} to listToReturn")
+					listToReturn.append(elem)
+
+	debug(f"@ responseSegmentAppend(): Done responseSegmentAppend() returning")
+	displayData(listToReturn)
 
 	return listToReturn
 
-def displayData(data: dict, text: str) -> None:
-	if data:
-		success(f"@ displayData(): Displaying {text}")
-		print(c.BYELLOW+"||"+"---#####--"*8+"||"+ c.WHITE)
-		print(json.dumps(data, indent=4))
-		print(c.BYELLOW+"||"+"---#####--"*8+"||"+ c.WHITE)
-		return
-	fail(f"@ displayData(): Failed to display {text}")
-	return
+@divider
+def displayData(data: dict) -> None:
+	print(json.dumps(data, indent=4))
 
 def getInterrogativeWord(text: str) -> str:
 	for word in text.lower().split(" "):
@@ -213,6 +239,7 @@ def getObjectOfPreposition(text: str, token) -> str:
 			return i.text.lower()
 	return ""
 
+@divider
 def getInputType() -> dict:
 
 	userInput = input(f"{c.DYELLOW}[LICEAN]: {c.WHITE}").title()
@@ -261,7 +288,10 @@ def getInputType() -> dict:
 	data["auxiliary"] = getAuxiliary(userInput, spacyDoc)
 	data["totalWords"] = len(userInput.split(" "))
 
-	displayData(data, "Input types")
+	if data:
+		success(f"@ displayData(): Displaying Input types")
+		displayData(data)
+
 	return data
 
 def processInput() -> None:
@@ -287,7 +317,8 @@ def processInput() -> None:
 	if len(inputType["properNouns"]) > 1:
 		for n in range(0, len(inputType["properNouns"])):
 			propNounBank.append(inputType["properNouns"][n])
-		displayData(propNounBank, "Proper Noun Bank")
+		success(f"@ displayData(): Displaying Proper Noun Bank")
+		displayData(propNounBank)
 
 	response = ""
 
@@ -324,7 +355,7 @@ def processInput() -> None:
 								if len(inputType["properNouns"]) > 4:
 									listResponse = responseSegmentAppend([inputType["interrogativeWord"]], propnBank=propNounBank)
 									debug(f"@ processInput(): 2) responses[{inputType['interrogativeWord']}][{propNounBank[0]}][{propNounBank[1]}][{propNounBank[2]}][{propNounBank[3]}][{propNounBank[4]}]")
-									response = responses[inputType["interrogativeWord"]][propNounBank[0]][propNounBank[1]][propNounBank[2]][propNounBank[3]]
+									response = responses[inputType["interrogativeWord"]][propNounBank[0]][propNounBank[1]][propNounBank[2]][propNounBank[3]][propNounBank[4]]
 								else:
 									listResponse = responseSegmentAppend([inputType["interrogativeWord"]], propnBank=propNounBank)
 									debug(f"@ processInput(): 2) responses[{inputType['interrogativeWord']}][{propNounBank[0]}][{propNounBank[1]}][{propNounBank[2]}][{propNounBank[3]}]")
@@ -348,7 +379,8 @@ def processInput() -> None:
 	except KeyError:
 		addResponse(responses, listResponse)
 		saveResponses(responsesFileLocation, responses)
-		displayData(responses, "responses")
+		success("@ displayData(): Displaying responses")
+		displayData(responses)
 
 def main() -> None:
 	debug("@ main(): Displaying Liceo De Cagayan Seal")

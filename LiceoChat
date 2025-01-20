@@ -502,16 +502,7 @@ def debug(text: str) -> None:
 		return
 	return
 
-def talkBot(text: str) -> None:
-	if chatbotReplyDelay:
-		print(f"{c.CYAN}[LDCU_BOT]: {c.WHITE}", end="")
-		for letter in text:
-			print(letter, end='', flush=True)
-			sleep(0.01)
-		print(c.R)
-	else:
-		print(f"{c.CYAN}[LDCU_BOT]: {c.WHITE}{text}{c.R}")
-	return
+
 
 def introGreet() -> None:
 	return selectRandom(greets)

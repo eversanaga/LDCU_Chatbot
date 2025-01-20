@@ -292,3 +292,532 @@
 [91m [DEBUG]  [94m[01:51:45] [92m@ main(): executing processInput()[0m
 [91m [DEBUG]  [94m[01:51:45] [92m@ processInput(): Checking for reloadFlag..[0m
 [91m [DEBUG]  [94m[01:51:45] [92m@ processInput(): Executing getInputType()[0m
+[91m [DEBUG]  [94m[22:16:48] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[22:16:48] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[22:16:48] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[22:16:48] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:16:48] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:16:48] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[22:16:48] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[22:16:48] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[22:16:48] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[22:16:48] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:16:54] [92m@ displayData(): Displaying Input types[0m
+[91m [DEBUG]  [94m[22:16:54] [92m@ processInput(): 1) responses[who][you][0m
+[91m [DEBUG]  [94m[22:16:59] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:16:59] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:16:59] [92m@ processInput(): Executing getInputType()[0m
+[91m [DEBUG]  [94m[22:18:23] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[22:18:23] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[22:18:23] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[22:18:23] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:18:23] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:18:23] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[22:18:23] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[22:18:23] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[22:18:23] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[22:18:23] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:18:25] [92m@ displayData(): Displaying Input types[0m
+[91m [DEBUG]  [94m[22:18:25] [92m@ processInput(): 1) responses[who][you][0m
+[91m [DEBUG]  [94m[22:18:30] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:18:30] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:18:30] [92m@ processInput(): Executing getInputType()[0m
+[91m [DEBUG]  [94m[22:28:50] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[22:28:50] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[22:28:50] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[22:28:50] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:28:50] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:28:50] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[22:28:50] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[22:28:51] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[22:28:51] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[22:28:51] [92m@ processInput(): Executing getInputType()[0m
+[91m [DEBUG]  [94m[22:30:12] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[22:30:12] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[22:30:12] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[22:30:12] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:30:12] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:30:12] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[22:30:12] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[22:30:12] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[22:30:12] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[22:30:12] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:30:25] [92m@ displayData(): Displaying Input types[0m
+[91m [DEBUG]  [94m[22:30:25] [92m@ processInput(): 1) responses[who][you][0m
+[91m [DEBUG]  [94m[22:30:30] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:30:30] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:30:30] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:33:41] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[22:33:41] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[22:33:41] [92m@ processInput(): 1) responses[who][yabes][0m
+[91m [DEBUG]  [94m[22:33:41] [92m@ processInput(): 2) responses[who][charlie][yabes][0m
+[91m [DEBUG]  [94m[22:33:42] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:33:42] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:33:42] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:35:10] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[22:35:10] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[22:35:10] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[22:35:10] [92m@ processInput(): 2) responses[who][wynne][lim][0m
+[91m [DEBUG]  [94m[22:38:18] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[22:38:18] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[22:38:18] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[22:38:18] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:38:18] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:38:18] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[22:38:18] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[22:38:18] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[22:38:18] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[22:38:18] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:38:21] [92m@ displayData(): Displaying Input types[0m
+[91m [DEBUG]  [94m[22:38:21] [92m@ processInput(): 1) responses[who][you][0m
+[91m [DEBUG]  [94m[22:38:26] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:38:26] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:38:26] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:39:12] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[22:39:12] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[22:39:12] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[22:39:12] [92m@ processInput(): 2) responses[who][wynne][lim][0m
+[96m[SUCCESS] [94m[22:39:44] [92m@ displayData(): Displaying responses[0m
+[91m [DEBUG]  [94m[22:39:44] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:39:44] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:39:44] [92m@ processInput(): Executing getInputType()[0m
+[91m [DEBUG]  [94m[22:41:48] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[22:41:48] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[22:41:48] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[22:41:48] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:41:48] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:41:48] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[22:41:48] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[22:41:48] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[22:41:48] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[22:41:48] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:41:55] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[22:41:55] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[22:41:55] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[22:41:55] [92m@ processInput(): 2) responses[who][wynne][lim][0m
+[91m [DEBUG]  [94m[22:41:56] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:41:56] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:41:56] [92m@ processInput(): Executing getInputType()[0m
+[91m [DEBUG]  [94m[22:42:08] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[22:42:08] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[22:42:08] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[22:42:08] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:42:08] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:42:08] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[22:42:08] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[22:42:08] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[22:42:08] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[22:42:08] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:42:13] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[22:42:13] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[22:42:13] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[22:42:13] [92m@ processInput(): 2) responses[who][wynne][lim][0m
+[96m[SUCCESS] [94m[22:42:25] [92m@ displayData(): Displaying responses[0m
+[91m [DEBUG]  [94m[22:42:25] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:42:25] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:42:25] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:43:03] [92m@ displayData(): Displaying Input types[0m
+[91m [DEBUG]  [94m[22:43:03] [92m@ processInput(): 1) responses[who][you][0m
+[91m [DEBUG]  [94m[22:43:08] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:43:08] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:43:08] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:43:27] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[22:43:27] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[22:43:27] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[22:43:27] [92m@ processInput(): 2) responses[who][chairpersons][tvl][liceo][de][cagayan][0m
+[96m[SUCCESS] [94m[22:43:59] [92m@ displayData(): Displaying responses[0m
+[91m [DEBUG]  [94m[22:43:59] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:43:59] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:43:59] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:44:03] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[22:44:03] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[22:44:03] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[22:44:03] [92m@ processInput(): 2) responses[who][chairpersons][tvl][liceo][de][cagayan][0m
+[91m [DEBUG]  [94m[22:44:03] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:44:03] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:44:03] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:44:27] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[22:44:27] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[22:44:27] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[22:44:27] [92m@ processInput(): 2) responses[who][chairpersons][tvl][liceo][de][cagayan][0m
+[91m [DEBUG]  [94m[22:44:27] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:44:27] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:44:27] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:44:43] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[22:44:43] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[22:44:43] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[22:44:43] [92m@ processInput(): 2) responses[who][chairpersons][tvl][liceo][de][cagayan][0m
+[91m [DEBUG]  [94m[22:44:43] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:44:43] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:44:43] [92m@ processInput(): Executing getInputType()[0m
+[91m [DEBUG]  [94m[22:45:22] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[22:45:22] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[22:45:22] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[22:45:22] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:45:22] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:45:22] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[22:45:22] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[22:45:22] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[22:45:23] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[22:45:23] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:45:33] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[22:45:33] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[22:45:33] [92m@ processInput(): 1) responses[who][chairperson][0m
+[91m [DEBUG]  [94m[22:45:33] [92m@ processInput(): 2) responses[who][chairperson][tvl][0m
+[91m [DEBUG]  [94m[22:45:33] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[22:45:45] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[22:45:45] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[22:45:46] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[22:45:46] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:45:46] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:45:46] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[22:45:46] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[22:45:46] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[22:45:46] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[22:45:46] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:46:03] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[22:46:03] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[22:46:03] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[22:46:03] [92m@ processInput(): 2) responses[who][chairpersons][tvl][liceo][de][cagayan][0m
+[91m [DEBUG]  [94m[22:46:03] [92m@ talkBot(): text={'cagayan': 'The chairperson in TVL 1 is Miss Wynne Lim and the chairperson in TVL 2 is Mister Charlie Yabes'}[0m
+[91m [DEBUG]  [94m[22:46:03] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:46:03] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:46:03] [92m@ processInput(): Executing getInputType()[0m
+[91m [DEBUG]  [94m[22:47:13] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[22:47:13] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[22:47:13] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[22:47:13] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:47:13] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:47:13] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[22:47:13] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[22:47:13] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[22:47:13] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[22:47:13] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[22:47:24] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[22:47:24] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[22:47:24] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[22:47:24] [92m@ processInput(): 2) responses[who][chairperson][tvl][liceo][de][cagayan][0m
+[91m [DEBUG]  [94m[22:47:24] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[22:47:32] [92m@ talkBot(): text='Thank you for providing information. It will be added in the response.json'[0m
+[96m[SUCCESS] [94m[22:47:33] [92m@ displayData(): Displaying responses[0m
+[91m [DEBUG]  [94m[22:47:33] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[22:47:33] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[22:47:33] [92m@ processInput(): Executing getInputType()[0m
+[91m [DEBUG]  [94m[23:09:05] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[23:09:05] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[23:09:05] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[23:09:05] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[23:09:05] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[23:09:05] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[23:09:05] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[23:09:05] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[23:09:05] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[23:09:05] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[23:09:10] [92m@ displayData(): Displaying Input types[0m
+[91m [DEBUG]  [94m[23:09:10] [92m@ talkBot(): text=''[0m
+[91m [DEBUG]  [94m[23:09:10] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[23:09:10] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[23:09:10] [92m@ processInput(): Executing getInputType()[0m
+[91m [DEBUG]  [94m[23:16:30] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[23:16:30] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[23:16:30] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[23:16:30] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[23:16:30] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[23:16:30] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[23:16:30] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[23:16:30] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[23:16:30] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[23:16:30] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[23:16:44] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[23:16:44] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[23:16:44] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[23:16:44] [92m@ processInput(): 2) responses[who][chairperson][tvl][liceo][de][cagayan][0m
+[91m [DEBUG]  [94m[23:16:44] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[23:17:47] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[23:17:47] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[23:17:47] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[23:17:47] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[23:17:47] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[23:17:47] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[23:17:47] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[23:17:47] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[23:17:47] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[23:17:47] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[23:17:56] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[23:17:56] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[23:17:56] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[23:17:56] [92m@ processInput(): 2) responses[who][chairperson][liceo][0m
+[91m [DEBUG]  [94m[23:17:56] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[23:18:02] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[23:18:02] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[23:18:02] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[23:18:02] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[23:18:02] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[23:18:02] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[23:18:02] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[23:18:02] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[23:18:02] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[23:18:02] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[23:18:12] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[23:18:12] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[23:18:12] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[23:18:12] [92m@ processInput(): 2) responses[who][chairperson][tvl][0m
+[91m [DEBUG]  [94m[23:18:12] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[23:18:18] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[23:18:18] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[23:18:18] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[23:18:18] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[23:18:18] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[23:18:18] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[23:18:18] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[23:18:18] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[23:18:18] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[23:18:18] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[23:18:35] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[23:18:35] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[23:18:35] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[23:18:35] [92m@ processInput(): 2) responses[who][chairperson][tvl][liceo][de][cagayan][0m
+[91m [DEBUG]  [94m[23:18:35] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[23:19:12] [92m@ talkBot(): text='Thank you for providing information. It will be added in the response.json'[0m
+[91m [DEBUG]  [94m[23:19:27] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[23:19:27] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[23:19:27] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[23:19:27] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[23:19:27] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[23:19:27] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[23:19:27] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[23:19:27] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[23:19:27] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[23:19:27] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[23:19:38] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[23:19:38] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[23:19:38] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[23:19:38] [92m@ processInput(): 2) responses[who][chairperson][tvl][0m
+[91m [DEBUG]  [94m[23:19:38] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[23:58:29] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[23:58:29] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[23:58:29] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[23:58:29] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[23:58:29] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[23:58:29] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[23:58:29] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[23:58:29] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[23:58:29] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[23:58:29] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[23:58:47] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[23:58:47] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[23:58:47] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[23:58:47] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[23:59:54] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[23:59:54] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[23:59:54] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[23:59:54] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[23:59:54] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[23:59:54] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[23:59:54] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[23:59:54] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[23:59:54] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[23:59:54] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[00:00:04] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[00:00:04] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[00:00:04] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[00:00:04] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[00:00:15] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[00:00:15] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[00:00:15] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[00:00:15] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[00:00:15] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[00:00:15] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[00:00:15] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[00:00:15] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[00:00:15] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[00:00:15] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[00:00:28] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[00:00:28] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[00:00:28] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[00:00:28] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[00:02:06] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[00:02:06] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[00:02:06] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[00:02:06] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[00:02:06] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[00:02:06] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[00:02:06] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[00:02:06] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[00:02:06] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[00:02:06] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[00:02:16] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[00:02:16] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[00:02:16] [92m@ responseSegmentAppend(): Done responseSegmentAppend() returning[0m
+[91m [DEBUG]  [94m[00:02:16] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[00:02:16] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:02:23] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[00:02:23] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[00:02:24] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[00:02:24] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[00:02:24] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[00:02:24] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[00:02:24] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[00:02:24] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[00:02:24] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[00:02:24] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[00:02:35] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[00:02:35] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[00:02:35] [92m@ responseSegmentAppend(): Done responseSegmentAppend() returning[0m
+[91m [DEBUG]  [94m[00:02:35] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[00:02:35] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:02:35] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:02:35] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:02:35] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:02:35] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[00:03:37] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[00:03:37] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[00:03:37] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[00:03:37] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[00:03:37] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[00:03:37] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[00:03:37] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[00:03:37] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[00:03:37] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[00:03:37] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[00:03:44] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[00:03:44] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[00:03:44] [92m@ responseSegmentAppend(): Done responseSegmentAppend() returning[0m
+[91m [DEBUG]  [94m[00:03:44] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[00:03:44] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:03:44] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:03:44] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:03:44] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:03:44] [92m@ responseSegmentAppend(): Appending chairperson to listToReturn[0m
+[91m [DEBUG]  [94m[00:03:44] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[00:03:48] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[00:03:48] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[00:03:48] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[00:03:48] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[00:03:48] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[00:03:48] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[00:03:48] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[00:03:48] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[00:03:48] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[00:03:48] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[00:03:50] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[00:03:50] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[00:03:50] [92m@ responseSegmentAppend(): Done responseSegmentAppend() returning[0m
+[91m [DEBUG]  [94m[00:03:50] [92m@ processInput(): 1) responses[who][chairperson][0m
+[91m [DEBUG]  [94m[00:03:50] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:03:50] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:03:50] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:03:50] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:03:50] [92m@ responseSegmentAppend(): Appending chairperson to listToReturn[0m
+[91m [DEBUG]  [94m[00:03:50] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[00:04:26] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[00:04:26] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[00:04:26] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[00:04:26] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[00:04:26] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[00:04:27] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[00:04:27] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[00:04:27] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[00:04:27] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[00:04:27] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[00:04:29] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[00:04:29] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[00:04:29] [92m@ responseSegmentAppend(): Done responseSegmentAppend() returning[0m
+[91m [DEBUG]  [94m[00:04:29] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[00:04:29] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:04:29] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:04:29] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:04:29] [92m@ responseSegmentAppend(): keys for loop[0m
+[91m [DEBUG]  [94m[00:04:29] [92m@ responseSegmentAppend(): Appending chairpersons to listToReturn[0m
+[91m [DEBUG]  [94m[00:04:29] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[00:09:17] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[00:09:17] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[00:09:17] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[00:09:17] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[00:09:17] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[00:09:17] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[00:09:17] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[00:09:17] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[00:09:17] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[00:09:17] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[00:09:33] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[00:09:33] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[00:09:33] [92m@ responseSegmentAppend(): Done responseSegmentAppend() returning[0m
+[91m [DEBUG]  [94m[00:09:33] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[00:09:33] [92m@ responseSegmentAppend(): Appending chairpersons to listToReturn[0m
+[91m [DEBUG]  [94m[00:09:33] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[00:12:38] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[00:12:38] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[00:12:38] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[00:12:38] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[00:12:38] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[00:12:38] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[00:12:38] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[00:12:38] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[00:12:38] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[00:12:38] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[00:12:45] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[00:12:45] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[00:12:45] [92m@ responseSegmentAppend(): Done responseSegmentAppend() returning[0m
+[91m [DEBUG]  [94m[00:12:45] [92m@ processInput(): 1) responses[who][chairperson][0m
+[91m [DEBUG]  [94m[00:12:45] [92m@ responseSegmentAppend(): Appending chairpersons to listToReturn[0m
+[91m [DEBUG]  [94m[00:12:45] [92m@ addResponse(): Displaying keys[0m
+[91m [DEBUG]  [94m[00:12:45] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[00:13:44] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[00:13:44] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[00:13:44] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[00:13:44] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[00:13:44] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[00:13:44] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[00:13:44] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[00:13:44] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[00:13:44] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[00:13:44] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[00:13:52] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[00:13:52] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[00:13:52] [92m@ responseSegmentAppend(): Done responseSegmentAppend() returning[0m
+[91m [DEBUG]  [94m[00:13:52] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[00:13:52] [92m@ responseSegmentAppend(): propnBank=['chairperson', 'tvl'][0m
+[91m [DEBUG]  [94m[00:13:52] [92m@ responseSegmentAppend(): Appending chairpersons to listToReturn[0m
+[91m [DEBUG]  [94m[00:13:52] [92m@ addResponse(): Displaying keys[0m
+[91m [DEBUG]  [94m[00:13:52] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[00:14:24] [92m@ talkBot(): text='Thank you for providing information. It will be added in the response.json'[0m
+[96m[SUCCESS] [94m[00:14:25] [92m@ displayData(): Displaying responses[0m
+[91m [DEBUG]  [94m[00:14:25] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[00:14:25] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[00:14:25] [92m@ processInput(): Executing getInputType()[0m
+[91m [DEBUG]  [94m[00:14:37] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[00:14:37] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[00:14:37] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[00:14:37] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[00:14:37] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[00:14:37] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[00:14:37] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[00:14:37] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[00:14:37] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[00:14:37] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[00:14:46] [92m@ displayData(): Displaying Input types[0m
+[96m[SUCCESS] [94m[00:14:46] [92m@ displayData(): Displaying Proper Noun Bank[0m
+[91m [DEBUG]  [94m[00:14:46] [92m@ responseSegmentAppend(): Done responseSegmentAppend() returning[0m
+[91m [DEBUG]  [94m[00:14:46] [92m@ processInput(): 1) responses[who][][0m
+[91m [DEBUG]  [94m[00:14:46] [92m@ responseSegmentAppend(): propnBank=['chairperson', 'tvl', 'liceo', 'de', 'cagayan'][0m
+[91m [DEBUG]  [94m[00:14:46] [92m@ responseSegmentAppend(): Appending chairpersons to listToReturn[0m
+[91m [DEBUG]  [94m[00:14:46] [92m@ addResponse(): Displaying keys[0m
+[91m [DEBUG]  [94m[00:14:46] [92m@ talkBot(): text='Unfortunately I have no information about that. Can you provide any information regarding that topic?'[0m
+[91m [DEBUG]  [94m[19:52:50] [92m@ entry_point: starting program[0m
+[91m [DEBUG]  [94m[19:52:50] [92m@ entry_point: executing main()[0m
+[91m [DEBUG]  [94m[19:52:50] [92m@ main(): Displaying Liceo De Cagayan Seal[0m
+[91m [DEBUG]  [94m[19:52:50] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[19:52:50] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[19:52:50] [92m@ processInput(): reloadFlag is enabled, executing loadResponses()[0m
+[91m [DEBUG]  [94m[19:52:50] [92m@ loadResponses(): Loading responses..[0m
+[96m[SUCCESS] [94m[19:52:50] [92m@ loadResponses(): Successfully loaded the responses[0m
+[91m [DEBUG]  [94m[19:52:50] [92m@ processInput(): Disabling reloadFlag, reloadFlag=False[0m
+[91m [DEBUG]  [94m[19:52:50] [92m@ processInput(): Executing getInputType()[0m
+[96m[SUCCESS] [94m[19:52:54] [92m@ displayData(): Displaying Input types[0m
+[91m [DEBUG]  [94m[19:52:54] [92m@ responseSegmentAppend(): Done responseSegmentAppend() returning[0m
+[91m [DEBUG]  [94m[19:52:54] [92m@ processInput(): 1) responses[who][you][0m
+[91m [DEBUG]  [94m[19:52:54] [92m@ talkBot(): text="I am a chatbot designed and developed by the dedicated ICT students and teachers at Liceo De Cagayan University. My main purpose is to assist you with any questions or tasks you may have, whether it's related to academic inquiries, campus information, or any other services we offer. I'm here to provide you with accurate and helpful responses, and I'm excited to help make your experience smoother and more efficient. Feel free to ask me anything, and I'll do my best to assist you!"[0m
+[91m [DEBUG]  [94m[19:52:59] [92m@ main(): executing processInput()[0m
+[91m [DEBUG]  [94m[19:52:59] [92m@ processInput(): Checking for reloadFlag..[0m
+[91m [DEBUG]  [94m[19:52:59] [92m@ processInput(): Executing getInputType()[0m
